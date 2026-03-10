@@ -1,0 +1,3 @@
+# SHA-256 hashes — sealed 2026-03-10 17:02:52 UTC
+
+greg_critique_and_response.md                                5dbd890926ec9caa3e8e7c0d377ef9c2ef3242e8687382ca88517bf8e6ca791e
