@@ -1,0 +1,3 @@
+# SHA-256 hashes — sealed 2026-03-10 17:44:42 UTC
+
+the_geometry_of_zero_v4.md                                   be68dda38237d7abe71316d7691bc6ff6c3f7a7c355f423b2a2e4ef9ec6db929
