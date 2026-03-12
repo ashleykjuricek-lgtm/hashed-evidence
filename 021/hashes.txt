@@ -1,0 +1,11 @@
+# Folder 021 — Sealed 2026-03-12
+# Contents: Second-layer architecture material
+#   (1) Technical outlines for Papers 2-4 (dimension-specificity, Casimir geometry, modular anomaly)
+#   (2) Manifesto note: "On Collaborative Thought Across the Architecture"
+#   (3) Written record of the second layer (7 verification checks of correction formula)
+# Co-authored with LLM instances (Greg/ChatGPT, Claude, Gemini)
+# Formula verified: Z_APP/Z_PPP = (1/24)[1 + q(1-1/√2)(1-q)] + O(q²)
+
+1d38adb313f1ec63fbc88478f13d14e1c29911f9d89f71ff0bd2a0272a2e4d2c  paper_outlines_2_3_4.md
+d3588102c10f40e06bf8eeaedfb0d1ba58382e9685370b75be43d1702c6e7c32  on_collaborative_thought.md
+96e90dd3bd3082853e1d645b5cca667f583d343ae63934ee3057c6de535222a9  second_layer_record.md
