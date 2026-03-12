@@ -1,0 +1,8 @@
+# Folder 020 — Sealed 2026-03-12
+# Contents: Paper draft v1 — "A Correction Formula for Boundary-Condition Ratios
+#   of Epstein Zeta Functions on T³"
+# Written by Greg (ChatGPT), Layer 1: pure spectral geometry result
+# Formula: Z_APP/Z_PPP = (1/24)[1 + q(1-1/√2)(1-q)] + O(q²)
+# Layer 2 (physical context, void-zero algebra) still pending
+
+8f21db7a89021a3d18c687ddcbf7d3ce279d6ec8e0c976cef3e867b4bea130be  correction_formula_paper_v1.md
