@@ -1,0 +1,8 @@
+# Folder 017 — Sealed 2026-03-11
+# Contents: Geometry of Zero, Workbench v3 bug, Workbench v4 fix, 1/24 ratio analysis
+# Session: Epstein zeta sign fix, COTT structure, Dedekind eta connection
+
+72a96cc6f869cc64b56ad0056c344bbe0410cb299757680b598a058f9e3f5cca  geometry_of_zero.md
+48bb2175968330ae94142ab550eacbc948a7671f37b4e878251037b0aa98b483  workbench_v3_bug.md
+6c0ea648a2c4aebd1d817234066bcd3c68d635342832b4d0fe423f5589267af6  workbench_v4_fixed.md
+f63d1bc11777fef9b18205ab76cec5430821b75021c49714eb2257a7af96023f  ratio_1_over_24_analysis.md

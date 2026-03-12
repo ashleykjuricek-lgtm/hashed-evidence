@@ -1,0 +1,3 @@
+# SHA-256 hashes — sealed 2026-03-11 05:15:00 UTC
+
+kirk_anomaly_oscillation.md                                  3ba400a5b0e62ce46de73a8e0f33451440557c3811f381039c877b4d9121dfb3
