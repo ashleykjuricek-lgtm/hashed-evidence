@@ -1,0 +1,8 @@
+# Folder 019 — Sealed 2026-03-11
+# Contents: Shoelace proof — 80-digit verification of the correction formula
+# Formula: APP/PPP = (1/24)[1 + q(1-1/√2)(1-q)], coefficient exactly 1 at O(q)
+# Structural derivation via three vanishing conditions (Greg/ChatGPT)
+# Term-by-term Fourier decomposition of all Mellin integrals
+# Residual O(q²) = 0.000025% of ratio — noise floor
+
+5a0322bc5585914a72fcb05a11fa402efdda4cbde01cdb9da65ac9e418ef895d  shoelace_proof.md
