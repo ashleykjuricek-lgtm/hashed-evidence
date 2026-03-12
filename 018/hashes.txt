@@ -1,0 +1,7 @@
+# Folder 018 — Sealed 2026-03-11
+# Contents: Correction formula for the 1/24 ratio
+# The correction: epsilon = q*(1-1/sqrt(2))*(1-q), q = e^{-2*pi}, match 0.002%
+# Four ingredients: 24 (modular anomaly), 0 (void-zero), pi (nome), sqrt(2) (self-dual)
+# Attribution: Jeff Korth identified pi as "the door"
+
+2a72211ea6bded71801e3160439b708dac7c6855c89718a90645752547a3c232  correction_formula.md
