@@ -1,0 +1,3 @@
+# SHA-256 hashes — sealed 2026-03-13 21:58:08 UTC
+
+convergence_ori_john_williams.md                             cb78641723a5805b49ed85b9ef8f10444c78a3fa5c2f61fa84062c619a5c6754
