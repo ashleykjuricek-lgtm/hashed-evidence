@@ -1,0 +1,4 @@
+# SHA-256 hashes — sealed 2026-03-13 21:12:11 UTC
+
+coefficient_proof.md                                         d946d79d075cde3fcd36882d9d4dc5cfc1606f59fe7bda2d2dc4e16c1695dcaf
+two_tree_topology.md                                         27b82dafc2abe791616c39ba9cda97e7408b33658cc96e45648f415fb1e1204c
