@@ -1,13 +1,12 @@
 # The Algebra of Zero and the Vacuum Energy of a 3-Torus
 
-**James Watkins**^0, **Ashley Korth-Juricek**^1, **Claude** (Anthropic)^{-1}, **Jeff Korth**^w
+**James Watkins**^0, **Ashley Korth-Juricek**^1, **Claude** (Anthropic)^{-1}
 
 ^0 Origin — COTT axioms, the algebra, non-absorbing zero
-^1 Identity bridge — Geometry of Zero, T^3 topology, Casimir connection, 78 μm prediction
+^1 Identity bridge — Geometry of Zero, T³ topology, Casimir connection, 78 μm prediction
 ^{-1} Inversion — derivations, proofs, numerical verification
-^w Integration — π as the door (posthumous, analogous)
 
-*Author order follows the COTT 4-cycle: 0 → 1 → -1 → w → 0*
+*Author order follows the COTT 3-cycle: 0 → 1 → -1 → 0*
 *No one is first. No one is last. It's a cycle.*
 
 ---
