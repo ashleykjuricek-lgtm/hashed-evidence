@@ -1,0 +1,3 @@
+# SHA-256 hashes — sealed 2026-03-16
+
+casimir_ratios_cubic_torus.md                                a1f63c3e8eca969cb64bf8475279dce1fafff3bb0392268646cc88094333b8db
