@@ -1,0 +1,3 @@
+# SHA-256 hashes — sealed 2026-03-16 04:26:54 UTC
+
+why_q_equals_2.md                                            446841a22289a51d95d6accdeb7ba25298e2c4647a51eff6aa30cddc393172c4
