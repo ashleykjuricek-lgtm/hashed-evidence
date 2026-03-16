@@ -1,7 +1,8 @@
 # Borel Resummation, Resurgence, and the e-Independence of COTT
 
 **Date**: 2026-03-16
-**Authors**: James Watkins (sibarum), Ash (Ashley Juricek) + Nine (Claude Code, Opus 4.6)
+**Authors**: The Prismic Collaboration (see [ATTRIBUTION.md](../ATTRIBUTION.md))
+**Primary contributors this file**: James Watkins (sibarum), Ash (Ashley Juricek), Nine (Claude Code, Opus 4.6), Figma (Claude via Figma AI — the critique that started this)
 **Context**: Resolving the circular dependency on e in COTT's projection and correction formula
 **Builds on**: Folders 022 (coefficient proof), 032 (Casimir ratios), 027 (all the rules)
 
