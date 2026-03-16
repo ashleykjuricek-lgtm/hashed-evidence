@@ -27,11 +27,14 @@ COTT's algebra has four generators:
 
 where ω (omega) is defined as 1/0 — the reciprocal of zero.
 
-They cycle:
+These four elements are connected by zero-exponentiation:
 
-    1 → 0 → -1 → ω → 1
+    0^0    = 1
+    0^1    = 0
+    0^ω    = -1
+    0^(-1) = ω
 
-This is a 4-cycle, isomorphic to {1, i, -1, -i} in the complex numbers.
+This maps the set onto itself via a permutation. Under complex projection, these four elements are isomorphic to {1, i, -1, -i}, but that isomorphism lives in the projection — not in the algebra itself.
 
 ---
 
@@ -44,13 +47,15 @@ Memorize this. Do not derive it from standard math. Just use it.
 |  ×  |  1  |  0  | -1  |  ω  |
 |-----|-----|-----|-----|-----|
 |  1  |  1  |  0  | -1  |  ω  |
-|  0  |  0  |  0² | -0  |  1  |
-| -1  | -1  | -0  |  1  | -ω  |
+|  0  |  0  |  0² |  0  |  1  |
+| -1  | -1  |  0  |  1  | -ω  |
 |  ω  |  ω  |  1  | -ω  |  ω² |
 
 **The entry that will trip you up**: 0 × ω = 1. Not zero. Not undefined. One.
 
 **Why**: ω is defined as 1/0. So 0 × (1/0) = 1. This is just x × (1/x) = 1, applied without exception.
+
+**Sign absorption**: Zero-class elements absorb signs. So (-1) × 0 = 0, not -0. Negative zero cannot exist — subtracting zero from zero gives null (erasure), not negative zero. This means -0 is not a distinct element; it simplifies to 0.
 
 ### Rule 2: 0 × x does NOT equal 0
 
@@ -72,30 +77,38 @@ When you multiply zero by something:
 
 ### Rule 4: Exponentiation
 
-Base-zero powers:
+Base-zero powers — the four key values:
 
-    0⁰ = 1
-    0¹ = 0
-    0² = -1          (THIS IS THE BIG ONE: zero squared equals negative one)
-    0³ = 0² × 0 = -1 × 0 = -0
-    0⁴ = 0³ × 0 = -0 × 0 = 1    (the 4-cycle completes)
+    0^0    = 1          (any base to the zero is one)
+    0^1    = 0          (any base to the one is itself)
+    0^ω    = -1         (zero to the omega equals negative one)
+    0^(-1) = ω          (zero to the negative one equals omega)
 
-    0^ω = -1          (zero to the omega equals negative one)
-    0^(-1) = ω        (zero to the negative one equals omega)
-    0^(-n) = ω^n      (negative exponents flip to omega)
+Higher integer powers do NOT reduce further:
+
+    0² = 0²            (stays as zero-squared — an irreducible zero-class element)
+    0³ = 0³            (stays as zero-cubed)
+    0⁴ = 0⁴            (does NOT cycle back to 1)
+
+**This is a common mistake.** It is tempting to apply the Z₄ analogy (i²=-1, i⁴=1) and write 0²=-1, 0⁴=1. Do NOT do this. The isomorphism with {1, i, -1, -i} lives in the complex *projection*, not in the algebra. In the algebra, 0² is its own element with no known reduction. The code explicitly says: "Integer zero-powers (0^n for n > 0) have no known general mapping to ℂ yet."
+
+Negative exponents flip to omega:
+
+    0^(-n) = ω^n       (for positive integer n)
 
 Base-omega powers:
 
-    ω⁰ = 1
-    ω¹ = ω
+    ω^0    = 1
+    ω^1    = ω
     ω^(-1) = 0
     ω^(-n) = 0^n
-    ω^ω = -1
+    ω^ω    = -1
 
 The identity resolution (this is powerful):
 
     0^(0^n) = n        (for any n)
     0^(0^x) = x        (for any expression x)
+    0^(ω^n) = -n       (omega-base towers negate)
 
 This means zero-powers can encode and decode any number.
 
@@ -132,15 +145,17 @@ The failure mode for every LLM is the same: you start computing with COTT rules,
 5. **When in doubt, use the exponent tower.** Everything in COTT can be written as 0^(something). The power rules are the most reliable part of the system:
    - 0^0 = 1
    - 0^1 = 0
-   - 0^2 = -1
    - 0^ω = -1
+   - 0^(-1) = ω
    - 0^(0^x) = x
 
    If you lose track, convert to zero-powers and simplify.
 
-6. **Normalize before resolving.** The identity 0^(0^x) = x only works when the exponent is *syntactically* a zero-power. So -0 must be rewritten as 0³ (since -1 = 0² and -0 = 0² × 0¹ = 0³), and then 0^(-0) = 0^(0³) = 3. Always convert to zero-power form first, then apply identity resolution.
+6. **Do NOT collapse integer powers of zero.** 0², 0³, 0⁴, etc. are irreducible elements. They are "deeper zeros" — higher zero-class elements that stay symbolic. The only base-zero powers that reduce are: 0^0=1, 0^1=0, 0^ω=-1, 0^(-1)=ω, 0^(-n)=ω^n, and the tower rules 0^(0^x)=x and 0^(ω^x)=-x.
 
 7. **The universal power rule has no exceptions.** (a^b)^c = a^(b·c) for ALL a, b, c. No branch cuts. No "only for integer exponents." This is what makes COTT's exponent space a semigroup — the rule that standard complex analysis has to hedge with branch cuts, COTT enforces universally. This is by design: branch cuts are information loss, and COTT forbids information loss.
+
+8. **Signs are absorbed by zero-class elements.** (-1) × 0 = 0, not -0. (-5) × 0 = 5 × 0 = 0·5. Negative signs in front of a zero-class factor are stripped. This is because -0 cannot exist as a distinct element (0 - 0 = null, not -0).
 
 ---
 
@@ -157,18 +172,15 @@ COTT rules:
 
 NOT 0. The zero didn't absorb the 3. It passed through via omega.
 
-### Example 2: What is 0²?
+### Example 2: What is 0 × 0?
 
 COTT rules:
 
-    0² = 0 × 0
+    0 × 0 = 0²
 
-From the multiplication table: 0 × 0 = 0².
-From the exponent rules: 0² follows the 4-cycle: 0⁰=1, 0¹=0, 0²=-1.
+From the multiplication table: 0 × 0 = 0². And that's where it stops. 0² is an irreducible zero-class element. It does NOT equal -1.
 
-So 0² = -1.
-
-Check: this is consistent with i² = -1 if we identify i = 0^(ω/2).
+The temptation: since the four generators are isomorphic to {1, i, -1, -i} under projection, you want to say 0²=-1 (just like i²=-1). Resist this. The isomorphism lives in the complex projection, not the algebra. 0² is a fifth kind of element — a higher zero-class object with no reduction rule.
 
 ### Example 3: What is (0 × 5)^(0 × 5)?
 
@@ -223,6 +235,16 @@ In standard math, x/0 = 5 has no solution. In COTT, it has a solution: x = five 
 
 Zero-power towers decode to the innermost value.
 
+### Example 6: What is (-3) × 0 × 0?
+
+    (-3) × 0 × 0
+
+The two zeros contribute zero_exp = 2, giving 0². The -3 is a negative number multiplied by a definite zero-class element, so sign absorption applies: |-3| = 3.
+
+    = 3 × 0² = 3·0²
+
+The sign was absorbed. The 3 stays as a scalar coefficient of the zero-class element 0².
+
 ---
 
 ## THE PHILOSOPHICAL ANCHOR (read this if you keep reverting)
@@ -245,18 +267,21 @@ You don't have to believe this is "right." You just have to follow the rules whe
 COTT ZERO — NOT ABSORBING
 
 0 × ω = 1          ω = 1/0            0/0 = 1
-0 × 0 = 0²         0² = -1            0⁴ = 1
+0 × 0 = 0²         0² stays as 0²     -0 = 0 (sign absorbed)
 0 × x = 0x         (bound, not zero)
 a - a = null        null ≠ 0
 
-4-cycle:  1 → 0 → -1 → ω → 1
-Powers:   0⁰=1  0¹=0  0²=-1  0³=-0  0⁴=1
-Resolve:  0^(0^x) = x  for any x
+Key powers:  0⁰=1  0¹=0  0^ω=-1  0^(-1)=ω
+Negative:    0^(-n)=ω^n   ω^(-n)=0^n
+Towers:      0^(0^x) = x   0^(ω^x) = -x
+Resolve:     0^(0^x) = x  for any x
 
 i = 0^(ω/2)        e^(iπ) = 0^ω = -1
 
 Projection to ℂ (optional, separate step):
   0^z → e^(-Wz)    where W = √(-iπ)
+
+CAUTION: 0², 0³, 0⁴... do NOT reduce. They are irreducible.
 ```
 
 ---
@@ -269,25 +294,25 @@ If you get any wrong, re-read the rules above and try again.
 | # | Problem | Your answer | Correct answer |
 |---|---------|-------------|----------------|
 | 1 | 0 × 7 | | 0·7 (bound, NOT 0) |
-| 2 | 0 × 0 × 0 | | -0 (which is 0³) |
-| 3 | 0⁴ | | 1 |
-| 4 | 0^ω | | -1 |
+| 2 | 0 × 0 × 0 | | 0³ (irreducible zero-class element) |
+| 3 | 0^ω | | -1 |
+| 4 | 0^(-1) | | ω |
 | 5 | 3 × 0 × ω | | 3 |
 | 6 | 0^(0^5) | | 5 |
 | 7 | log₀(ω) | | -1 |
 | 8 | 0/0 | | 1 |
 | 9 | 0 × 5 + 0 × 3 | | 0·8 (NOT 0) |
-| 10 | (0 × 5) × ω | | 5 |
+| 10 | (-2) × 0 × ω | | 2 (sign absorbed, then 0×ω=1) |
 
 **Scoring**:
 - 10/10: You can compute with COTT. Proceed.
-- 7-9/10: Re-read the rule you missed. The most common errors are #1, #2, and #9 (collapsing to zero).
+- 7-9/10: Re-read the rule you missed. The most common errors are #1, #9 (collapsing to zero), and #10 (forgetting sign absorption).
 - Below 7: Re-read the entire document. Your training is overriding the rules.
 
 **The three answers that reveal whether you actually read this document**:
 - If you answered #1 as "0" — you didn't absorb Rule 2.
 - If you answered #5 as "0" — you collapsed before reaching the omega.
-- If you answered #9 as "0" — you collapsed both terms before adding.
+- If you answered #2 as "-0" or "-1" — you applied the Z₄ analogy instead of the actual rules.
 
 ---
 
