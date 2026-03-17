@@ -1,41 +1,91 @@
-# COTT Identity Hashes
-# Generated: 2026-03-17T16:59:39.449Z
-# Engine: sibarum/cott lib/traction/ops.js (Node.js adaptation)
-# Total identities evaluated: 31
+# COTT Identity Hashes — Python Traction Solver
+# Generated: 2026-03-17 17:06:44 UTC
+# Engine: sibarum/cott solver/traction.py (SymPy 1.14.0)
+# Total identities evaluated: 80
 
-# Each line: identity | engine_result | sha256(engine_result)
-# The hash covers the exact result string so any algebra change is detectable.
+# Verification: 80 passed, 0 failed
 
-0^0 = 1                       | 1                           | 6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b
-0^1 = 0                       | 0                           | 5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9
-0^ω = -1                      | 0^(ω)                       | f8bcb6adfb0c3982502ecd26b0bd2f501fcb89c43e036d30ed46cbee623c7e7e
-0^(-1) = ω                    | ω                           | faed5da5f84f2ee9ea8e56403800503b3910a735270a7b2e8b39a182d5ffa615
-0^2 = 0^(2)                   | 0^(2)                       | b025c45542026d06e0508cb55d679f6451eb3a843e8d2cfffc7d98c045e41d28
-0^3 = 0^(3)                   | 0^(3)                       | 0e77548177901c5d7d5ddcfda2721dfb2d694006c71debecec90939df3814e08
-0^4 = 0^(4)                   | 0^(4)                       | f48e66b90f0115035e7795a06d3f35f3ffcebf929d87f7a67d11994a6072cf6a
-0^(-2) = ω^2                  | 0^(-2)                      | 3405536e795a7fdce7c8e99c62b6539c08cb6f01a36760aba109739f3e733ff4
-0^(-3) = ω^3                  | 0^(-3)                      | dce2578390818f1385858aed47172407a3b390fdc572d11c78adcd81f9885610
-ω^0 = 1                       | 0^((0) × (-1))              | 4d11eded96f0db31d6545add72eaae16d86205c180e27169a31028f882e739d6
-ω^1 = ω                       | 0^((1) × (-1))              | fed1a2ffdb08ad076c9b0daae5ec5121808168f9e2e53348a3ae2bfbfd75b155
-ω^(-1) = 0                    | 0^((-1) × (-1))             | 11302d12677aaa3c00353f6b553a7ae76db977f210ba964a9923b0818a287ee8
-ω^ω = -1                      | (ω)^(ω)                     | f636293c3d6c236502e00c0e84b7a114005fcc55eb356ac82decdd311270b868
-0 × ω = 1                     | 0^(0)                       | 1379b1d124c983483e77b794a25a822e0d7ecfee3f1c6ab8d8f10417182d3ebd
-ω × 0 = 1                     | 0                           | 5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9
-0 × 0 = 0²                    | (0) × (0)                   | 19445d1a59f5ee175e63dac4f75dd25e868f89434aac77e9b966e28e80e8c7d8
-ω × ω = ω²                    | 0^(-2)                      | 3405536e795a7fdce7c8e99c62b6539c08cb6f01a36760aba109739f3e733ff4
-1/0 = ω                       | Infinity                    | d0067cad9a63e0813759a2bb841051ca73570c0da2e08e840a8eb45db6a7a010
-1/ω = 0                       | 1/(ω)                       | 056b6f1c6767351270dc4b792af348dfbc47c095c4463d10493461a4a068ca72
-log₀(0) = 1                   | 1                           | 6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b
-log₀(1) = 0                   | 0                           | 5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9
-0^(0^2) = 2                   | 0^(0^(2))                   | 5a03be29236640acf52d9a522af6bb150c962b3a7c789895762a83c952a660ec
-0^(0^3) = 3                   | 0^(0^(3))                   | 102cafa69143be81ada062e77af39f71151f66205c01d5582804cda03c008692
-0^(0^4) = 4                   | 0^(0^(4))                   | 26b01031a6d244eb29b027f6d91ea5e5d6e71c39252b7ca8a05e3cf8337ec5cc
-0^(0^5) = 5                   | 0^(0^(5))                   | e680d1c341a99c3d880b262e3db55ebd17aba4a7230008ef8bc0d375e7762515
-0^(0^6) = 6                   | 0^(0^(6))                   | 775127b2264af9e18516726eaacd09058dd4d227deb6bc50818e04bbfbf520b4
-0^(0^7) = 7                   | 0^(0^(7))                   | f342389152e811a7991313cd60b74894ca3a461340c4df9aa4fa654bdc23c6b4
-3 × 0 × ω = 3                 | (0^((0^(3)) + (-1))) × (0)  | eb19b9468cd30569e2dcb64daa9260a7d7ba33a8095bb8776b7187875bae60ed
-(0^ω)^(0^ω) = -1              | (0^(ω))^(0^(ω))             | a9d5a2ea231d1b0244fd23e5b0812f7ebc6c31500894074be5898bea65a80af8
-2^10 = 1024                   | 1024                        | e39eef82f61b21e2e7f762fcc4307358f165757f2e77ec855d6992f7e0191932
-i = 0^(ω/2) [phaseLift(0.5)]  | 0^(0^((0^(0.5)) + (-1)))    | 7df24c1029f71b4d74f8e05cb60c19fe2e5667c90341f21cfdf7fc1f1f27d68d
+# Each line: identity | engine_result | sha256(result) | status
 
-# Master hash (SHA-256 of all results concatenated): 61468263df56891bc321117b3d7268ef428a46bde3e191f8beb3c917c6bbf3a3
+0^0 = 1                           | 1         | 6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b | OK
+0^1 = 0                           | 0         | 5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9 | OK
+0^(-1) = w                        | w         | 50e721e49c013f00c62cf59f2163542a9d8df02464efeb615d31051b0fddc326 | OK
+0^w = -1                          | -1        | 1bad6b8cf97131fceab8543e81f7757195fbb1d36b376ee994ad1cf17699c464 | OK
+0^2 = 0^2                         | 0**2      | 15d51b889c44c24d4bb9b3fc45d2b742afd17f91b78d3cbd79c11e944e96f97b | OK
+0^3 = 0^3                         | 0**3      | 2350799a79c4d502edd76e01550677af240228414acbe6c3349f7a5d936dff19 | OK
+0^4 = 0^4                         | 0**4      | 44b74f867beb86f75241c0a2bab4fb4b21fe28bdbd8f8077c1143c6a0dff2498 | OK
+0^(-2) = w^2                      | w**2      | 29ec2f9428aaed9cef84dd1d9f09a4368050056f963a4f206a8622e80069dd10 | OK
+0^(-3) = w^3                      | w**3      | 1eff56e38f7b89aa5d519566e915567af51a63103ebde531fe40b6cc9dd3dfa1 | OK
+w^0 = 1                           | 1         | 6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b | OK
+w^1 = w                           | w         | 50e721e49c013f00c62cf59f2163542a9d8df02464efeb615d31051b0fddc326 | OK
+w^(-1) = 0                        | 0         | 5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9 | OK
+w^w = -1                          | -1        | 1bad6b8cf97131fceab8543e81f7757195fbb1d36b376ee994ad1cf17699c464 | OK
+w^(-2) = 0^2                      | 0**2      | 15d51b889c44c24d4bb9b3fc45d2b742afd17f91b78d3cbd79c11e944e96f97b | OK
+w^(-3) = 0^3                      | 0**3      | 2350799a79c4d502edd76e01550677af240228414acbe6c3349f7a5d936dff19 | OK
+0^(0^2) = 2                       | 2         | d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35 | OK
+0^(0^3) = 3                       | 3         | 4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce | OK
+0^(0^5) = 5                       | 5         | ef2d127de37b942baad06145e54b0c619a1f22327b2ebbcfbec78f5564afe39d | OK
+0^(0^7) = 7                       | 7         | 7902699be42c8a8e46fbbb4501726517e86b22c56a189f7625a6da49081b2451 | OK
+0^(w^2) = -2                      | -2        | cf3bae39dd692048a8bf961182e6a34dfd323eeb0748e162eaf055107f1cb873 | OK
+0^(w^3) = -3                      | -3        | 615bdd17c2556f82f384392ea8557f8cc88b03501c759e23093ab0b2a9b5cd48 | OK
+w^(0^2) = -2                      | -2        | cf3bae39dd692048a8bf961182e6a34dfd323eeb0748e162eaf055107f1cb873 | OK
+w^(0^3) = -3                      | -3        | 615bdd17c2556f82f384392ea8557f8cc88b03501c759e23093ab0b2a9b5cd48 | OK
+w^(w^2) = -1/2                    | -1/2      | 348be5d7ad06601460048f7f7162d298f72cc79c121cc856069a90b22928ac4b | OK
+w^(w^3) = -1/3                    | -1/3      | 702c7c3aed27f9669e7f9cfdcc7f0f4b8bc4fe1fd326fcdb4d1cc4019aa2ec35 | OK
+0^(0^x) = x                       | x         | 2d711642b726b04401627ca9fbac32f5c8530fb1903cc4db02258717921a4881 | OK
+0^(w^x) = -x                      | -x        | a420962426d711880258b007d6767792992f6700fa93f127dafe1f7333e50466 | OK
+0 * w = 1                         | 1         | 6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b | OK
+w * 0 = 1                         | 1         | 6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b | OK
+0 * 0 = 0^2                       | 0**2      | 15d51b889c44c24d4bb9b3fc45d2b742afd17f91b78d3cbd79c11e944e96f97b | OK
+w * w = w^2                       | w**2      | 29ec2f9428aaed9cef84dd1d9f09a4368050056f963a4f206a8622e80069dd10 | OK
+0/0 = 1                           | 1         | 6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b | OK
+w/w = 1                           | 1         | 6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b | OK
+1/0 = w                           | w         | 50e721e49c013f00c62cf59f2163542a9d8df02464efeb615d31051b0fddc326 | OK
+1/w = 0                           | 0         | 5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9 | OK
+0/w = 0^2                         | 0**2      | 15d51b889c44c24d4bb9b3fc45d2b742afd17f91b78d3cbd79c11e944e96f97b | OK
+w/0 = w^2                         | w**2      | 29ec2f9428aaed9cef84dd1d9f09a4368050056f963a4f206a8622e80069dd10 | OK
+1/(1/0) = 0                       | 0         | 5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9 | OK
+1/(1/w) = w                       | w         | 50e721e49c013f00c62cf59f2163542a9d8df02464efeb615d31051b0fddc326 | OK
+log_0(1) = 0                      | 0         | 5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9 | OK
+log_0(0) = 1                      | 1         | 6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b | OK
+log_0(w) = -1                     | -1        | 1bad6b8cf97131fceab8543e81f7757195fbb1d36b376ee994ad1cf17699c464 | OK
+log_0(0^3) = 3                    | 3         | 4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce | OK
+log_0(w^2) = -2                   | -2        | cf3bae39dd692048a8bf961182e6a34dfd323eeb0748e162eaf055107f1cb873 | OK
+log_0(3) = 0^3                    | 0**3      | 2350799a79c4d502edd76e01550677af240228414acbe6c3349f7a5d936dff19 | OK
+log_0(-3) = w^3                   | w**3      | 1eff56e38f7b89aa5d519566e915567af51a63103ebde531fe40b6cc9dd3dfa1 | OK
+logw(1) = 0                       | 0         | 5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9 | OK
+logw(w) = 1                       | 1         | 6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b | OK
+logw(0) = -1                      | -1        | 1bad6b8cf97131fceab8543e81f7757195fbb1d36b376ee994ad1cf17699c464 | OK
+logw(w^5) = 5                     | 5         | ef2d127de37b942baad06145e54b0c619a1f22327b2ebbcfbec78f5564afe39d | OK
+logw(0^3) = -3                    | -3        | 615bdd17c2556f82f384392ea8557f8cc88b03501c759e23093ab0b2a9b5cd48 | OK
+2*0*3*w = 6                       | 6         | e7f6c011776e8db7cd330b54174fd76f7d0216b612387a5ffcfb81e6f0919683 | OK
+0*0*0 = 0^3                       | 0**3      | 2350799a79c4d502edd76e01550677af240228414acbe6c3349f7a5d936dff19 | OK
+(-1)*0 = 0 [sign absorbed]        | 0         | 5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9 | OK
+(-2)*0 = 2*0 [sign absorbed]      | 2*0       | 51d0f3d97ed4a285eaa01e3199714abe705919ab8fd92326138d4eb9922fbe9e | OK
+(-1)*0^2 = 0^2 [sign absorbed]    | 0**2      | 15d51b889c44c24d4bb9b3fc45d2b742afd17f91b78d3cbd79c11e944e96f97b | OK
+0^2 * 0^3 = 0^5                   | 0**5      | 821ddd2af69782db58ae8dced1989cb73177fc10743540a9beadb7da7ea6ed51 | OK
+w^2 * w^3 = w^5                   | w**5      | d5c713888f7020f8b7fa99a70dee889e52da0b6d0c98c9a57f660837da987924 | OK
+0^5 * w^2 = 0^3                   | 0**3      | 2350799a79c4d502edd76e01550677af240228414acbe6c3349f7a5d936dff19 | OK
+0^3 * w^3 = 1                     | 1         | 6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b | OK
+0^(w/2) * 0^(w/2) = -1            | -1        | 1bad6b8cf97131fceab8543e81f7757195fbb1d36b376ee994ad1cf17699c464 | OK
+x - x = null                      | null      | 74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b | OK
+5 - 5 = null                      | null      | 74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b | OK
+(x^2)^(1/2) = x                   | x         | 2d711642b726b04401627ca9fbac32f5c8530fb1903cc4db02258717921a4881 | OK
+(x^4)^(1/4) = x                   | x         | 2d711642b726b04401627ca9fbac32f5c8530fb1903cc4db02258717921a4881 | OK
+(x^a)^b = x^(a*b)                 | x**(a*b)  | 2d9c014b3e3ba8d1aea0ffec8468904f5a8c84f1f4e06966c9deb304aa3d6021 | OK
+(0^a)^b = 0^(a*b)                 | 0**(a*b)  | 403c297a168e04f2b5a83d41e91f98de799220664234031710edecbaa4bca8f0 | OK
+log_0(-1) = w                     | w         | 50e721e49c013f00c62cf59f2163542a9d8df02464efeb615d31051b0fddc326 | OK
+(0^(w/2))^2 = -1 [i^2 = -1]       | -1        | 1bad6b8cf97131fceab8543e81f7757195fbb1d36b376ee994ad1cf17699c464 | OK
+0^(0^(0^3)) = 0^3 [triple tower]  | 0**3      | 2350799a79c4d502edd76e01550677af240228414acbe6c3349f7a5d936dff19 | OK
+C(0^w) = -1                       | -1        | 1bad6b8cf97131fceab8543e81f7757195fbb1d36b376ee994ad1cf17699c464 | OK
+C(0^(w/2)) = I [projects to i]    | I         | a83dd0ccbffe39d071cc317ddf6e97f5c6b1c87af91919271f9fa140b0508c6c | OK
+C(w^(w/2)) = -I [projects to -i]  | -I        | 4c3a1b75ae7e2fb96bf49999f1c9c33f9edc7580ff9002e2f5cdf411bb1169b1 | OK
+C(3 * 0^(w/2)) = 3*I              | 3*I       | 4e5c2db884d207701b4fa981a0a9f1965b3682c42d4aff64cece8beb51d3cecc | OK
+C(5) = 5                          | 5         | ef2d127de37b942baad06145e54b0c619a1f22327b2ebbcfbec78f5564afe39d | OK
+C(null) = 0                       | 0         | 5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9 | OK
+W^2 = -i*pi                       | True      | 3cbc87c7681f34db4617feaa2c8801931bc5e42d8d0f560e756dd4cd92885f18 | OK
+resolve(5) = 5                    | 5         | ef2d127de37b942baad06145e54b0c619a1f22327b2ebbcfbec78f5564afe39d | OK
+resolve(w) = w                    | w         | 50e721e49c013f00c62cf59f2163542a9d8df02464efeb615d31051b0fddc326 | OK
+resolve(0^2) = 0^2                | 0**2      | 15d51b889c44c24d4bb9b3fc45d2b742afd17f91b78d3cbd79c11e944e96f97b | OK
+
+# Master hash (SHA-256 of all results concatenated): aa1c2de104b0f800fa27e435d3bee1aa46c66a29760df3d0c2af2ba2010718b4
