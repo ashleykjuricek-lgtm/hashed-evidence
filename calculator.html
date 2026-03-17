@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Math Calculator</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: #1a1a2e;
+    display: flex; justify-content: center; align-items: center;
+    min-height: 100vh;
+  }
+  .calc {
+    background: #16213e;
+    border-radius: 16px;
+    padding: 24px;
+    width: 360px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+  }
+  #display {
+    width: 100%;
+    background: #0f3460;
+    border: none;
+    border-radius: 10px;
+    color: #e0e0e0;
+    font-size: 20px;
+    padding: 16px;
+    text-align: right;
+    outline: none;
+    font-family: 'Courier New', monospace;
+    margin-bottom: 4px;
+  }
+  #display::placeholder { color: #5a6a8a; }
+  #result {
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: #53d8fb;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 8px 16px;
+    text-align: right;
+    font-family: 'Courier New', monospace;
+    margin-bottom: 16px;
+    min-height: 44px;
+    cursor: pointer;
+  }
+  #result:hover { color: #7be8ff; }
+  #result.copied { color: #4ade80; }
+  .hint {
+    color: #5a6a8a;
+    font-size: 11px;
+    text-align: right;
+    padding: 0 8px 8px;
+  }
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+  button {
+    background: #1a1a40;
+    border: 1px solid #2a2a5a;
+    border-radius: 10px;
+    color: #e0e0e0;
+    font-size: 20px;
+    padding: 16px;
+    cursor: pointer;
+    transition: background 0.15s, transform 0.1s;
+  }
+  button:hover { background: #2a2a5a; }
+  button:active { transform: scale(0.95); }
+  .op { background: #0f3460; color: #53d8fb; }
+  .op:hover { background: #1a4a80; }
+  .eq { background: #e94560; color: #fff; }
+  .eq:hover { background: #ff6b81; }
+  .clear { background: #533a1e; color: #f0a040; }
+  .clear:hover { background: #6a4a2e; }
+  .wide { grid-column: span 2; }
+  .history { margin-top: 16px; max-height: 160px; overflow-y: auto; }
+  .history div {
+    color: #5a6a8a;
+    font-size: 13px;
+    font-family: 'Courier New', monospace;
+    padding: 4px 8px;
+    border-bottom: 1px solid #1a1a40;
+    cursor: pointer;
+  }
+  .history div:hover { color: #e0e0e0; }
+  .history div span { color: #53d8fb; }
+</style>
+</head>
+<body>
+<div class="calc">
+  <input id="display" type="text" placeholder="Type or paste an expression..." autofocus>
+  <div class="hint">Click result to copy</div>
+  <div id="result"></div>
+  <div class="buttons">
+    <button class="clear" onclick="clearAll()">C</button>
+    <button class="clear" onclick="backspace()">⌫</button>
+    <button class="op" onclick="ins('(')">(</button>
+    <button class="op" onclick="ins(')')">)</button>
+
+    <button onclick="ins('7')">7</button>
+    <button onclick="ins('8')">8</button>
+    <button onclick="ins('9')">9</button>
+    <button class="op" onclick="ins('/')">÷</button>
+
+    <button onclick="ins('4')">4</button>
+    <button onclick="ins('5')">5</button>
+    <button onclick="ins('6')">6</button>
+    <button class="op" onclick="ins('*')">×</button>
+
+    <button onclick="ins('1')">1</button>
+    <button onclick="ins('2')">2</button>
+    <button onclick="ins('3')">3</button>
+    <button class="op" onclick="ins('-')">−</button>
+
+    <button onclick="ins('0')">0</button>
+    <button onclick="ins('.')">.</button>
+    <button class="op" onclick="ins('^')">^</button>
+    <button class="op" onclick="ins('+')">+</button>
+
+    <button class="op" onclick="ins('sqrt(')">√</button>
+    <button class="op" onclick="ins('Math.PI')">π</button>
+    <button class="eq wide" onclick="evaluate()">=</button>
+  </div>
+  <div class="history" id="history"></div>
+</div>
+
+<script>
+const display = document.getElementById('display');
+const result = document.getElementById('result');
+const history = document.getElementById('history');
+
+function ins(ch) {
+  const s = display.selectionStart, e = display.selectionEnd;
+  const v = display.value;
+  display.value = v.slice(0, s) + ch + v.slice(e);
+  display.selectionStart = display.selectionEnd = s + ch.length;
+  display.focus();
+  liveEval();
+}
+
+function clearAll() {
+  display.value = '';
+  result.textContent = '';
+  display.focus();
+}
+
+function backspace() {
+  const s = display.selectionStart, v = display.value;
+  if (s > 0) {
+    display.value = v.slice(0, s - 1) + v.slice(s);
+    display.selectionStart = display.selectionEnd = s - 1;
+  }
+  display.focus();
+  liveEval();
+}
+
+function sanitize(expr) {
+  // Replace display symbols and common patterns
+  return expr
+    .replace(/×/g, '*')
+    .replace(/÷/g, '/')
+    .replace(/−/g, '-')
+    .replace(/π/g, 'Math.PI')
+    .replace(/\^/g, '**')
+    .replace(/sqrt\(/g, 'Math.sqrt(')
+    .replace(/abs\(/g, 'Math.abs(')
+    .replace(/sin\(/g, 'Math.sin(')
+    .replace(/cos\(/g, 'Math.cos(')
+    .replace(/tan\(/g, 'Math.tan(')
+    .replace(/log\(/g, 'Math.log10(')
+    .replace(/ln\(/g, 'Math.log(')
+    .replace(/e\b/g, 'Math.E');
+}
+
+function safeEval(expr) {
+  const sanitized = sanitize(expr);
+  // Only allow safe math characters
+  if (/[^0-9+\-*/.() ,Mathemsqrtabsincotaglop10EPIL\s]/.test(sanitized)) {
+    return null;
+  }
+  try {
+    const val = Function('"use strict"; return (' + sanitized + ')')();
+    if (typeof val === 'number' && isFinite(val)) {
+      // Round to avoid floating point noise
+      return Math.abs(val) < 1e-14 ? 0 : parseFloat(val.toPrecision(12));
+    }
+    return null;
+  } catch { return null; }
+}
+
+function liveEval() {
+  const expr = display.value.trim();
+  if (!expr) { result.textContent = ''; return; }
+  const val = safeEval(expr);
+  result.textContent = val !== null ? '= ' + val : '';
+}
+
+function evaluate() {
+  const expr = display.value.trim();
+  if (!expr) return;
+  const val = safeEval(expr);
+  if (val === null) { result.textContent = 'Error'; return; }
+  result.textContent = '= ' + val;
+  // Add to history
+  const div = document.createElement('div');
+  div.innerHTML = expr + ' <span>= ' + val + '</span>';
+  div.onclick = () => { display.value = String(val); liveEval(); display.focus(); };
+  history.prepend(div);
+  // Keep last 20
+  while (history.children.length > 20) history.lastChild.remove();
+}
+
+// Keyboard support
+display.addEventListener('input', liveEval);
+display.addEventListener('keydown', e => {
+  if (e.key === 'Enter') { e.preventDefault(); evaluate(); }
+  if (e.key === 'Escape') { clearAll(); }
+});
+
+// Click result to copy
+result.addEventListener('click', () => {
+  const text = result.textContent.replace(/^= /, '');
+  if (!text || text === 'Error') return;
+  navigator.clipboard.writeText(text).then(() => {
+    result.classList.add('copied');
+    setTimeout(() => result.classList.remove('copied'), 600);
+  });
+});
+</script>
+</body>
+</html>
