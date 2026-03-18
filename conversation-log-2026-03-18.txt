@@ -1,0 +1,12 @@
+Conversation Log — 2026-03-18
+==============================
+
+Q: What's the master?
+A: The "master" side is the program driving the terminal — your terminal emulator
+   app (Terminal.app, iTerm2, etc.). The "slave" side is what your shell (bash/zsh)
+   talks to, as if it were a real terminal. They work as a pair — a two-way pipe
+   that pretends to be a physical terminal. The master/slave naming is historical
+   Unix terminology (some newer systems use "primary/secondary" instead).
+
+Q: Do you recognize this number? 3.428571428?
+A: That's 24/7 — the repeating decimal 3.428571̄ (where 428571 repeats forever).
