@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Penrose Rose — ω on the Decagon</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;600&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0a0a0f;
+    color: #e8e8e8;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 16px;
+  }
+  h1 {
+    font-size: 22px; font-weight: 600; letter-spacing: 2px;
+    background: linear-gradient(135deg, #f59e0b, #06b6d4);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    margin-bottom: 2px;
+  }
+  .sub { color: #777; font-style: italic; font-size: 13px; margin-bottom: 12px; }
+  canvas { border-radius: 4px; display: block; }
+  .controls {
+    margin-top: 12px;
+    display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; align-items: center;
+  }
+  .control { display: flex; align-items: center; gap: 6px; }
+  .control label { font-size: 12px; color: #aaa; font-family: 'JetBrains Mono', monospace; }
+  .control input[type="range"] { width: 120px; accent-color: #f59e0b; }
+  .val { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #06b6d4; min-width: 32px; }
+  .btn {
+    padding: 4px 12px; background: rgba(245,158,11,0.12); border: 1px solid rgba(245,158,11,0.25);
+    color: #f59e0b; border-radius: 3px; cursor: pointer; font: 11px 'JetBrains Mono', monospace;
+    transition: all 0.2s;
+  }
+  .btn:hover { background: rgba(245,158,11,0.22); }
+  .btn.active { background: rgba(245,158,11,0.3); border-color: #f59e0b; }
+  .note {
+    max-width: 640px; text-align: center; margin-top: 14px;
+    font-size: 14px; line-height: 1.7; color: #999;
+  }
+  .note strong { color: #f59e0b; }
+  .note em { color: #06b6d4; }
+</style>
+</head>
+<body>
+
+<h1>PENROSE ROSE</h1>
+<div class="sub">ω on the decagon — the unsmoothed structure without π</div>
+
+<canvas id="c" width="720" height="720"></canvas>
+
+<div class="controls">
+  <div class="control">
+    <label>petals k:</label>
+    <input type="range" id="kRange" min="1" max="12" step="0.5" value="5" oninput="draw()">
+    <span class="val" id="kVal">5</span>
+  </div>
+  <div class="control">
+    <label>σ smooth:</label>
+    <input type="range" id="sigRange" min="0" max="60" step="1" value="0" oninput="draw()">
+    <span class="val" id="sigVal">0</span>
+  </div>
+  <div class="control">
+    <label>tiling:</label>
+    <input type="range" id="tileAlpha" min="0" max="100" step="5" value="60" oninput="draw()">
+    <span class="val" id="tileVal">60</span>
+  </div>
+  <div class="control">
+    <label>blend:</label>
+    <input type="range" id="blendRange" min="0" max="100" step="1" value="50" oninput="draw()">
+    <span class="val" id="blendVal">50</span>
+  </div>
+  <div class="control">
+    <button class="btn" onclick="setPreset(5, 0)">5-petal unsmoothed</button>
+    <button class="btn" onclick="setPreset(5, 30)">5-petal smoothed</button>
+    <button class="btn" onclick="setPreset(2.5, 0)">5/2 rose</button>
+    <button class="btn" onclick="setPreset(5, 60)">full erasure</button>
+  </div>
+</div>
+
+<div class="note" id="noteText"></div>
+
+<script>
+const PHI = (1 + Math.sqrt(5)) / 2;
+const canvas = document.getElementById('c');
+const ctx = canvas.getContext('2d');
+const W = canvas.width, H = canvas.height;
+const cx = W/2, cy = H/2;
+
+// ─── Generate Penrose vertices (simplified browser version) ───
+function generatePenroseVertices() {
+  const norm = Math.sqrt(2/5);
+  const P = [];
+  for (let k = 0; k < 5; k++) {
+    P.push([norm * Math.cos(2*Math.PI*k/5), norm * Math.sin(2*Math.PI*k/5)]);
+  }
+
+  const N = 6;
+  const verts = [];
+  const seen = new Set();
+
+  // Perp-space projection
+  const Pp = [];
+  for (let k = 0; k < 5; k++) {
+    Pp.push([norm * Math.cos(4*Math.PI*k/5), norm * Math.sin(4*Math.PI*k/5)]);
+  }
+
+  function inDecagon(qx, qy) {
+    for (let k = 0; k < 5; k++) {
+      const a = Math.PI * (2*k+1) / 10;
+      if (Math.abs(qx*Math.cos(a) + qy*Math.sin(a)) >= 1.0) return false;
+    }
+    return true;
+  }
+
+  for (let a = -N; a <= N; a++)
+  for (let b = -N; b <= N; b++)
+  for (let c = -N; c <= N; c++)
+  for (let d = -N; d <= N; d++)
+  for (let e = -N; e <= N; e++) {
+    let px=0, py=0, qx=0, qy=0;
+    const n = [a,b,c,d,e];
+    for (let k = 0; k < 5; k++) {
+      px += P[k][0]*n[k]; py += P[k][1]*n[k];
+      qx += Pp[k][0]*n[k]; qy += Pp[k][1]*n[k];
+    }
+    if (inDecagon(qx, qy)) {
+      const key = Math.round(px*1e5) + ',' + Math.round(py*1e5);
+      if (!seen.has(key)) {
+        seen.add(key);
+        verts.push({x: px, y: py, r: Math.sqrt(px*px+py*py)});
+      }
+    }
+  }
+  return verts.filter(v => v.r > 0.01).sort((a,b) => a.r - b.r);
+}
+
+// ─── Ratio data (from computation) ───
+// One period (36°) of the direction-dependent ratio, high res
+const PERIOD = [
+  0.61761, 0.61762, 0.61763, 0.61763, 0.61762, 0.60825, 0.55977, 0.52534,
+  0.52128, 0.52244, 0.52245, 0.52246, 0.52246, 0.52242, 0.52246, 0.52246,
+  0.52246, 0.52246, 0.52242, 0.52246, 0.52246, 0.52246, 0.52246, 0.52242,
+  0.52245, 0.52244, 0.52128, 0.52534, 0.55977, 0.60825, 0.61762, 0.61763,
+  0.61763, 0.61763, 0.61762, 0.61761,
+];
+
+function getRatio(deg) {
+  const d = ((deg % 360) + 360) % 360;
+  const period = d % 36;
+  return PERIOD[Math.round(period)] || PERIOD[0];
+}
+
+function gaussSmooth(getData, sigma) {
+  if (sigma < 1) return getData;
+  return function(deg) {
+    const k = Math.ceil(sigma * 3);
+    let sum = 0, wsum = 0;
+    for (let j = -k; j <= k; j++) {
+      const w = Math.exp(-0.5*(j/sigma)*(j/sigma));
+      sum += getData(deg + j) * w;
+      wsum += w;
+    }
+    return sum / wsum;
+  };
+}
+
+let penroseVerts = null;
+
+function draw() {
+  const k = parseFloat(document.getElementById('kRange').value);
+  const sigma = parseInt(document.getElementById('sigRange').value);
+  const tileAlpha = parseInt(document.getElementById('tileAlpha').value) / 100;
+  const blend = parseInt(document.getElementById('blendRange').value) / 100;
+
+  document.getElementById('kVal').textContent = k;
+  document.getElementById('sigVal').textContent = sigma;
+  document.getElementById('tileVal').textContent = Math.round(tileAlpha * 100);
+  document.getElementById('blendVal').textContent = Math.round(blend * 100);
+
+  ctx.fillStyle = '#0a0a0f';
+  ctx.fillRect(0, 0, W, H);
+
+  const maxR = 280;
+
+  // ─── Penrose tiling vertices ───
+  if (penroseVerts && tileAlpha > 0) {
+    const scale = maxR / 8;
+    for (const v of penroseVerts) {
+      const sx = cx + v.x * scale;
+      const sy = cy - v.y * scale;
+      if (sx < 0 || sx > W || sy < 0 || sy > H) continue;
+
+      // Color by angle to show 5-fold
+      const angle = Math.atan2(v.y, v.x);
+      const hue = ((angle / Math.PI + 1) * 180) % 360;
+      const alpha = tileAlpha * Math.max(0, 1 - v.r / 9) * 0.5;
+      ctx.fillStyle = `hsla(${hue}, 40%, 50%, ${alpha})`;
+      ctx.beginPath();
+      ctx.arc(sx, sy, 1.5, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    // Draw edges (connect nearest neighbors)
+    if (tileAlpha > 0.3) {
+      const edgeAlpha = tileAlpha * 0.15;
+      ctx.strokeStyle = `rgba(255,255,255,${edgeAlpha})`;
+      ctx.lineWidth = 0.5;
+      // Only draw edges for vertices within visible range
+      const nearby = penroseVerts.filter(v => v.r < 8);
+      for (let i = 0; i < nearby.length; i++) {
+        for (let j = i+1; j < nearby.length; j++) {
+          const dx = nearby[i].x - nearby[j].x;
+          const dy = nearby[i].y - nearby[j].y;
+          const d = Math.sqrt(dx*dx + dy*dy);
+          // Penrose edge lengths: ~0.39 and ~0.63 (ratio φ)
+          if (d < 0.7 && d > 0.1) {
+            const x1 = cx + nearby[i].x * scale;
+            const y1 = cy - nearby[i].y * scale;
+            const x2 = cx + nearby[j].x * scale;
+            const y2 = cy - nearby[j].y * scale;
+            ctx.beginPath();
+            ctx.moveTo(x1, y1);
+            ctx.lineTo(x2, y2);
+            ctx.stroke();
+          }
+        }
+      }
+    }
+  }
+
+  // ─── Smoothed ratio function ───
+  const getSmoothed = gaussSmooth(getRatio, sigma);
+
+  // ─── Rose curve: r = |cos(kθ)| ───
+  // Blend between pure rose and actual ratio data
+  function getR(deg) {
+    const rad = deg * Math.PI / 180;
+    const rose = Math.abs(Math.cos(k * rad));
+    const data = (getSmoothed(deg) - 0.45) / 0.20; // normalize to 0-1ish
+    const val = rose * (1 - blend) + data * blend;
+    return Math.max(0, val) * maxR;
+  }
+
+  // ─── Draw the rose/ratio hybrid ───
+  // Filled shape
+  ctx.beginPath();
+  for (let deg = 0; deg <= 360; deg += 0.5) {
+    const r = getR(deg);
+    const rad = deg * Math.PI / 180 - Math.PI/2;
+    const x = cx + r * Math.cos(rad);
+    const y = cy + r * Math.sin(rad);
+    if (deg === 0) ctx.moveTo(x, y);
+    else ctx.lineTo(x, y);
+  }
+  ctx.closePath();
+  ctx.fillStyle = 'rgba(245, 158, 11, 0.06)';
+  ctx.fill();
+
+  // Outline
+  ctx.beginPath();
+  for (let deg = 0; deg <= 360; deg += 0.5) {
+    const r = getR(deg);
+    const rad = deg * Math.PI / 180 - Math.PI/2;
+    const x = cx + r * Math.cos(rad);
+    const y = cy + r * Math.sin(rad);
+    if (deg === 0) ctx.moveTo(x, y);
+    else ctx.lineTo(x, y);
+  }
+  ctx.closePath();
+
+  // Gradient stroke
+  const grad = ctx.createLinearGradient(cx - maxR, cy, cx + maxR, cy);
+  grad.addColorStop(0, '#f59e0b');
+  grad.addColorStop(0.5, '#06b6d4');
+  grad.addColorStop(1, '#f59e0b');
+  ctx.strokeStyle = grad;
+  ctx.lineWidth = 2;
+  ctx.stroke();
+
+  // ─── Petal tip markers ───
+  const nPetals = k % 1 === 0 ? k * 2 : Math.round(k * 2);
+  for (let i = 0; i < nPetals; i++) {
+    const deg = i * 360 / nPetals;
+    if (Math.abs(Math.cos(k * deg * Math.PI / 180)) > 0.95) {
+      const r = getR(deg);
+      const rad = deg * Math.PI / 180 - Math.PI/2;
+      const x = cx + r * Math.cos(rad);
+      const y = cy + r * Math.sin(rad);
+      ctx.fillStyle = 'rgba(245, 158, 11, 0.6)';
+      ctx.beginPath();
+      ctx.arc(x, y, 3, 0, Math.PI * 2);
+      ctx.fill();
+    }
+  }
+
+  // ─── Decagonal axes (every 36°) ───
+  ctx.strokeStyle = 'rgba(168, 85, 247, 0.12)';
+  ctx.lineWidth = 0.5;
+  for (let i = 0; i < 10; i++) {
+    const rad = i * 36 * Math.PI / 180 - Math.PI/2;
+    ctx.beginPath();
+    ctx.moveTo(cx, cy);
+    ctx.lineTo(cx + maxR * 1.05 * Math.cos(rad), cy + maxR * 1.05 * Math.sin(rad));
+    ctx.stroke();
+  }
+
+  // ─── ω marker (single point, not a pair) ───
+  // ω is the generator — mark where it would sit if projected
+  // At the 4-cycle position: phase = -π/4 = 315° = between 288° and 324° axes
+  const omegaDeg = 315;
+  const omegaR = getR(omegaDeg);
+  const omegaRad = omegaDeg * Math.PI / 180 - Math.PI / 2;
+  const ox = cx + omegaR * Math.cos(omegaRad);
+  const oy = cy + omegaR * Math.sin(omegaRad);
+
+  ctx.fillStyle = '#f472b6';
+  ctx.beginPath();
+  ctx.arc(ox, oy, 5, 0, Math.PI * 2);
+  ctx.fill();
+  ctx.strokeStyle = 'rgba(244, 114, 182, 0.3)';
+  ctx.lineWidth = 1;
+  ctx.setLineDash([3, 5]);
+  ctx.beginPath();
+  ctx.moveTo(cx, cy);
+  ctx.lineTo(cx + maxR * 1.08 * Math.cos(omegaRad), cy + maxR * 1.08 * Math.sin(omegaRad));
+  ctx.stroke();
+  ctx.setLineDash([]);
+
+  ctx.fillStyle = '#f472b6';
+  ctx.font = '16px Cormorant Garamond';
+  ctx.textAlign = 'center';
+  const lx = cx + (maxR + 20) * Math.cos(omegaRad);
+  const ly = cy + (maxR + 20) * Math.sin(omegaRad);
+  ctx.fillText('ω', lx, ly + 5);
+  ctx.textAlign = 'start';
+
+  // ─── 1/φ reference circle ───
+  const phiR = ((1/PHI - 0.45) / 0.20) * maxR * blend + Math.abs(Math.cos(0)) * maxR * (1-blend);
+  // Simpler: just draw at a meaningful radius
+  const refR = maxR * 0.85;
+  ctx.strokeStyle = 'rgba(6, 182, 212, 0.15)';
+  ctx.lineWidth = 1;
+  ctx.setLineDash([4, 6]);
+  ctx.beginPath();
+  ctx.arc(cx, cy, refR, 0, Math.PI * 2);
+  ctx.stroke();
+  ctx.setLineDash([]);
+  ctx.fillStyle = 'rgba(6, 182, 212, 0.4)';
+  ctx.font = '11px JetBrains Mono';
+  ctx.fillText('1/φ', cx + refR + 4, cy - 2);
+
+  // ─── Center: the hole ───
+  // The node collapse — draw the void
+  const holeR = 12;
+  const holeGrad = ctx.createRadialGradient(cx, cy, 0, cx, cy, holeR * 3);
+  holeGrad.addColorStop(0, 'rgba(244, 114, 182, 0.12)');
+  holeGrad.addColorStop(0.5, 'rgba(244, 114, 182, 0.04)');
+  holeGrad.addColorStop(1, 'rgba(244, 114, 182, 0)');
+  ctx.fillStyle = holeGrad;
+  ctx.beginPath();
+  ctx.arc(cx, cy, holeR * 3, 0, Math.PI * 2);
+  ctx.fill();
+
+  ctx.strokeStyle = 'rgba(244, 114, 182, 0.3)';
+  ctx.lineWidth = 1;
+  ctx.beginPath();
+  ctx.arc(cx, cy, holeR, 0, Math.PI * 2);
+  ctx.stroke();
+
+  ctx.fillStyle = 'rgba(244, 114, 182, 0.5)';
+  ctx.font = '11px JetBrains Mono';
+  ctx.textAlign = 'center';
+  ctx.fillText('0', cx, cy + 4);
+  ctx.textAlign = 'start';
+
+  // ─── Labels for 4-cycle positions ───
+  // 0 (center), -1 (180°/left), ω (315°), 1 (0°/right)
+  const fourCycle = [
+    { label: '1', deg: 0, color: '#06b6d4' },
+    { label: '−1', deg: 180, color: '#a855f7' },
+  ];
+  for (const pt of fourCycle) {
+    const r = getR(pt.deg) + 16;
+    const rad = pt.deg * Math.PI / 180 - Math.PI / 2;
+    const x = cx + r * Math.cos(rad);
+    const y = cy + r * Math.sin(rad);
+    ctx.fillStyle = pt.color;
+    ctx.font = '14px Cormorant Garamond';
+    ctx.textAlign = 'center';
+    ctx.fillText(pt.label, x, y + 5);
+  }
+  ctx.textAlign = 'start';
+
+  // Update note
+  const erasure = sigma > 0 ? Math.min(100, sigma * 100 / 60) : 0;
+  document.getElementById('noteText').innerHTML =
+    blend > 0.7
+      ? `<strong>Data mode:</strong> the shape is the actual Penrose ratio data. ` +
+        `10 peaks at <em>1/φ</em> along the self-similar axes. ` +
+        `ω sits in the valley — not because it's suppressed, but because <strong>ω generates the peaks, not the circle</strong>. ` +
+        `The circle is what you get after ω has been smoothed away.`
+      : blend < 0.3
+        ? `<strong>Rose mode:</strong> r = |cos(${k}θ)| — the pure ${k}-petal rose. ` +
+          `A rose curve is what a circle looks like when you let it have structure. ` +
+          `k = 5 gives 10 petals — the decagonal truth.`
+        : `<strong>Blended:</strong> ${Math.round(blend*100)}% data, ${Math.round((1-blend)*100)}% rose. ` +
+          `The mathematical rose curve and the computed Penrose ratio align on the same 10-fold skeleton.`;
+}
+
+function setPreset(k, sig) {
+  document.getElementById('kRange').value = k;
+  document.getElementById('sigRange').value = sig;
+  draw();
+}
+
+// Generate vertices on load
+penroseVerts = generatePenroseVertices();
+draw();
+</script>
+</body>
+</html>

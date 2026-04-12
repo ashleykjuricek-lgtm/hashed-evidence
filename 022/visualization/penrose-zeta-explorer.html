@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Penrose Lattice Zeta Explorer — Unsmoothed Zero</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;600&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #0a0a0f;
+    color: #e8e8e8;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  .header {
+    text-align: center;
+    padding: 24px 20px 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .header h1 {
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    background: linear-gradient(135deg, #f59e0b, #06b6d4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .header .subtitle {
+    font-size: 14px;
+    color: #888;
+    font-style: italic;
+    margin-top: 4px;
+  }
+
+  .main {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 0;
+    height: calc(100vh - 90px);
+  }
+
+  .canvas-area {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    gap: 8px;
+  }
+
+  canvas {
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 4px;
+  }
+
+  .ratio-display {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: rgba(10,10,15,0.92);
+    border: 1px solid rgba(245,158,11,0.3);
+    border-radius: 8px;
+    padding: 14px 18px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    line-height: 1.6;
+    z-index: 10;
+  }
+  .ratio-display .label { color: #888; font-size: 11px; }
+  .ratio-display .value { color: #f59e0b; font-weight: 600; }
+  .ratio-display .target { color: #06b6d4; }
+  .ratio-display .delta { color: #f472b6; font-size: 11px; }
+
+  .sidebar {
+    border-left: 1px solid rgba(255,255,255,0.06);
+    padding: 16px;
+    overflow-y: auto;
+    background: rgba(255,255,255,0.015);
+  }
+
+  .section {
+    margin-bottom: 20px;
+  }
+  .section h3 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #f59e0b;
+    margin-bottom: 10px;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 600;
+  }
+
+  .control {
+    margin-bottom: 14px;
+  }
+  .control label {
+    display: block;
+    font-size: 13px;
+    color: #aaa;
+    margin-bottom: 4px;
+  }
+  .control input[type="range"] {
+    width: 100%;
+    accent-color: #f59e0b;
+    cursor: pointer;
+  }
+  .control .val {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: #06b6d4;
+    float: right;
+  }
+
+  .info-box {
+    background: rgba(6,182,212,0.08);
+    border: 1px solid rgba(6,182,212,0.2);
+    border-radius: 6px;
+    padding: 10px 12px;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #ccc;
+  }
+  .info-box strong { color: #f59e0b; }
+  .info-box code {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: #06b6d4;
+    background: rgba(0,0,0,0.3);
+    padding: 1px 4px;
+    border-radius: 2px;
+  }
+
+  .chart-area {
+    width: 100%;
+    height: 180px;
+    position: relative;
+    margin-top: 6px;
+  }
+
+  .findings {
+    background: rgba(244,114,182,0.06);
+    border: 1px solid rgba(244,114,182,0.2);
+    border-radius: 6px;
+    padding: 10px 12px;
+    font-size: 12px;
+    line-height: 1.6;
+    color: #ccc;
+  }
+  .findings h4 { color: #f472b6; font-size: 12px; margin-bottom: 6px; font-family: 'JetBrains Mono', monospace; }
+
+  .btn {
+    display: inline-block;
+    padding: 6px 14px;
+    background: rgba(245,158,11,0.15);
+    border: 1px solid rgba(245,158,11,0.3);
+    color: #f59e0b;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    transition: all 0.2s;
+    margin-right: 6px;
+    margin-bottom: 6px;
+  }
+  .btn:hover {
+    background: rgba(245,158,11,0.25);
+    border-color: rgba(245,158,11,0.5);
+  }
+  .btn.active {
+    background: rgba(245,158,11,0.35);
+    border-color: #f59e0b;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>PENROSE LATTICE ZETA EXPLORER</h1>
+  <div class="subtitle">Quasiperiodic analog of Epstein zeta on T³ — Cut-and-project from Z⁵→R²</div>
+</div>
+
+<div class="main">
+  <div class="canvas-area">
+    <canvas id="lattice" width="640" height="640"></canvas>
+    <div class="ratio-display" id="ratioDisplay"></div>
+    <div class="chart-area">
+      <canvas id="chart" width="640" height="170"></canvas>
+    </div>
+  </div>
+
+  <div class="sidebar">
+    <div class="section">
+      <h3>Lattice</h3>
+      <div class="control">
+        <label>Search range N <span class="val" id="nVal">6</span></label>
+        <input type="range" id="nRange" min="3" max="8" step="1" value="6"
+               oninput="document.getElementById('nVal').textContent=this.value; scheduleRecompute()">
+      </div>
+      <div class="control">
+        <label>Window radius <span class="val" id="wVal">1.00</span></label>
+        <input type="range" id="wRange" min="0.5" max="1.5" step="0.05" value="1.0"
+               oninput="document.getElementById('wVal').textContent=parseFloat(this.value).toFixed(2); scheduleRecompute()">
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>Phason Shift</h3>
+      <div class="control">
+        <label>Magnitude (×1/φ²) <span class="val" id="shiftVal">1.00</span></label>
+        <input type="range" id="shiftRange" min="0" max="3" step="0.05" value="1.0"
+               oninput="document.getElementById('shiftVal').textContent=parseFloat(this.value).toFixed(2); scheduleRecompute()">
+      </div>
+      <div class="control">
+        <label>Direction (°) <span class="val" id="dirVal">0</span></label>
+        <input type="range" id="dirRange" min="0" max="360" step="5" value="0"
+               oninput="document.getElementById('dirVal').textContent=this.value; scheduleRecompute()">
+      </div>
+      <div style="margin-top:8px">
+        <button class="btn" onclick="setShift(1.0, 0)">φ² vertex</button>
+        <button class="btn" onclick="setShift(1.618, 18)">φ edge</button>
+        <button class="btn" onclick="setShift(2.618, 0)">max vertex</button>
+        <button class="btn" onclick="setShift(0, 0)">no shift</button>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>Zeta Exponent</h3>
+      <div class="control">
+        <label>s <span class="val" id="sVal">2.00</span></label>
+        <input type="range" id="sRange" min="0.5" max="5" step="0.05" value="2.0"
+               oninput="document.getElementById('sVal').textContent=parseFloat(this.value).toFixed(2); recomputeZeta()">
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>Display</h3>
+      <div class="control">
+        <label>Color by</label>
+        <div style="margin-top:4px">
+          <button class="btn active" id="colorShell" onclick="setColorMode('shell')">Shell</button>
+          <button class="btn" id="colorPerp" onclick="setColorMode('perp')">Perp-space</button>
+          <button class="btn" id="colorDiff" onclick="setColorMode('diff')">Difference</button>
+        </div>
+      </div>
+      <div class="control">
+        <label>Zoom <span class="val" id="zoomVal">1.0</span></label>
+        <input type="range" id="zoomRange" min="0.3" max="3" step="0.1" value="1.0"
+               oninput="document.getElementById('zoomVal').textContent=parseFloat(this.value).toFixed(1); draw()">
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="info-box">
+        <strong>Periodic (T³):</strong> APP/PPP = <code>1/24 ≈ 0.04167</code><br>
+        <strong>Quasiperiodic:</strong> crosses <code>1/φ ≈ 0.61803</code> at <code>s ≈ 2.0</code><br><br>
+        The phason shift breaks 10-fold shell multiplicity → 5, giving the quasiperiodic lattice its golden ratio signature.
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="findings">
+        <h4>KEY FINDINGS</h4>
+        • Density scales as φ² under deflation<br>
+        • φ²-vertex phason → ratio = 1/φ at s ≈ 2<br>
+        • Edge phason → ratio = 2/5 as s → ∞<br>
+        • ratio × φ × 24 ≈ 24 (periodic ↔ quasiperiodic duality)<br>
+        • 24 = S₄ denominator, φ = A₅ denominator
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ═══════════════════════════════════════════════════════════════
+// PENROSE LATTICE ZETA COMPUTATION — Browser implementation
+// ═══════════════════════════════════════════════════════════════
+
+const PHI = (1 + Math.sqrt(5)) / 2;
+
+// ─── Projection matrices ───
+function buildProjectionMatrices() {
+  const norm = Math.sqrt(2/5);
+  const P_par = [], P_perp = [];
+  for (let k = 0; k < 5; k++) {
+    const a_par = 2 * Math.PI * k / 5;
+    const a_perp = 4 * Math.PI * k / 5;
+    P_par.push([norm * Math.cos(a_par), norm * Math.sin(a_par)]);
+    P_perp.push([norm * Math.cos(a_perp), norm * Math.sin(a_perp)]);
+  }
+  return { P_par, P_perp };
+}
+
+const { P_par, P_perp } = buildProjectionMatrices();
+
+// ─── Project Z^5 point to parallel and perp space ───
+function project(n) {
+  let px = 0, py = 0, qx = 0, qy = 0;
+  for (let k = 0; k < 5; k++) {
+    px += P_par[k][0] * n[k];
+    py += P_par[k][1] * n[k];
+    qx += P_perp[k][0] * n[k];
+    qy += P_perp[k][1] * n[k];
+  }
+  return { px, py, qx, qy };
+}
+
+// ─── Decagonal acceptance test ───
+function inDecagon(qx, qy, radius, cx, cy) {
+  const dx = qx - cx, dy = qy - cy;
+  for (let k = 0; k < 5; k++) {
+    const angle = Math.PI * (2*k + 1) / 10;
+    const proj = Math.abs(dx * Math.cos(angle) + dy * Math.sin(angle));
+    if (proj >= radius) return false;
+  }
+  return true;
+}
+
+// ─── Generate Penrose vertices ───
+function generatePenrose(N, windowRadius, shiftX, shiftY) {
+  const verts = [];
+  const seen = new Set();
+  const tol = 1e-6;
+
+  // Iterate Z^5
+  for (let a = -N; a <= N; a++)
+  for (let b = -N; b <= N; b++)
+  for (let c = -N; c <= N; c++)
+  for (let d = -N; d <= N; d++)
+  for (let e = -N; e <= N; e++) {
+    const { px, py, qx, qy } = project([a,b,c,d,e]);
+    if (inDecagon(qx, qy, windowRadius, shiftX, shiftY)) {
+      // Dedup
+      const key = Math.round(px/tol) + ',' + Math.round(py/tol);
+      if (!seen.has(key)) {
+        seen.add(key);
+        verts.push({ x: px, y: py, qx, qy, r2: px*px + py*py });
+      }
+    }
+  }
+
+  verts.sort((a, b) => a.r2 - b.r2);
+  return verts;
+}
+
+// ─── Lattice zeta ───
+function latticeZeta(verts, s) {
+  let sum = 0;
+  for (const v of verts) {
+    if (v.r2 > 1e-12) {
+      sum += Math.pow(v.r2, -s);
+    }
+  }
+  return sum;
+}
+
+// ─── State ───
+let baseVerts = [];
+let shiftedVerts = [];
+let colorMode = 'shell';
+let recomputeTimer = null;
+
+function scheduleRecompute() {
+  if (recomputeTimer) clearTimeout(recomputeTimer);
+  recomputeTimer = setTimeout(recompute, 100);
+}
+
+function recompute() {
+  const N = parseInt(document.getElementById('nRange').value);
+  const W = parseFloat(document.getElementById('wRange').value);
+  const shiftMag = parseFloat(document.getElementById('shiftRange').value) * W / (PHI * PHI);
+  const shiftDir = parseFloat(document.getElementById('dirRange').value) * Math.PI / 180;
+  const sx = shiftMag * Math.cos(shiftDir);
+  const sy = shiftMag * Math.sin(shiftDir);
+
+  baseVerts = generatePenrose(N, W, 0, 0);
+  shiftedVerts = generatePenrose(N, W, sx, sy);
+
+  recomputeZeta();
+}
+
+function recomputeZeta() {
+  const s = parseFloat(document.getElementById('sRange').value);
+
+  const zBase = latticeZeta(baseVerts, s);
+  const zShifted = latticeZeta(shiftedVerts, s);
+  const ratio = zShifted / zBase;
+
+  updateRatioDisplay(s, zBase, zShifted, ratio);
+  drawChart(s);
+  draw();
+}
+
+function updateRatioDisplay(s, zBase, zShifted, ratio) {
+  const target_phi = 1/PHI;
+  const target_24 = 1/24;
+  const delta_phi = ratio - target_phi;
+  const delta_24 = ratio - target_24;
+
+  document.getElementById('ratioDisplay').innerHTML = `
+    <div class="label">LATTICE ZETA RATIO (shifted/base)</div>
+    <div style="margin-top:6px">
+      <span class="label">s = </span><span class="value">${s.toFixed(2)}</span>
+    </div>
+    <div>
+      <span class="label">Z_base = </span><span class="value">${zBase.toFixed(4)}</span>
+    </div>
+    <div>
+      <span class="label">Z_shifted = </span><span class="value">${zShifted.toFixed(4)}</span>
+    </div>
+    <div style="margin-top:6px; font-size:16px">
+      <span class="label">ratio = </span><span class="value" style="font-size:18px">${ratio.toFixed(8)}</span>
+    </div>
+    <div style="margin-top:4px">
+      <span class="target">1/φ = ${target_phi.toFixed(8)}</span>
+      <span class="delta"> Δ = ${delta_phi >= 0 ? '+' : ''}${delta_phi.toFixed(8)}</span>
+    </div>
+    <div>
+      <span class="target">1/24 = ${target_24.toFixed(8)}</span>
+      <span class="delta"> Δ = ${delta_24 >= 0 ? '+' : ''}${delta_24.toFixed(8)}</span>
+    </div>
+    <div style="margin-top:6px; font-size:11px; color:#888">
+      ${baseVerts.length} base · ${shiftedVerts.length} shifted vertices
+    </div>
+  `;
+}
+
+// ─── Drawing ───
+function draw() {
+  const canvas = document.getElementById('lattice');
+  const ctx = canvas.getContext('2d');
+  const W = canvas.width, H = canvas.height;
+  const zoom = parseFloat(document.getElementById('zoomRange').value);
+
+  ctx.fillStyle = '#0a0a0f';
+  ctx.fillRect(0, 0, W, H);
+
+  if (baseVerts.length === 0) return;
+
+  // Find max radius for scaling
+  const maxR = Math.sqrt(baseVerts[baseVerts.length - 1].r2);
+  const scale = (W/2 - 20) / maxR * zoom;
+
+  const cx = W/2, cy = H/2;
+
+  // Find shell boundaries for coloring
+  const shells = [];
+  let currentR2 = -1;
+  for (const v of baseVerts) {
+    if (v.r2 > 1e-12 && Math.abs(v.r2 - currentR2) > 1e-6) {
+      currentR2 = v.r2;
+      shells.push(currentR2);
+    }
+  }
+
+  // Draw base vertices
+  for (const v of baseVerts) {
+    if (v.r2 < 1e-12) continue;
+    const sx = cx + v.x * scale;
+    const sy = cy - v.y * scale;
+    if (sx < -10 || sx > W+10 || sy < -10 || sy > H+10) continue;
+
+    let color;
+    if (colorMode === 'shell') {
+      const shellIdx = shells.findIndex(s => Math.abs(s - v.r2) < 1e-6);
+      const hue = (shellIdx * 37) % 360;
+      color = `hsla(${hue}, 60%, 55%, 0.7)`;
+    } else if (colorMode === 'perp') {
+      const angle = Math.atan2(v.qy, v.qx);
+      const hue = ((angle / Math.PI + 1) * 180) % 360;
+      const dist = Math.sqrt(v.qx*v.qx + v.qy*v.qy);
+      color = `hsla(${hue}, 70%, ${40 + dist*30}%, 0.8)`;
+    } else {
+      color = 'rgba(100,100,100,0.4)';
+    }
+
+    ctx.fillStyle = color;
+    ctx.beginPath();
+    ctx.arc(sx, sy, 2.5, 0, Math.PI*2);
+    ctx.fill();
+  }
+
+  // Draw shifted vertices on top (if in diff mode)
+  if (colorMode === 'diff') {
+    // Build set of base vertex keys
+    const baseSet = new Set();
+    for (const v of baseVerts) {
+      baseSet.add(Math.round(v.x*1e5) + ',' + Math.round(v.y*1e5));
+    }
+
+    for (const v of shiftedVerts) {
+      if (v.r2 < 1e-12) continue;
+      const sx = cx + v.x * scale;
+      const sy = cy - v.y * scale;
+      if (sx < -10 || sx > W+10 || sy < -10 || sy > H+10) continue;
+
+      const key = Math.round(v.x*1e5) + ',' + Math.round(v.y*1e5);
+      const isShared = baseSet.has(key);
+
+      ctx.fillStyle = isShared ? 'rgba(6,182,212,0.5)' : 'rgba(245,158,11,0.9)';
+      ctx.beginPath();
+      ctx.arc(sx, sy, isShared ? 2 : 3.5, 0, Math.PI*2);
+      ctx.fill();
+    }
+  }
+
+  // Draw origin marker
+  ctx.strokeStyle = 'rgba(244,114,182,0.5)';
+  ctx.lineWidth = 1;
+  ctx.beginPath();
+  ctx.arc(cx, cy, 4, 0, Math.PI*2);
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.moveTo(cx-6, cy); ctx.lineTo(cx+6, cy);
+  ctx.moveTo(cx, cy-6); ctx.lineTo(cx, cy+6);
+  ctx.stroke();
+
+  // Draw 5-fold symmetry axes (faint)
+  ctx.strokeStyle = 'rgba(255,255,255,0.04)';
+  ctx.lineWidth = 0.5;
+  for (let k = 0; k < 5; k++) {
+    const angle = 2 * Math.PI * k / 5;
+    ctx.beginPath();
+    ctx.moveTo(cx, cy);
+    ctx.lineTo(cx + Math.cos(angle) * W/2, cy - Math.sin(angle) * H/2);
+    ctx.stroke();
+  }
+}
+
+// ─── s-dependence chart ───
+function drawChart(currentS) {
+  const canvas = document.getElementById('chart');
+  const ctx = canvas.getContext('2d');
+  const W = canvas.width, H = canvas.height;
+
+  ctx.fillStyle = '#0a0a0f';
+  ctx.fillRect(0, 0, W, H);
+
+  // Compute ratios for s from 0.5 to 5
+  const sMin = 0.5, sMax = 5.0;
+  const nPoints = 60;
+  const ratios = [];
+
+  for (let i = 0; i < nPoints; i++) {
+    const s = sMin + (sMax - sMin) * i / (nPoints - 1);
+    const zb = latticeZeta(baseVerts, s);
+    const zs = latticeZeta(shiftedVerts, s);
+    ratios.push({ s, ratio: zs / zb });
+  }
+
+  // Axis bounds
+  const rMin = 0, rMax = 1.5;
+  const pad = { l: 50, r: 20, t: 10, b: 30 };
+  const plotW = W - pad.l - pad.r;
+  const plotH = H - pad.t - pad.b;
+
+  function toX(s) { return pad.l + (s - sMin) / (sMax - sMin) * plotW; }
+  function toY(r) { return pad.t + (1 - (r - rMin) / (rMax - rMin)) * plotH; }
+
+  // Grid
+  ctx.strokeStyle = 'rgba(255,255,255,0.06)';
+  ctx.lineWidth = 0.5;
+  for (const r of [0.25, 0.5, 0.75, 1.0, 1.25]) {
+    const y = toY(r);
+    ctx.beginPath(); ctx.moveTo(pad.l, y); ctx.lineTo(W-pad.r, y); ctx.stroke();
+  }
+
+  // 1/φ line
+  const y_phi = toY(1/PHI);
+  ctx.strokeStyle = 'rgba(6,182,212,0.5)';
+  ctx.setLineDash([4,4]);
+  ctx.beginPath(); ctx.moveTo(pad.l, y_phi); ctx.lineTo(W-pad.r, y_phi); ctx.stroke();
+  ctx.setLineDash([]);
+  ctx.fillStyle = '#06b6d4';
+  ctx.font = '11px JetBrains Mono';
+  ctx.fillText('1/φ', W-pad.r+2, y_phi+4);
+
+  // 1/2 line
+  const y_half = toY(0.5);
+  ctx.strokeStyle = 'rgba(244,114,182,0.3)';
+  ctx.setLineDash([4,4]);
+  ctx.beginPath(); ctx.moveTo(pad.l, y_half); ctx.lineTo(W-pad.r, y_half); ctx.stroke();
+  ctx.setLineDash([]);
+  ctx.fillStyle = '#f472b6';
+  ctx.font = '11px JetBrains Mono';
+  ctx.fillText('1/2', W-pad.r+2, y_half+4);
+
+  // 2/5 line
+  const y_25 = toY(0.4);
+  ctx.strokeStyle = 'rgba(168,85,247,0.3)';
+  ctx.setLineDash([4,4]);
+  ctx.beginPath(); ctx.moveTo(pad.l, y_25); ctx.lineTo(W-pad.r, y_25); ctx.stroke();
+  ctx.setLineDash([]);
+  ctx.fillStyle = '#a855f7';
+  ctx.font = '11px JetBrains Mono';
+  ctx.fillText('2/5', W-pad.r+2, y_25+4);
+
+  // Plot ratios (clip to visible range)
+  ctx.strokeStyle = '#f59e0b';
+  ctx.lineWidth = 2;
+  ctx.beginPath();
+  let started = false;
+  for (const { s, ratio } of ratios) {
+    const x = toX(s);
+    const y = toY(Math.max(rMin, Math.min(rMax, ratio)));
+    if (ratio >= rMin && ratio <= rMax) {
+      if (!started) { ctx.moveTo(x, y); started = true; }
+      else ctx.lineTo(x, y);
+    } else {
+      started = false;
+    }
+  }
+  ctx.stroke();
+
+  // Current s marker
+  const x_s = toX(currentS);
+  ctx.strokeStyle = 'rgba(245,158,11,0.4)';
+  ctx.lineWidth = 1;
+  ctx.beginPath(); ctx.moveTo(x_s, pad.t); ctx.lineTo(x_s, H-pad.b); ctx.stroke();
+
+  // Axes labels
+  ctx.fillStyle = '#888';
+  ctx.font = '11px JetBrains Mono';
+  ctx.fillText('s', W/2, H-4);
+  for (const s of [1, 2, 3, 4, 5]) {
+    ctx.fillText(s.toString(), toX(s)-4, H-pad.b+14);
+  }
+  ctx.save();
+  ctx.translate(12, H/2);
+  ctx.rotate(-Math.PI/2);
+  ctx.fillText('ratio', 0, 0);
+  ctx.restore();
+
+  // Y-axis labels
+  for (const r of [0, 0.5, 1.0, 1.5]) {
+    ctx.fillText(r.toFixed(1), pad.l - 30, toY(r) + 4);
+  }
+}
+
+// ─── UI helpers ───
+function setColorMode(mode) {
+  colorMode = mode;
+  document.getElementById('colorShell').classList.toggle('active', mode === 'shell');
+  document.getElementById('colorPerp').classList.toggle('active', mode === 'perp');
+  document.getElementById('colorDiff').classList.toggle('active', mode === 'diff');
+  draw();
+}
+
+function setShift(mag, dir) {
+  document.getElementById('shiftRange').value = mag;
+  document.getElementById('shiftVal').textContent = mag.toFixed(2);
+  document.getElementById('dirRange').value = dir;
+  document.getElementById('dirVal').textContent = dir;
+  scheduleRecompute();
+}
+
+// ─── Init ───
+window.addEventListener('load', () => {
+  recompute();
+});
+</script>
+</body>
+</html>

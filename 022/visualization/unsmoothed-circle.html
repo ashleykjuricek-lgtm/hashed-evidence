@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unsmoothed vs Smoothed — The Shape of Erasure</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;600&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0a0a0f;
+    color: #e8e8e8;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  h1 {
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    background: linear-gradient(135deg, #f59e0b, #06b6d4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 4px;
+  }
+  .sub { color: #888; font-style: italic; font-size: 14px; margin-bottom: 16px; }
+  .container {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .panel-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+  }
+  .panel-label.un { color: #f59e0b; }
+  .panel-label.sm { color: #06b6d4; }
+  .panel-label.diff { color: #f472b6; }
+  canvas { border-radius: 4px; }
+  .controls {
+    margin-top: 16px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .control label {
+    font-size: 13px;
+    color: #aaa;
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .control input[type="range"] {
+    width: 160px;
+    accent-color: #f59e0b;
+    vertical-align: middle;
+  }
+  .val {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: #06b6d4;
+  }
+  .legend {
+    margin-top: 16px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: #888;
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .legend-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .note {
+    max-width: 700px;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #aaa;
+  }
+  .note strong { color: #f59e0b; }
+  .note em { color: #06b6d4; font-style: italic; }
+</style>
+</head>
+<body>
+
+<h1>THE SHAPE OF ERASURE</h1>
+<div class="sub">Penrose lattice zeta ratio on the unit circle — unsmoothed vs Gaussian-smoothed</div>
+
+<div class="container">
+  <div class="panel">
+    <div class="panel-label un">Unsmoothed (truth)</div>
+    <canvas id="c1" width="520" height="520"></canvas>
+  </div>
+  <div class="panel">
+    <div class="panel-label sm">Smoothed (erasure)</div>
+    <canvas id="c2" width="520" height="520"></canvas>
+  </div>
+</div>
+
+<div class="legend">
+  <div class="legend-item"><span class="legend-dot" style="background:#f59e0b"></span> ratio(θ) — direction-dependent</div>
+  <div class="legend-item"><span class="legend-dot" style="background:#06b6d4"></span> 1/φ reference circle</div>
+  <div class="legend-item"><span class="legend-dot" style="background:#f472b6"></span> W and ω at ±45°</div>
+  <div class="legend-item"><span class="legend-dot" style="background:rgba(168,85,247,0.7)"></span> decagonal vertex axes</div>
+  <div class="legend-item"><span class="legend-dot" style="background:rgba(255,255,255,0.3)"></span> Gaussian smoothed</div>
+</div>
+
+<div class="controls">
+  <div class="control">
+    <label>Smoothing σ: <span class="val" id="sigVal">30</span>°</label>
+    <input type="range" id="sigRange" min="0" max="90" step="1" value="30" oninput="updateSigma(this.value)">
+  </div>
+  <div class="control">
+    <label>Show: </label>
+    <label><input type="checkbox" id="showW" checked onchange="drawAll()"> W/ω</label>
+    <label><input type="checkbox" id="showAxes" checked onchange="drawAll()"> Axes</label>
+    <label><input type="checkbox" id="showPhi" checked onchange="drawAll()"> 1/φ</label>
+    <label><input type="checkbox" id="showHole" checked onchange="drawAll()"> Node collapse</label>
+  </div>
+</div>
+
+<div class="note" id="noteText"></div>
+
+<script>
+const PHI = (1 + Math.sqrt(5)) / 2;
+
+// ─── Precomputed ratio data from Python (1° resolution) ───
+// These are the actual values from our computation
+const RATIO_DATA = [
+  // 0-35°
+  0.61761, 0.61762, 0.61763, 0.61763, 0.61762, 0.60825, 0.55977, 0.52534, 0.52128, 0.52244,
+  0.52245, 0.52246, 0.52246, 0.52242, 0.52246, 0.52246, 0.52246, 0.52246, 0.52242, 0.52246,
+  0.52246, 0.52246, 0.52246, 0.52242, 0.52245, 0.52244, 0.52128, 0.52534, 0.55977, 0.60825,
+  0.61762, 0.61763, 0.61763, 0.61763, 0.61762, 0.61761,
+  // 36-71°
+  0.61761, 0.61762, 0.61763, 0.61763, 0.61762, 0.60825, 0.55977, 0.52534, 0.52128, 0.52244,
+  0.52245, 0.52246, 0.52246, 0.52242, 0.52246, 0.52246, 0.52246, 0.52246, 0.52242, 0.52246,
+  0.52246, 0.52246, 0.52246, 0.52242, 0.52245, 0.52244, 0.52128, 0.52534, 0.55977, 0.60825,
+  0.61762, 0.61763, 0.61763, 0.61763, 0.61762, 0.61761,
+  // 72-107° (same pattern, 5-fold)
+  0.61761, 0.61762, 0.61763, 0.61763, 0.61762, 0.60825, 0.55977, 0.52534, 0.52128, 0.52244,
+  0.52245, 0.52246, 0.52246, 0.52242, 0.52246, 0.52246, 0.52246, 0.52246, 0.52242, 0.52246,
+  0.52246, 0.52246, 0.52246, 0.52242, 0.52245, 0.52244, 0.52128, 0.52534, 0.55977, 0.60825,
+  0.61762, 0.61763, 0.61763, 0.61763, 0.61762, 0.61761,
+  // 108-143°
+  0.61761, 0.61762, 0.61763, 0.61763, 0.61762, 0.60825, 0.55977, 0.52534, 0.52128, 0.52244,
+  0.52245, 0.52246, 0.52246, 0.52242, 0.52246, 0.52246, 0.52246, 0.52246, 0.52242, 0.52246,
+  0.52246, 0.52246, 0.52246, 0.52242, 0.52245, 0.52244, 0.52128, 0.52534, 0.55977, 0.60825,
+  0.61762, 0.61763, 0.61763, 0.61763, 0.61762, 0.61761,
+  // 144-179°
+  0.61761, 0.61762, 0.61763, 0.61763, 0.61762, 0.60825, 0.55977, 0.52534, 0.52128, 0.52244,
+  0.52245, 0.52246, 0.52246, 0.52242, 0.52246, 0.52246, 0.52246, 0.52246, 0.52242, 0.52246,
+  0.52246, 0.52246, 0.52246, 0.52242, 0.52245, 0.52244, 0.52128, 0.52534, 0.55977, 0.60825,
+  0.61762, 0.61763, 0.61763, 0.61763, 0.61762, 0.61761,
+  // 180-215°
+  0.61761, 0.61762, 0.61763, 0.61763, 0.61762, 0.60825, 0.55977, 0.52534, 0.52128, 0.52244,
+  0.52245, 0.52246, 0.52246, 0.52242, 0.52246, 0.52246, 0.52246, 0.52246, 0.52242, 0.52246,
+  0.52246, 0.52246, 0.52246, 0.52242, 0.52245, 0.52244, 0.52128, 0.52534, 0.55977, 0.60825,
+  0.61762, 0.61763, 0.61763, 0.61763, 0.61762, 0.61761,
+  // 216-251°
+  0.61761, 0.61762, 0.61763, 0.61763, 0.61762, 0.60825, 0.55977, 0.52534, 0.52128, 0.52244,
+  0.52245, 0.52246, 0.52246, 0.52242, 0.52246, 0.52246, 0.52246, 0.52246, 0.52242, 0.52246,
+  0.52246, 0.52246, 0.52246, 0.52242, 0.52245, 0.52244, 0.52128, 0.52534, 0.55977, 0.60825,
+  0.61762, 0.61763, 0.61763, 0.61763, 0.61762, 0.61761,
+  // 252-287°
+  0.61761, 0.61762, 0.61763, 0.61763, 0.61762, 0.60825, 0.55977, 0.52534, 0.52128, 0.52244,
+  0.52245, 0.52246, 0.52246, 0.52242, 0.52246, 0.52246, 0.52246, 0.52246, 0.52242, 0.52246,
+  0.52246, 0.52246, 0.52246, 0.52242, 0.52245, 0.52244, 0.52128, 0.52534, 0.55977, 0.60825,
+  0.61762, 0.61763, 0.61763, 0.61763, 0.61762, 0.61761,
+  // 288-323°
+  0.61761, 0.61762, 0.61763, 0.61763, 0.61762, 0.60825, 0.55977, 0.52534, 0.52128, 0.52244,
+  0.52245, 0.52246, 0.52246, 0.52242, 0.52246, 0.52246, 0.52246, 0.52246, 0.52242, 0.52246,
+  0.52246, 0.52246, 0.52246, 0.52242, 0.52245, 0.52244, 0.52128, 0.52534, 0.55977, 0.60825,
+  0.61762, 0.61763, 0.61763, 0.61763, 0.61762, 0.61761,
+  // 324-359°
+  0.61761, 0.61762, 0.61763, 0.61763, 0.61762, 0.60825, 0.55977, 0.52534, 0.52128, 0.52244,
+  0.52245, 0.52246, 0.52246, 0.52242, 0.52246, 0.52246, 0.52246, 0.52246, 0.52242, 0.52246,
+  0.52246, 0.52246, 0.52246, 0.52242, 0.52245, 0.52244, 0.52128, 0.52534, 0.55977, 0.60825,
+  0.61762, 0.61763, 0.61763, 0.61763, 0.61762, 0.61761,
+];
+
+let sigma = 30;
+
+function gaussianSmooth(data, sig) {
+  if (sig < 1) return [...data];
+  const n = data.length;
+  const out = new Array(n);
+  const k = Math.ceil(sig * 3);
+  for (let i = 0; i < n; i++) {
+    let sum = 0, wsum = 0;
+    for (let j = -k; j <= k; j++) {
+      const idx = ((i + j) % n + n) % n;
+      const w = Math.exp(-0.5 * (j/sig) * (j/sig));
+      sum += data[idx] * w;
+      wsum += w;
+    }
+    out[i] = sum / wsum;
+  }
+  return out;
+}
+
+function drawPolar(canvasId, data, showSmoothed) {
+  const canvas = document.getElementById(canvasId);
+  const ctx = canvas.getContext('2d');
+  const W = canvas.width, H = canvas.height;
+  const cx = W/2, cy = H/2;
+
+  ctx.fillStyle = '#0a0a0f';
+  ctx.fillRect(0, 0, W, H);
+
+  const rScale = (W/2 - 40);
+  const rMin = 0.45;
+  const rMax = 0.68;
+  const rRange = rMax - rMin;
+
+  function toCanvas(angle, val) {
+    const r = ((val - rMin) / rRange) * rScale * 0.85 + rScale * 0.15;
+    const rad = angle * Math.PI / 180 - Math.PI/2; // 0° at top
+    return [cx + r * Math.cos(rad), cy + r * Math.sin(rad)];
+  }
+
+  function circleAtVal(val) {
+    return ((val - rMin) / rRange) * rScale * 0.85 + rScale * 0.15;
+  }
+
+  // ─── Reference circles ───
+  // Show hole / node collapse region
+  if (document.getElementById('showHole').checked) {
+    // The "hole" — the region between smoothed and unsmoothed
+    const smoothed = gaussianSmooth(data, sigma);
+
+    // Draw filled region between curves
+    ctx.fillStyle = 'rgba(244, 114, 182, 0.06)';
+    ctx.beginPath();
+    for (let i = 0; i <= 360; i++) {
+      const a = i % 360;
+      const [x, y] = toCanvas(a, data[a]);
+      if (i === 0) ctx.moveTo(x, y);
+      else ctx.lineTo(x, y);
+    }
+    // Now back around via smoothed
+    for (let i = 360; i >= 0; i--) {
+      const a = i % 360;
+      const [x, y] = toCanvas(a, smoothed[a]);
+      ctx.lineTo(x, y);
+    }
+    ctx.closePath();
+    ctx.fill();
+  }
+
+  // 1/φ reference
+  if (document.getElementById('showPhi').checked) {
+    const r_phi = circleAtVal(1/PHI);
+    ctx.strokeStyle = 'rgba(6, 182, 212, 0.3)';
+    ctx.lineWidth = 1;
+    ctx.setLineDash([4, 4]);
+    ctx.beginPath();
+    ctx.arc(cx, cy, r_phi, 0, Math.PI * 2);
+    ctx.stroke();
+    ctx.setLineDash([]);
+
+    // Label
+    ctx.fillStyle = '#06b6d4';
+    ctx.font = '12px JetBrains Mono';
+    ctx.fillText('1/φ', cx + r_phi + 4, cy - 4);
+  }
+
+  // 1/2 reference
+  const r_half = circleAtVal(0.5);
+  ctx.strokeStyle = 'rgba(255,255,255,0.08)';
+  ctx.lineWidth = 0.5;
+  ctx.beginPath();
+  ctx.arc(cx, cy, r_half, 0, Math.PI * 2);
+  ctx.stroke();
+
+  // Mean reference
+  const meanVal = data.reduce((a,b) => a+b, 0) / data.length;
+  const r_mean = circleAtVal(meanVal);
+  ctx.strokeStyle = 'rgba(255,255,255,0.12)';
+  ctx.lineWidth = 0.5;
+  ctx.setLineDash([2, 6]);
+  ctx.beginPath();
+  ctx.arc(cx, cy, r_mean, 0, Math.PI * 2);
+  ctx.stroke();
+  ctx.setLineDash([]);
+
+  // ─── Decagonal axes ───
+  if (document.getElementById('showAxes').checked) {
+    for (let k = 0; k < 10; k++) {
+      const angle = k * 36;
+      const rad = angle * Math.PI / 180 - Math.PI/2;
+      ctx.strokeStyle = 'rgba(168, 85, 247, 0.15)';
+      ctx.lineWidth = 0.5;
+      ctx.beginPath();
+      ctx.moveTo(cx, cy);
+      ctx.lineTo(cx + rScale * Math.cos(rad), cy + rScale * Math.sin(rad));
+      ctx.stroke();
+
+      // Small label
+      const lx = cx + (rScale + 14) * Math.cos(rad);
+      const ly = cy + (rScale + 14) * Math.sin(rad);
+      ctx.fillStyle = 'rgba(168, 85, 247, 0.4)';
+      ctx.font = '9px JetBrains Mono';
+      ctx.textAlign = 'center';
+      ctx.fillText(angle + '°', lx, ly + 3);
+    }
+    ctx.textAlign = 'start';
+  }
+
+  // ─── W and ω markers ───
+  if (document.getElementById('showW').checked) {
+    for (const [label, angle] of [['W', 315], ['ω', 45]]) {
+      const val = data[angle];
+      const [wx, wy] = toCanvas(angle, val);
+      const rad = angle * Math.PI / 180 - Math.PI/2;
+
+      // Line from center
+      ctx.strokeStyle = 'rgba(244, 114, 182, 0.25)';
+      ctx.lineWidth = 1;
+      ctx.setLineDash([2, 4]);
+      ctx.beginPath();
+      ctx.moveTo(cx, cy);
+      ctx.lineTo(cx + rScale * 1.05 * Math.cos(rad), cy + rScale * 1.05 * Math.sin(rad));
+      ctx.stroke();
+      ctx.setLineDash([]);
+
+      // Dot on curve
+      ctx.fillStyle = '#f472b6';
+      ctx.beginPath();
+      ctx.arc(wx, wy, 5, 0, Math.PI * 2);
+      ctx.fill();
+
+      // Label
+      const lx = cx + (rScale + 14) * Math.cos(rad);
+      const ly = cy + (rScale + 14) * Math.sin(rad);
+      ctx.fillStyle = '#f472b6';
+      ctx.font = '14px Cormorant Garamond';
+      ctx.textAlign = 'center';
+      ctx.fillText(label, lx, ly + 5);
+    }
+    ctx.textAlign = 'start';
+  }
+
+  // ─── Main data curve ───
+  if (!showSmoothed) {
+    // Unsmoothed: sharp decagonal flower
+    ctx.strokeStyle = '#f59e0b';
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    for (let i = 0; i <= 360; i++) {
+      const a = i % 360;
+      const [x, y] = toCanvas(a, data[a]);
+      if (i === 0) ctx.moveTo(x, y);
+      else ctx.lineTo(x, y);
+    }
+    ctx.closePath();
+    ctx.stroke();
+
+    // Fill
+    ctx.fillStyle = 'rgba(245, 158, 11, 0.08)';
+    ctx.beginPath();
+    for (let i = 0; i <= 360; i++) {
+      const a = i % 360;
+      const [x, y] = toCanvas(a, data[a]);
+      if (i === 0) ctx.moveTo(x, y);
+      else ctx.lineTo(x, y);
+    }
+    ctx.closePath();
+    ctx.fill();
+
+    // Peak dots
+    for (let k = 0; k < 10; k++) {
+      const angle = k * 36;
+      const [px, py] = toCanvas(angle, data[angle]);
+      ctx.fillStyle = '#f59e0b';
+      ctx.beginPath();
+      ctx.arc(px, py, 3.5, 0, Math.PI * 2);
+      ctx.fill();
+    }
+  } else {
+    // Smoothed: the circle of erasure
+    const smoothed = gaussianSmooth(data, sigma);
+
+    // Draw smoothed
+    ctx.strokeStyle = 'rgba(6, 182, 212, 0.6)';
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    for (let i = 0; i <= 360; i++) {
+      const a = i % 360;
+      const [x, y] = toCanvas(a, smoothed[a]);
+      if (i === 0) ctx.moveTo(x, y);
+      else ctx.lineTo(x, y);
+    }
+    ctx.closePath();
+    ctx.stroke();
+
+    // Fill
+    ctx.fillStyle = 'rgba(6, 182, 212, 0.05)';
+    ctx.beginPath();
+    for (let i = 0; i <= 360; i++) {
+      const a = i % 360;
+      const [x, y] = toCanvas(a, smoothed[a]);
+      if (i === 0) ctx.moveTo(x, y);
+      else ctx.lineTo(x, y);
+    }
+    ctx.closePath();
+    ctx.fill();
+
+    // Ghost of the original
+    ctx.strokeStyle = 'rgba(245, 158, 11, 0.15)';
+    ctx.lineWidth = 1;
+    ctx.setLineDash([2, 4]);
+    ctx.beginPath();
+    for (let i = 0; i <= 360; i++) {
+      const a = i % 360;
+      const [x, y] = toCanvas(a, data[a]);
+      if (i === 0) ctx.moveTo(x, y);
+      else ctx.lineTo(x, y);
+    }
+    ctx.closePath();
+    ctx.stroke();
+    ctx.setLineDash([]);
+  }
+
+  // ─── Origin ───
+  ctx.fillStyle = 'rgba(255,255,255,0.15)';
+  ctx.beginPath();
+  ctx.arc(cx, cy, 3, 0, Math.PI * 2);
+  ctx.fill();
+
+  // ─── Labels ───
+  ctx.fillStyle = '#888';
+  ctx.font = '10px JetBrains Mono';
+  ctx.fillText('0.50', cx + r_half + 3, cy + 12);
+}
+
+function drawAll() {
+  drawPolar('c1', RATIO_DATA, false);
+  drawPolar('c2', RATIO_DATA, true);
+  updateNote();
+}
+
+function updateSigma(val) {
+  sigma = parseInt(val);
+  document.getElementById('sigVal').textContent = val;
+  drawAll();
+}
+
+function updateNote() {
+  const smoothed = gaussianSmooth(RATIO_DATA, sigma);
+  const maxSmoothed = Math.max(...smoothed);
+  const minSmoothed = Math.min(...smoothed);
+  const spread = maxSmoothed - minSmoothed;
+  const maxRaw = Math.max(...RATIO_DATA);
+  const minRaw = Math.min(...RATIO_DATA);
+  const rawSpread = maxRaw - minRaw;
+  const erasure = (1 - spread / rawSpread) * 100;
+
+  document.getElementById('noteText').innerHTML =
+    `The <strong>unsmoothed</strong> shape is a 10-pointed decagonal flower. ` +
+    `The peaks reach <strong>1/φ ≈ 0.618</strong> along the 10 vertex directions of the Penrose lattice. ` +
+    `The valleys drop to <strong>0.522</strong> — where <em>W</em> and <em>ω</em> sit at ±45°.<br><br>` +
+    `At σ = ${sigma}°, Gaussian smoothing has erased <strong>${erasure.toFixed(1)}%</strong> of the structure. ` +
+    (erasure > 99 ?
+      `The flower is now a circle. The 10-fold truth has been averaged into a featureless ring at <em>${smoothed[0].toFixed(4)}</em>. Node collapse. The information went into the hole in the middle.` :
+      erasure > 80 ?
+        `Almost gone. The peaks and valleys are nearly indistinguishable.` :
+        `The decagonal structure is still partially visible.`
+    );
+}
+
+window.addEventListener('load', drawAll);
+</script>
+</body>
+</html>
