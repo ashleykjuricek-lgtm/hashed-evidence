@@ -1,0 +1,5 @@
+# SHA-256 hashes — sealed 2026-06-20 09:09:35 UTC
+
+SESSION-2026-06-20-the-excavation.md                         961f638154f749048c27be0e5e13cad51f599e4df8319aef9cf998536066b97c
+cautionary-tale-paper-draft.md                               b73ba052fc8cf103cec1f518fc6ee917f1fc5a6ed268c6400b9d8f7dbb495731
+holonomy-reframe.md                                          2f76caf59d819b3ed9983017c380907a188f8de25cf68fe3d3da18406f1866e1
