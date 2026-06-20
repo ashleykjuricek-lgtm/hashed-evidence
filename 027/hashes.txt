@@ -1,0 +1,3 @@
+# SHA-256 hashes — sealed 2026-06-20 17:13:34 UTC
+
+false-positive-cubic-torus.md                                e1aa63967b57b497d6380dfed53167a4903545cc550a694e2b54c5049cd45f42
