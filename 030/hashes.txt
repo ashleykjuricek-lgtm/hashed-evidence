@@ -1,0 +1,11 @@
+# SHA-256 hashes — sealed 2026-07-03 06:35:22 UTC
+
+mirror.py                                                    8f944fe19da05d25e2a5b6b8e6fef1aa5d26ef5a79bba03c21fb93f7b8277677
+mirror_summary.png                                           bb46f9ea24b619c46a9544fa9644f05525e2354e29071d5bb29761a88bc00862
+mirror_sweep.py                                              ecff5cb0202fb38106e872b8222b0677dbe5e0f270d242ec2faf46c4f6653de9
+mirror_sweep_summary.png                                     b11aef02da594088a274467d747cd3e470bb6d8172034da87afa8cd34ad4f236
+sweep.py                                                     9a5e3e0b6a9877f628205d2cc0ef0e0f764b7e17c9f36076e658deb7aaa9805b
+sweep_summary.png                                            53c37b38ace58c20f57d8d165ca0c7624b46a859695acd23030f3aa1f1bca648
+tier1-quasicrystal-null.md                                   ef704225c83e27add0ef2a519a1f0d4a8eb8f5514f84d808a69387e8b1008aed
+tier1.py                                                     d4f60f4225901bf95d8b47405b110d8fc2f1cfff8214ba84d051b868399175b9
+tier1_summary.png                                            a3e9902b56dbcf5fdab3aebfb52878a78779f82c4cedc1986b16a8a3c2a0bab8
