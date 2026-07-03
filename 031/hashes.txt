@@ -1,0 +1,19 @@
+# SHA-256 hashes — sealed 2026-07-03 17:46:00 UTC
+
+chirality_check.py                                       1a0068a2569c8b16c802e6df32591401436c85d7542034520f5d931dcb732c22
+mirror.py                                                8f944fe19da05d25e2a5b6b8e6fef1aa5d26ef5a79bba03c21fb93f7b8277677
+mirror_summary.png                                       bb46f9ea24b619c46a9544fa9644f05525e2354e29071d5bb29761a88bc00862
+mirror_sweep.py                                          ecff5cb0202fb38106e872b8222b0677dbe5e0f270d242ec2faf46c4f6653de9
+mirror_sweep_summary.png                                 b11aef02da594088a274467d747cd3e470bb6d8172034da87afa8cd34ad4f236
+penrose_gauntlet.py                                      92e9a6229f96c53d77bdaa029e6898716c45bf0d329c4265fede0efad7a4816c
+penrose_gauntlet_summary.png                             e3b0144123ab17d0e1ab05e3b51d53f751de57ceb8f4a0e03783485f8f86d55d
+penrose_plateau.py                                       f58ee3ff83af73107866c297be2f8da91e8e7c01d3605786bf8c601e5a9254ad
+penrose_plateau_summary.png                              4d2c24aa4926d2f4783e878ddd91a02a747f53c0eea6755cb004fcafd51ee7fd
+penrose_probe.py                                         65c76c8667547192bef3038fb53dec1952f50928c247e3b3500efdd3ed78e5bb
+penrose_rose.py                                          ecbe6ebf86486d9cdf0314977c5b100494916fd107f9ea4a0af6f44e83a1c72c
+penrose_rose_shape.png                                   7fc8c895d823f129182080eb58ab915595abbadcf47d58b8c8f529751e4b8320
+reversible-bloom-philosophy.md                           ae289ca88ae6b02370f460f35da97306616474c1421b8b29c11f4733262e0bac
+the-clock-day.md                                         ae0824239366e740bee8020a05adfdc596360832628f38480e4b47c43e4b54d9
+the-clock.html                                           daef205b3989b49e24e79857c531358151bd1f8b4b72d2a459c037072eec8e37
+watch_the_clock.py                                       4e217af3c5f09074dff9fd7f2d653fa6593c58852c0776c0c8782110c1904dbb
+watch_the_clock_summary.png                              19cadc22aec04b6f1f80b3bf3dafe8531e3e639d2cc7159f4c76bf32e351b838
