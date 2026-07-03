@@ -1,0 +1,3 @@
+# SHA-256 hashes — sealed 2026-07-03 06:40:56 UTC
+
+figure1-panel3-correction.md                                 5391d1bcd8e73090f12ed1773cc3f941b050caf41fed2c2a89df6beceb8f3f0a
