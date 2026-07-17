@@ -1,0 +1,8 @@
+# SHA-256 hashes — sealed 2026-07-17 04:39:50 UTC
+
+_manifest.json                                               2e8f12cb9882b57ac622442299a7f9105123b8739e4713af1d9c41ead6c3c3dc
+check_1_24.py                                                cf7c331548148396cc967b13a0da2efa1bf1027045f8370472a78cc982ce4a69
+llms-full.txt                                                0ae9413a569b2784627291d323a56db4cf0c4b13523e4a46ecb628d3aca3fa6d
+llms.txt                                                     a0b7f9294b673a6c457b2766bbfc99f014282f3fce521ec955578e9303164bdb
+project_summary_2026-07-16.md                                c9687070f89feb58282d1af5ba0c835fdf55d2d8018f23ed1c127e0e91e8dba9
+site-audit-2026-07-16.md                                     9b1732c3e0b07899cbcf8c34be65685b87ba61a1ad82b0c7de24ab95270faf58

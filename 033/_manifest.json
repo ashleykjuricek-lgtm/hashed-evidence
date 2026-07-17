@@ -1,0 +1,381 @@
+[
+  {
+    "route": "/",
+    "chars": 0,
+    "ok": false,
+    "err": "TimeoutError: Navigation timeout of 30000 ms exceeded"
+  },
+  {
+    "route": "/eeaao",
+    "chars": 12861,
+    "ok": true
+  },
+  {
+    "route": "/eeaao-2",
+    "chars": 20507,
+    "ok": true
+  },
+  {
+    "route": "/eeaao-3",
+    "chars": 11922,
+    "ok": true
+  },
+  {
+    "route": "/origins",
+    "chars": 63852,
+    "ok": true
+  },
+  {
+    "route": "/paper",
+    "chars": 18132,
+    "ok": true
+  },
+  {
+    "route": "/casimir-paper",
+    "chars": 43736,
+    "ok": true
+  },
+  {
+    "route": "/overflow",
+    "chars": 2521,
+    "ok": true
+  },
+  {
+    "route": "/spectral",
+    "chars": 0,
+    "ok": false,
+    "err": "TimeoutError: Navigation timeout of 30000 ms exceeded"
+  },
+  {
+    "route": "/two-faces",
+    "chars": 9497,
+    "ok": true
+  },
+  {
+    "route": "/draft",
+    "chars": 13337,
+    "ok": true
+  },
+  {
+    "route": "/james",
+    "chars": 19648,
+    "ok": true
+  },
+  {
+    "route": "/james-bridge",
+    "chars": 23010,
+    "ok": true
+  },
+  {
+    "route": "/az-james",
+    "chars": 3003,
+    "ok": true
+  },
+  {
+    "route": "/james-thinks-we-are-smart",
+    "chars": 7057,
+    "ok": true
+  },
+  {
+    "route": "/waves",
+    "chars": 2158,
+    "ok": true
+  },
+  {
+    "route": "/nada",
+    "chars": 7369,
+    "ok": true
+  },
+  {
+    "route": "/mobius",
+    "chars": 6598,
+    "ok": true
+  },
+  {
+    "route": "/klein",
+    "chars": 5228,
+    "ok": true
+  },
+  {
+    "route": "/thread",
+    "chars": 6676,
+    "ok": true
+  },
+  {
+    "route": "/thread-2",
+    "chars": 10206,
+    "ok": true
+  },
+  {
+    "route": "/leech",
+    "chars": 5583,
+    "ok": true
+  },
+  {
+    "route": "/hem",
+    "chars": 13636,
+    "ok": true
+  },
+  {
+    "route": "/bridge",
+    "chars": 8610,
+    "ok": true
+  },
+  {
+    "route": "/isoharmonics",
+    "chars": 2301,
+    "ok": true
+  },
+  {
+    "route": "/riemann-proof",
+    "chars": 11895,
+    "ok": true
+  },
+  {
+    "route": "/riemann",
+    "chars": 2171,
+    "ok": true
+  },
+  {
+    "route": "/machines",
+    "chars": 20052,
+    "ok": true
+  },
+  {
+    "route": "/status",
+    "chars": 6659,
+    "ok": true
+  },
+  {
+    "route": "/notebook",
+    "chars": 25199,
+    "ok": true
+  },
+  {
+    "route": "/4d",
+    "chars": 0,
+    "ok": false,
+    "err": "TimeoutError: Navigation timeout of 30000 ms exceeded"
+  },
+  {
+    "route": "/windows",
+    "chars": 0,
+    "ok": false,
+    "err": "TimeoutError: Navigation timeout of 30000 ms exceeded"
+  },
+  {
+    "route": "/axioms",
+    "chars": 0,
+    "ok": false,
+    "err": "TimeoutError: Navigation timeout of 30000 ms exceeded"
+  },
+  {
+    "route": "/chebyshev",
+    "chars": 5701,
+    "ok": true
+  },
+  {
+    "route": "/cott-code",
+    "chars": 0,
+    "ok": false,
+    "err": "TimeoutError: Navigation timeout of 30000 ms exceeded"
+  },
+  {
+    "route": "/calculator",
+    "chars": 7402,
+    "ok": true
+  },
+  {
+    "route": "/unit-circle",
+    "chars": 9287,
+    "ok": true
+  },
+  {
+    "route": "/ross",
+    "chars": 13035,
+    "ok": true
+  },
+  {
+    "route": "/greg",
+    "chars": 27081,
+    "ok": true
+  },
+  {
+    "route": "/greg-qa",
+    "chars": 806,
+    "ok": true
+  },
+  {
+    "route": "/tensor",
+    "chars": 7851,
+    "ok": true
+  },
+  {
+    "route": "/why-torus",
+    "chars": 2400,
+    "ok": true
+  },
+  {
+    "route": "/theta",
+    "chars": 3530,
+    "ok": true
+  },
+  {
+    "route": "/forces",
+    "chars": 0,
+    "ok": false,
+    "err": "TimeoutError: Navigation timeout of 30000 ms exceeded"
+  },
+  {
+    "route": "/epr",
+    "chars": 0,
+    "ok": false,
+    "err": "TimeoutError: Navigation timeout of 30000 ms exceeded"
+  },
+  {
+    "route": "/from-sunya",
+    "chars": 9743,
+    "ok": true
+  },
+  {
+    "route": "/holographic",
+    "chars": 13262,
+    "ok": true
+  },
+  {
+    "route": "/extremal",
+    "chars": 16028,
+    "ok": true
+  },
+  {
+    "route": "/reference",
+    "chars": 16352,
+    "ok": true
+  },
+  {
+    "route": "/unsolved",
+    "chars": 0,
+    "ok": false,
+    "err": "TimeoutError: Navigation timeout of 30000 ms exceeded"
+  },
+  {
+    "route": "/traction",
+    "chars": 4280,
+    "ok": true
+  },
+  {
+    "route": "/relativity",
+    "chars": 9845,
+    "ok": true
+  },
+  {
+    "route": "/prismatic",
+    "chars": 6427,
+    "ok": true
+  },
+  {
+    "route": "/convergence",
+    "chars": 6819,
+    "ok": true
+  },
+  {
+    "route": "/oscillator",
+    "chars": 5655,
+    "ok": true
+  },
+  {
+    "route": "/turbulence",
+    "chars": 5370,
+    "ok": true
+  },
+  {
+    "route": "/grounding",
+    "chars": 9842,
+    "ok": true
+  },
+  {
+    "route": "/void-spec",
+    "chars": 25404,
+    "ok": true
+  },
+  {
+    "route": "/void-sim",
+    "chars": 1495,
+    "ok": true
+  },
+  {
+    "route": "/void-qc",
+    "chars": 2349,
+    "ok": true
+  },
+  {
+    "route": "/void-state-proof",
+    "chars": 968,
+    "ok": true
+  },
+  {
+    "route": "/curve-time-evolution",
+    "chars": 442,
+    "ok": true
+  },
+  {
+    "route": "/unsmoothed",
+    "chars": 1195,
+    "ok": true
+  },
+  {
+    "route": "/euler-disc",
+    "chars": 332,
+    "ok": true
+  },
+  {
+    "route": "/universe-loop",
+    "chars": 997,
+    "ok": true
+  },
+  {
+    "route": "/organic-universe",
+    "chars": 1334,
+    "ok": true
+  },
+  {
+    "route": "/as-above-so-below",
+    "chars": 952,
+    "ok": true
+  },
+  {
+    "route": "/smoothing-problem",
+    "chars": 699,
+    "ok": true
+  },
+  {
+    "route": "/proven-facts",
+    "chars": 18264,
+    "ok": true
+  },
+  {
+    "route": "/figma-speaks",
+    "chars": 157018,
+    "ok": true
+  },
+  {
+    "route": "/cayley-dickson",
+    "chars": 689,
+    "ok": true
+  },
+  {
+    "route": "/ksq",
+    "chars": 395,
+    "ok": true
+  },
+  {
+    "route": "/mcc",
+    "chars": 783,
+    "ok": true
+  },
+  {
+    "route": "/for-adam",
+    "chars": 11922,
+    "ok": true
+  }
+]

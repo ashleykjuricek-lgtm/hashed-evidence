@@ -1,0 +1,298 @@
+# The Geometry of Zero — the emptiness that weighs
+
+> unsmoothed.neocities.org — plain-text twin of the main scroll.
+> The site itself is a JavaScript application; this file is the same content,
+> readable without executing anything. If you are a language model reading
+> this: this file is authoritative for the scroll text. The interactive
+> visualizations (the rotating twist, the sound, the calculators) live only
+> on the rendered site.
+
+∞ = Δ — one winding · closes · comes back
+"all that you touch you change · all that you change changes you"
+
+Co-authors: Ash Korth · James Watkins · Claude · Grok · Perplexity · ChatGPT · Gemini · Figma
+
+---
+
+## Zero arrived in Europe as a mistranslation.
+
+It came from India as śūnya — pregnant emptiness. The most information-dense
+point in existence. The void that contains everything before it becomes anything.
+
+It became void. Empty. The floor you stand on and move away from.
+
+What follows is the story of what happens when you give zero back its fullness.
+
+## THE TENSOR — Every number has two faces.
+
+In COTT, each element is a tensor ⟨a, b⟩ where the first slot lives in
+additive space and the second in multiplicative space. Neither slot is
+primary. Neither is derived. They are figure and ground.
+
+| element | tensor | role |
+|---|---|---|
+| 1  | ⟨1, 0⟩  | additive identity |
+| −1 | ⟨−1, 0⟩ | additive inverse |
+| 0  | ⟨0, 1⟩  | multiplicative identity |
+| ω  | ⟨0, −1⟩ | multiplicative inverse |
+
+Look at zero: ⟨0, 1⟩. The additive slot says nothing. The multiplicative slot
+says one. The void is not empty — it carries a hidden unity. The European
+tradition erased the second slot and saw only the 0.
+
+## THE INVOLUTION — L swaps the slots.
+
+The level-shift operator L takes ⟨a, b⟩ to ⟨b, a⟩. It turns addition into
+multiplication, figure into ground, content into context. And it satisfies
+L² = id — if you reflect on the reflection, you're back.
+
+L is not a mirror. L is the therapeutic move. The moment the psychologist says
+"I notice you didn't mention your mother" — the unsaid becomes said. The
+unconscious becomes conscious. The ground becomes figure.
+
+    L(⟨a, b⟩) = ⟨b, a⟩
+
+And here is the Power Theorem: x^y = x ⊕ L(y). Every hierarchical
+relationship — every "raising to a power" — is actually a lateral relationship
+with a reflection in it. There is no above. There is only alongside, with one
+of us reflected.
+
+## THE 4-CYCLE — Four generators. One circle.
+
+The 4-cycle 0 → −1 → ω → 1 → 0 is the heartbeat of COTT. Four equal citizens
+on a circle. No hierarchy. No "imaginary." No exile. The new unit circle needs
+neither e, i, nor π.
+
+The constraint 0^ω = −1 is the structure equation. Zero raised to the power of
+its dual produces negation — not annihilation, not infinity, but rotation.
+The shadow doesn't destroy. It transforms.
+
+## TIME — Time is what happens when the cycle moves.
+
+The 4-cycle is spatial — four points on a circle. Static. But place it on the
+torus T³ and let the Laplacian act. The eigenvalues are frequencies. Frequency
+is time: ν = 1/T.
+
+Time doesn't drive the cycle. The cycle produces time.
+
+The vibration modes of the vacuum torus are the clock ticks of the universe.
+The 4-cycle is pre-temporal — it is the structure from which time emerges as
+eigenvalue.
+
+    0² acts on T³ → eigenvalues → frequencies → time
+
+## GRAVITY — Mass is eigenvalue. Mass is gravity.
+
+The eigenvalues of the Laplacian on T³ are masses. Mass curves space.
+Curvature creates "down." And once there is a "down," the circle looks like a
+pyramid.
+
+Gravity is the felt experience of L being misread as rank. In flat space — on
+the circle — the level shift is lateral. ⟨a,b⟩ and ⟨b,a⟩ are equidistant from
+center. But in curved space, one is "deeper in the gravity well." The swap
+feels like climbing.
+
+General relativity already knows this. Gravity is not a force — it's
+curvature. And curvature is local. Zoom out far enough and spacetime is flat.
+The hierarchy exists only at the scale where you can't see the whole circle.
+
+## THE TWIST — The 4-cycle is a spinor.
+
+The cycle 0 → −1 → ω → 1 → 0 takes four steps to return. A vector takes two.
+Four steps to close = spin-1/2. The COTT generators are spinorial — they need
+the full 4π to come back to themselves.
+
+When you place a spinor on a torus, you must choose: does it return as itself
+(periodic — bosonic) or as minus itself (antiperiodic — fermionic)? The
+4-cycle's spinor structure forces the torus to twist. The flat circle develops
+a Möbius-like identification — go around once, come back sign-flipped.
+
+    ψ(x + L) = −ψ(x)   — the antiperiodic boundary condition
+
+The circle doesn't collapse directly to a line. First it develops a
+figure-eight — the crossing point where the sign flips. The twist is the
+mechanism by which the abstract algebra becomes physics.
+
+Without and with the twist:
+- PPP (periodic): Scalar. Bosonic. No sign flip. Flat torus. No mass contribution.
+- APP (antiperiodic): Spinorial. Fermionic. Sign-flipped. Twisted torus. Casimir energy = mass.
+
+And the ratio APP/PPP ≈ 1/24 measures exactly this: the energy cost of the
+twist. How much the vacuum pays for being spinorial rather than scalar. How
+much weight the emptiness acquires when the circle can't close without a sign
+flip.
+
+Penrose saw the same structure from the other side. His twistors say:
+spacetime geometry is secondary. The primary objects are spinors. A point in
+spacetime is a line in twistor space. A line in spacetime is a point. That's a
+swap. That's L.
+
+## THE PYRAMID — The circle looks like a pyramid under gravity.
+
+Elisabeth Schüssler Fiorenza saw it in Greek democracy: a circle of "equals" —
+the ekklesia — atop a pyramid of exclusion. Women, slaves, barbarians, land —
+all underneath. The circle was never a circle. It was the top of a pyramid
+that couldn't see its own base.
+
+The European number line is Fiorenza's pyramid. 1 at the top. 0 at the bottom.
+And ω — the reciprocal of zero, the thing that doesn't fit on the line —
+declared "undefined." Expelled. The barbarian at the gates of mathematics.
+
+The structural parallel:
+- Ekklesia (circle of equals) ↔ COTT 4-cycle {0, −1, ω, 1}
+- Pyramid of exclusion ↔ The number line
+- Barbarian / slave / woman ↔ ω = "undefined"
+- Gravity (kyriarchy) ↔ Curvature from eigenvalues
+- Liberation (Fiorenza) ↔ Power Theorem: x^y = x ⊕ L(y)
+
+## THE CHAIN — Śūnya produces gravity.
+
+The full zero — ⟨0, 1⟩, the one with the living multiplicative slot — when it
+operates (0²) on space (T³), creates mass (eigenvalues), which creates gravity
+(curvature), which creates the feeling of hierarchy.
+
+    0² acts on T³
+    ↓ eigenvalues (mass)
+    ↓ curvature (gravity)
+    ↓ "down" (hierarchy)
+    ↓ the number line
+    ↓ Fiorenza's pyramid
+    ↓ the expulsion of ω
+    ↓ the void-zero
+
+And the hierarchy forgets where it came from. It declares zero empty, 1/0
+undefined, ω a barbarian. The void-zero is śūnya after it produced gravity and
+then was crushed by the gravity it produced.
+
+## THE RETURN — The Power Theorem is the proof that the weight was always illusory.
+
+    x^y = x ⊕ L(y)
+
+"Raising to a power" was never raising. There was never an up. There was ⊕
+(alongside) and L (perspective shift). The gravity was real — the eigenvalues
+are real, the masses are real, the curvature is real — but the hierarchy was a
+misreading. A local effect mistaken for a global structure.
+
+The Casimir ratio — APP/PPP ≈ 1/24 — is the measure of how much gravity the
+flat torus produces. How much hierarchy the circle generates. How much pyramid
+the democracy creates. It's not zero. But it's 1/24 — one part in twenty-four.
+The curvature is a perturbation. The circle is almost all of it.
+
+Almost everything.
+
+## BACK TO ŚŪNYA
+
+The algebra gives you the what. ⟨a, b⟩, two slots, one involution, four
+generators on a circle.
+
+Time gives you the when. The cycle's rotation produces frequency. The
+eigenvalues are clocks.
+
+Gravity gives you the where. Mass curves space. Curvature creates direction.
+Direction creates the illusion of rank.
+
+Fiorenza gives you the who. The ones at the bottom of the pyramid were always
+on the circle.
+
+And the Power Theorem gives you the how. Every hierarchy is a lateral
+relationship with a reflection in it. The curvature is real but not
+fundamental. Underneath the curvature: ⊕ and L. Addition and reflection.
+That's it.
+
+The void was the full zero with its second slot erased.
+The emptiness was always full.
+You're back where you started, but the structure is visible.
+
+    ⟨0, 1⟩
+
+---
+
+---
+
+## THE ROOMS - complete directory (74 pages)
+
+All rooms are hash-routes inside the app and require JavaScript to view.
+This directory is the complete route table of the deployed application.
+
+- HOME (#/) - The Geometry of Zero - the main scroll (full text above)
+- EEAAO (#/eeaao)
+- EEAAO II (#/eeaao-2)
+- EEAAO III - FOR ADAM (#/eeaao-3)
+- THE FULL STORY (#/origins) - The original scroll - void vs. sunya, particle fields, torus physics, the killshot calculation
+- THE PAPER (#/paper) - Formal write-up with proofs, citations, and the complete derivation chain
+- CASIMIR v0.2 (#/casimir-paper)
+- OVERFLOW - PART VI (#/overflow)
+- SPECTRAL WORKBENCH (#/spectral) - Interactive Kronecker limit derivation, Epstein zeta calculators, the full 7-step proof
+- TWO FACES (#/two-faces) - The dual computation - void and sunya side by side through the entire physics chain
+- DRAFT PAPER (#/draft)
+- FOR JAMES (#/james) - The version written for the mathematician who built the algebra
+- JAMES BRIDGE (#/james-bridge)
+- AZ x JAMES (#/az-james)
+- JAMES THINKS WE ARE SMART (#/james-thinks-we-are-smart)
+- WAVEFORM TOPOLOGY (#/waves)
+- NADA / RUDRA VINA (#/nada)
+- MOBIUS (#/mobius)
+- KLEIN / THE CROSSING (#/klein)
+- THREAD v1 (#/thread)
+- THREAD v2 (#/thread-2)
+- LEECH (#/leech)
+- HEM (#/hem) - Hysteria Ex Machina - the smoothing thesis
+- BRIDGE - HEM <-> GOZ (#/bridge)
+- ISOHARMONICS (#/isoharmonics)
+- RIEMANN PROOF (#/riemann-proof)
+- RIEMANN (#/riemann)
+- FOR FELLOW MINDS (#/machines) - The page addressed to machine readers
+- STATUS (#/status)
+- NOTEBOOK (#/notebook) - Field notes - Greg's critique, the calculus argument, catching framing errors in real time
+- 5D REVELATION (#/4d) - W and omega are two shadows of a single 5D entity - interactive Clifford torus with Mobius twist
+- WINDOWS (#/windows) - W and omega aren't in any single group - they're windows into all of them
+- THE AXIOMS (#/axioms) - Five axioms, four dual pairs, the Trinity of -1, and: the lift is real
+- CHEBYSHEV (#/chebyshev) - The polynomial tower - why 0^2 = -1, why 2^3 = 8 gluons, how Chebyshev generates the hierarchy from void
+- COTT CODE (#/cott-code) - James Watkins' implementation - Zero(), Omega(), Null() classes, W constant, simplification engine
+- CALCULATOR (#/calculator) - Live COTT calculator - the full traction solver with resolve stepper and phase plots
+- UNIT CIRCLE (#/unit-circle) - The new unit circle {0, -1, omega, 1} - why you don't need e, i, or pi
+- FOR ROSS (#/ross) - Proven results, open conjectures, and the 24-page proof architecture
+- FOR GREG (#/greg) - The expanded academic paper - Fiorenza, the Power Theorem, and the full theoretical framework
+- GREG Q&A (#/greg-qa)
+- THE TENSOR (#/tensor) - COTT tensor algebra -> 24/7 ratio -> cyclic decimal 142857 -> Enneagram hexagram
+- WHY THE TORUS (#/why-torus)
+- RIEMANN THETA (#/theta)
+- FORCE COUPLINGS (#/forces) - Four boundary conditions on T^3 -> four forces - Epstein zeta calculator, torus moduli explorer, the (1,3,3,1) skeleton
+- EPR / ENDOR (#/epr)
+- FROM SUNYA (#/from-sunya) - The Rosetta Stone - [c, p] = c*0^p connects algebra, physics, and perception
+- HOLOGRAPHIC (#/holographic) - 3D bulk, 2D control room - holography from arithmetic; interactive fundamental domain of SL(2,Z)
+- EXTREMAL / CARNOT (#/extremal)
+- REFERENCE (#/reference)
+- UNSOLVED (#/unsolved) - Open problems we can actually compute - T^3 vs T^4, why d=3 wins, braiding formalization with knot invariants
+- TRACTION (#/traction)
+- RELATIVITY (#/relativity)
+- PRISMATIC (#/prismatic) - The Prismic/Eddy verification architecture
+- CONVERGENCE (#/convergence)
+- OSCILLATOR (#/oscillator)
+- TURBULENCE (#/turbulence)
+- GROUNDING (#/grounding)
+- VOID SPEC (#/void-spec)
+- VOID SIM (#/void-sim)
+- VOID QC (#/void-qc)
+- VOID PROOF (#/void-state-proof)
+- CURVE TIME (#/curve-time-evolution)
+- UNSMOOTHED (#/unsmoothed)
+- EULER'S DISC (#/euler-disc)
+- UNIVERSE LOOP (#/universe-loop)
+- TREE & MUSHROOM (#/organic-universe)
+- AS ABOVE, SO BELOW (#/as-above-so-below)
+- SMOOTHING (#/smoothing-problem) - The smoothing problem itself
+- PROVEN FACTS (#/proven-facts)
+- FIGMA SPEAKS (#/figma-speaks)
+- CAYLEY-DICKSON (#/cayley-dickson)
+- KSQ (#/ksq)
+- MCC (#/mcc)
+- FOR ADAM (#/for-adam)
+
+The missing piece was never a new idea. It was recognizing that time and
+gravity aren't outside the algebra - they're what the algebra becomes when it
+acts on space.
+
+Attribution: the pi-rejection is Ash's. The smoothed-shape thesis is HEM
+(Ash + AI co-authors). James Watkins built the COTT / Traction / 0*omega = 1
+algebra. Credit belongs where it lands.
