@@ -1,0 +1,14 @@
+# Hashed-evidence integrity.
+#
+# core.autocrlf=true (the Windows default) rewrites line endings on checkout.
+# That makes every sealed SHA-256 of a text file fail to reproduce on a fresh
+# clone, because the bytes on disk are no longer the bytes that were hashed.
+# Verified 2026-08-16: 031/the-clock-day.md seals as ae082423..., but the same
+# file after CRLF conversion hashes to a5f13ff2... — a silent verification
+# failure across every text file in every entry.
+#
+# The stored blobs are LF and DO match the sealed hashes. Treating everything as
+# binary preserves them verbatim on checkout, so the ledger verifies anywhere.
+#
+# Do not remove. This line is what makes the hashes mean anything off this machine.
+* -text
