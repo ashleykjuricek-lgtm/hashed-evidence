@@ -1,0 +1,81 @@
+========================================================================
+032 PROPAGATION TEST  |  root: C:/Users/atoms/AppData/Local/Temp/claude/C--Users-atoms/5302d34c-eede-44c8-8071-a76217c7e993/scratchpad/z10/src
+files scanned: 350
+========================================================================
+
+[A dead-claim]  24
+    app\components\ExportButton.tsx                      c₁ = 1 proven
+    app\components\ExportButton.tsx                      proven by Poincaré isometry
+    app\components\ForGregPage.tsx                       c₁ = 1 is
+    app\components\ForGregPage.tsx                       The c₁ = 1 Proof
+    app\components\ForGregPage.tsx                       proven by Poincaré isometry
+    app\components\PaperDraft.tsx                        c₁ = 1 is
+    app\components\TwoFacesPage.tsx                      forced by Poincaré isometry
+    app\components\spectral\DedekindEtaPanel.tsx         c₁ = 1 PROVEN
+    app\components\spectral\DedekindEtaPanel.tsx         c₁ = 1 proven
+    app\components\spectral\DedekindEtaPanel.tsx         c₁ = 1 is
+    app\components\spectral\DedekindEtaPanel.tsx         PARTIALLY RESOLVED — c₁ = 1
+    app\components\spectral\EtaAnalysisSections.tsx      c₁ = 1 forced
+    app\components\spectral\EtaAnalysisSections.tsx      forced by Poincaré isometry
+    app\components\spectral\EtaClosedFormSections.tsx    c₁ = 1 PROVEN
+    app\components\spectral\EtaClosedFormSections.tsx    c₁ = 1 forced
+    app\components\spectral\EtaClosedFormSections.tsx    forced by Poincaré isometry
+    app\components\spectral\math.ts                      c₁ = 1 is
+    imports\PROVEN_FACTS_HANDOFF.md                      c₁ = 1 is
+    imports\PROVEN_FACTS_HANDOFF.md                      c₁ = 1 forced
+    imports\PROVEN_FACTS_HANDOFF.md                      forced by Poincaré isometry
+    imports\pasted_text\hysteria-ex-machina-discussion-1 c₁ = 1 is
+    imports\pasted_text\hysteria-ex-machina-discussion.m c₁ = 1 is
+    imports\pasted_text\pasted-attachment-1.txt          c₁ = 1 proven
+    imports\pasted_text\pasted-attachment-1.txt          proven by Poincaré isometry
+
+[B stale-constant]  18
+    app\components\ForGregPage.tsx                       041689414162
+    app\components\ForGregQAPage.tsx                     041689414162
+    app\components\ForJamesPage.tsx                      041689414162
+    app\components\ForRossPage.tsx                       041689414162
+    app\components\PaperDraft.tsx                        041689414162
+    app\components\PDFExportButton.tsx                   041689414162
+    app\components\spectral\BriefingPanel.tsx            041689414162
+    app\components\spectral\math.ts                      041689414162
+    imports\geometry-of-zero-complete__2_.txt            041689414162
+    imports\project_summary_2026-05-24__1_.md            041689414162
+    imports\project_summary_2026-05-24__3_.md            041689414162
+    imports\PROVEN_FACTS_HANDOFF.md                      041689414162
+    imports\pasted_text\cott-summary.md                  041689414162
+    imports\pasted_text\figma-audit-read.md              0.041689414162238
+    imports\pasted_text\figma-audit-read.md              041689414162
+    imports\pasted_text\hysteria-ex-machina-discussion-1 041689414162
+    imports\pasted_text\hysteria-ex-machina-discussion.m 041689414162
+    imports\pasted_text\proof-chain-derivation.md        041689414162
+
+[C unrefuted-formula]  33
+    app\components\ExportButton.tsx                      states formula, no refutation
+    app\components\ForGregPage.tsx                       states formula, no refutation
+    app\components\MobiusFactorizationPage.tsx           states formula, no refutation
+    app\components\NotebookPage.tsx                      states formula, no refutation
+    app\components\PaperDraft.tsx                        states formula, no refutation
+    app\components\PaperPage.tsx                         states formula, no refutation
+    app\components\PenroseProblem.tsx                    states formula, no refutation
+    app\components\RelativityPage.tsx                    states formula, no refutation
+    app\components\SpectralWorkbench.tsx                 states formula, no refutation
+    app\components\TwoFacesPage.tsx                      states formula, no refutation
+    app\components\UnsolvedPage.tsx                      states formula, no refutation
+    app\components\spectral\BriefingPanel.tsx            states formula, no refutation
+    app\components\spectral\DedekindEtaPanel.tsx         states formula, no refutation
+    app\components\spectral\EtaAnalysisSections.tsx      states formula, no refutation
+    app\components\spectral\EtaClosedFormSections.tsx    states formula, no refutation
+    app\components\spectral\math.ts                      states formula, no refutation
+    app\components\spectral\SunyaRatioExplorer.tsx       states formula, no refutation
+    imports\mobius-tab-export.md                         states formula, no refutation
+    imports\project_summary_2026-05-24__1_.md            states formula, no refutation
+    imports\project_summary_2026-05-24__3_.md            states formula, no refutation
+    imports\PROVEN_FACTS_HANDOFF.md                      states formula, no refutation
+    imports\pasted_text\cayley-dickson-bridge.md         states formula, no refutation
+    imports\pasted_text\chowla-selberg-s3-minus-2.md     states formula, no refutation
+    imports\pasted_text\figma-audit-read.md              states formula, no refutation
+    imports\pasted_text\figma-pslq-analysis.md           states formula, no refutation
+    ... and 8 more
+
+FAIL - 75 finding(s). Correction is NOT complete. Do not seal.
+

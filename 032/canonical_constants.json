@@ -1,0 +1,70 @@
+{
+  "_comment": [
+    "SINGLE SOURCE OF TRUTH for cubic-torus Epstein/Casimir constants.",
+    "Sealed in hashed-evidence 032. Any component, export, or page that hardcodes",
+    "one of these values instead of importing it is a propagation hazard.",
+    "Greg's rule: no manually copied 'ground truth' strings scattered as glitter."
+  ],
+  "_version": "032",
+  "_date": "2026-08-15",
+
+  "Z_PPP_at_minus_half": "-0.26659627871839347461049847552287965704123163551674423171133070313320053353872034",
+  "Z_APP_at_minus_half": "-0.011114242795034410520050501728239128743230327022113411539290369469368226387440289",
+  "R": "0.041689414602723775120079189541147795945176276253828090067002511795844266589880806",
+  "one_over_24": "0.041666666666666666666666666666666666666666666666666666666666666666666666666666667",
+  "epsilon_at_cube": "0.00054595046537060288190054898754710268423063009187416160806028310026239815713933853",
+
+  "Z_PPP_at_2": "16.5323159598",
+  "Z_star_APP_at_2": "0.68922257439",
+  "two_pi_cubed": "62.0125533606",
+
+  "deformation": {
+    "slope_at_b1": "-18.32596",
+    "b0": "1.0000297910",
+    "offset_from_cube": "2.9791e-05",
+    "_note": "sign convention opposite to 028 (axis labelling); magnitudes agree"
+  },
+
+  "genuine_leading_coefficients_of_epsilon": {
+    "e^-2pi": "-5.709",
+    "e^-2pi*sqrt2": "-67.1932743663",
+    "_note": "THE REBUTTAL. c1 is NOT 1 and NOT 0.293. 0.293 = 1-1/sqrt2 is eps/q, a VALUE, not a coefficient (029)."
+  },
+
+  "SUPERSEDED_DO_NOT_USE": {
+    "R_stale": "0.041689414162238",
+    "_where_seen": "Chowla-Selberg page 'ground truth R'; old Near-Rational draft",
+    "_warned_by": "032/casimir_half_period_hinge_notes.md item 10, 2026-07-07",
+    "_diverges_at": "10th significant figure"
+  },
+
+  "DEAD_CLAIMS": [
+    {
+      "claim": "epsilon = q(1-1/sqrt2)(1-q) as an analytic identity",
+      "killed_by": "028 Prop 2 (interval-certified e^-2pi*sqrt2 coefficient in (-68,-66))",
+      "killed_on": "2026-06-20"
+    },
+    {
+      "claim": "c1 = 1, forced/proven by Poincare isometry of t -> 1/t",
+      "killed_by": "genuine e^-2pi coefficient is -5.709 (028 shell table); separately, the Mellin integral samples the whole it ray, not only the fixed point i (real-math ledger line 76)",
+      "killed_on": "2026-06-20"
+    },
+    {
+      "claim": "closed-form c2; the q^2/sqrt2 best candidate",
+      "killed_by": "no integer-power expansion exists to have a c2",
+      "killed_on": "2026-06-20"
+    },
+    {
+      "claim": "78 micron cosmological handle AS DERIVED FROM THIS COEFFICIENT",
+      "killed_by": "unsupported once c1 falls",
+      "killed_on": "2026-06-20"
+    }
+  ],
+
+  "REPLACEMENT_MECHANISM": {
+    "statement": "The half-shift alpha=(1/2,0,0) Poisson-dualizes to the alternating character (-1)^n1. The character annihilates every ODD shell of the transverse square dual lattice, exactly, by the orientation-reversing coordinate swap (k1,k2)->(k2,k1). That swap exists only when the transverse sides are equal, i.e. only on the cube. The residue is the surviving sqrt2-tower.",
+    "consequence": "The near-1/24 value is a structured cancellation residue, not a closed form.",
+    "sources": ["032 parity law", "032/casimir_half_period_hinge_notes.md (half-period hinge, 2026-07-07)"],
+    "_note": "One phenomenon, two representations, joined by Poisson summation."
+  }
+}

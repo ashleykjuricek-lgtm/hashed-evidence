@@ -1,0 +1,20 @@
+# SHA-256 hashes — sealed 2026-08-16 03:16:08 UTC
+
+canonical_constants.json                                     7d6362c24f3211c2f84c0e89c79386e506fbc1e6e44e043f8e13bf12726d373e
+casimir_half_period_hinge_notes.md                           9e888a3e7e8d5dc3c8048b65f764a838abf6d0ec05145badd00494ba371c2da9
+deformation_b0_duality.py                                    a9d5199cf2251bde6a40584ff9f86aa4384f59dd00a7ef0b09b64c22648f99fb
+deformation_b0_duality_output.txt                            0ac301860fb317ff0ade5561dfee8aa36fe81b456c0de141cb9d4ba112a020a8
+epstein_aniso_check.py                                       3a1b5825f29a97109761d3330d6f7c4359e8637af570e61d73c0f6417edf793c
+epstein_aniso_check_output.txt                               ba95394ec3c69f9e33be68befc54faf065e8a817189d205ef9b7d995ac8302b3
+false-positive-cubic-torus.md                                f4f9f6dc8f591a2895e7b281fca20773c6477fbc5951f99b10f59f3d2a3da027
+orientation_check.py                                         0d0f4074dcb2df31d338c8466ba765b6bff160eddcabbd64862228ea282f2168
+orientation_check_output.txt                                 f62ac716b6ea98b4fd7d4288a29dfcee63c86ef42b3919faec722c1e3e2ce72c
+parity-law-and-the-register.md                               039eac8bf2c45e20cfafd4ba8eb36a4c9922d31ac66c5742c19d90daf3fe1900
+parity_register.py                                           b5a239aa9357872194ec28f37d250213e7caa5d33c1f1976fac09d1913aa95d4
+parity_register_output.txt                                   c124c14c67f8a2835f1db149afae58c7124a0d438b78b0ff1bb9f4e7738ce778
+positions-on-the-source-of-truth.md                          457c7bf2202059619e4804c08c49059d6bf08a47548b22ff26724a0d2dafba13
+propagation-failure.md                                       301039bdd3df5428b056e4b21571041afd86157e6f8cd67b3c72e9aff553b40d
+propagation_test.py                                          2c631d3086b405d1001574a71deed7ab0684055bcf6a44083b0578b35289e0a8
+propagation_test_BASELINE.txt                                caed59bac0c2a8ee328417cfa8cb85ab483a4faeadd746956b4f99d886fbfdf8
+verify_R_output.txt                                          a98ca296a015f93379d26002776cfeb91843ff0c2c09f54317049bc23bd7ab10
+verify_R_theta_route.py                                      30f82b6a759a38cf9f6c34652ca4efee7e2653c5be413e2a344cbbc33b62708e

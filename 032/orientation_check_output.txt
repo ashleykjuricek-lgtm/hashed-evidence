@@ -1,0 +1,7 @@
+alpha      Z(+a)             |Z(-a)-Z(+a)|   |Im Z|
+0.5000     +0.6974551868    3.02e-32       1.51e-32
+0.2500     +4.7274435973    2.05e-16       1.02e-16
+0.3333     +2.4881620103    1.01e-16       5.07e-17
+0.1234     +9.7546203861    5.74e-16       2.87e-16
+
+swap matrix [[0,1],[1,0]] determinant = -1 -> orientation-REVERSING (the involution proving the parity law)
