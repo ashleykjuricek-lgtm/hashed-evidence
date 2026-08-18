@@ -1,0 +1,12 @@
+# SHA-256 hashes — sealed 2026-08-18 23:03:01 UTC
+
+README-034.md                                                38298cd95bec8a4d8bddec32aebb1b758d9834272d5105cbe1cc3fa8aa008898
+casimir_component_decomposition.txt                          580c4b2a1e473356c01c417b792157e91e78f16fa1f280a6f4e41f48ae3229d3
+constants_gate.allow                                         24662cc125b5b39582a72dcdb2014e796bcc0de23e7157f20264b66c40498839
+constants_gate.sh                                            ab439f38f6b221b698ac8425041944677b8f06280117ce9d4f4bec6aac89e9ab
+cott-anchor-permutation-test.md                              322fc79effce16fea9c118ecf777799971e1d48d402d73c65b5937e329783e4c
+projection_hierarchy.txt                                     a5c5140eb69301f2a5a15d6fb968741c07b261038efadf83e8bbe8ac4bff0826
+scar_control.py                                              62f91a066c2caff792f712f8670657a912818e73b563545c8a649a17b5a003e1
+scar_control_output.txt                                      0217ed39a2e0d83cbba8ca6af391a5419a046f31d193f575cc250aed23c66dfc
+site-corrections-manifest.md                                 9fc58cca4ebe80174fb7c92e41a3e1be4fdc09aeb2bf65ac766cd8a3893593d5
+zip12_propagation.txt                                        031c1eda615bee8f16b65fa33a3cb58b7475f3b95a6cf424a7285e54fcf242b4

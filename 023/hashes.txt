@@ -1,0 +1,5 @@
+# SHA-256 hashes — sealed 2026-08-18 23:03:00 UTC
+# NOTE: content dated 2026-06-09; sealed late. Authorship date is the content date.
+
+genesis_hash.md                                              730571c2773061e911e9bdc54337d95c4232a85f19b57dde5176b3e87de2836d
+nnuts_framework.md                                           8761c986ca815a7e1aa988cedd93ab4bca4e1dd440a4bc46acae2a492cbbcbf6

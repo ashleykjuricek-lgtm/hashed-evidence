@@ -1,0 +1,29 @@
+=== 1. at the zero crossing, is information destroyed? ===
+  t*        = 1.570796
+  delta(t*) = 6.123e-17   <- coarse observable is ZERO
+  p(t*)     = -1.000000  <- and is MAXIMAL in magnitude
+  |p| max   = 1.000000
+  -> at the drain the coarse coord holds nothing; p holds everything.
+
+=== 2. coarse cycle closes before the full cycle ===
+  half period T/2 = 3.141593
+   t=0.3  (delta,p)=(+0.9553,-0.2955)   ->  t+T/2  (-0.9553,+0.2955)   |delta| same? True
+   t=0.7  (delta,p)=(+0.7648,-0.6442)   ->  t+T/2  (-0.7648,+0.6442)   |delta| same? True
+   t=1.1  (delta,p)=(+0.4536,-0.8912)   ->  t+T/2  (-0.4536,+0.8912)   |delta| same? True
+  coarse r returns after T/2; full state (delta,p) needs T. ratio = 2
+
+=== 3. what the coarse observer literally cannot do ===
+  approaching zero from t<t*:  delta=+1.000e-09
+  r(t) alone is symmetric about the crossing, so it admits BOTH
+  continuations: delta -> -|.| (cross) or delta -> +|.| (bounce).
+  sign(p) selects. p(t*) = -1.0000 -> crosses to delta<0.
+
+=== 4. four-petal rose: r = A cos(2 theta) ===
+  theta       r        dr/dtheta   petal
+    0.0000   +1.0000    -0.0000   +
+    0.7754   +0.0200    -1.9996   +
+    0.7854   +0.0000    -2.0000   center
+    0.7954   -0.0200    -1.9996   -
+    1.5708   -1.0000    -0.0000   -
+  at theta=pi/4 the curve is AT the origin; r alone cannot say which
+  petal follows. dr/dtheta = -2.0000 does.

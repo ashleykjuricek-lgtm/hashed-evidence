@@ -1,0 +1,6 @@
+# Extended-regex patterns for paths permitted to contain superseded constants,
+# because documenting them is their purpose. External by necessity: sealed
+# entries cannot be edited to carry an inline marker.
+/[0-9]{3}/
+constants_gate
+canonical_constants\.json

@@ -1,0 +1,7 @@
+PROJECTION HIERARCHY  theta -> (delta,p) -> |delta|
+  scar size is relative to the projection, not absolute.
+
+  preimage of (delta,p) : 2  -> 1 bit  hidden (branch)
+  preimage of |delta|   : 8  -> 3 bits hidden (sign d, sign p, branch)
+
+  C(theta+pi)=C(theta) exactly; max residual over 2000 samples = 3.220e-15

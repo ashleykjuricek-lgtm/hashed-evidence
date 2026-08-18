@@ -1,0 +1,12 @@
+component             PPP            APP     difference
+tail         -0.487750459   -0.796494275    0.308743816
+smooth        0.785398163    0.785398163    0.000000000
+dual         -0.000054399   -0.000018131   -0.000036268
+zeromode     -0.564189584   -0.000000000   -0.564189584
+total        -0.266596279   -0.011114243   -0.255482036
+
+Z_PPP - Z_APP            = -0.255482036
+zero-mode subtraction    = -0.564189584  -> 220.8% of the difference
+everything else combined = 0.308707548  -> -120.8%
+
+[exited with code 0]
