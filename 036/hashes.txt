@@ -1,0 +1,5 @@
+# SHA-256 hashes — sealed 2026-08-20 08:40:50 UTC
+
+parity-cancellation-note-v2.md                               52ef97c8e13c1e91b2100cf53a731a315a7fde429e88158cb0d642fac1b756c2
+verify_theorem2_hypothesis.py                                be184b39cd0229d22086cf483b920688e19d43234b90e7cc1e45cd26b48fcdcc
+verify_theorem2_hypothesis_output.txt                        865c93c0d8cc154bc2496d71f11e5a7dfe05fb9d50c7fef038eb6db949db24e7

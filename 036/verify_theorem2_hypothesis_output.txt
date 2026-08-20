@@ -1,0 +1,14 @@
+THEOREM 2a — finite sigma-symmetric truncation, ANY w
+  w = 1                N=20,40,80 -> ['+0.0e+00', '+0.0e+00', '+0.0e+00']
+  w = exp(-2 pi d)     N=20,40,80 -> ['-4.8e-35', '-4.8e-35', '-4.8e-35']
+  w = d^-7             N=20,40,80 -> ['+0.0e+00', '+0.0e+00', '+0.0e+00']
+  w = log(1+d)/d^5     N=20,40,80 -> ['+0.0e+00', '+0.0e+00', '+0.0e+00']
+
+THEOREM 2b — the hypothesis sum_k |w| < inf, tested by growth
+  w = 1                mass(40)=6.560e+03  mass(80)=2.592e+04   DIVERGES -> 2b does NOT apply
+  w = exp(-2 pi d)     mass(40)=8.044e-03  mass(80)=8.044e-03   CONVERGENT
+  w = d^-7             mass(40)=4.423e+00  mass(80)=4.423e+00   CONVERGENT
+  w = log(1+d)/d^5     mass(40)=3.880e+00  mass(80)=3.880e+00   CONVERGENT
+
+  => w = 1 vanishes under 2a and is inadmissible under 2b.
+     That distinction is the whole content of the v1 -> v2 amendment.
