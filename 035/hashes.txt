@@ -1,0 +1,4 @@
+# SHA-256 hashes — sealed 2026-08-20 08:13:37 UTC
+
+errata-session-2026-08.md                                    687a307eb8122b69d5f2d618b527c8479c4e1d9d1191dadacffe54904ea15122
+parity-cancellation-note.md                                  83a60e443b6ee84c78f68f02ce1dab0a77113453e8d54198a6ff8c6a38f41d66
