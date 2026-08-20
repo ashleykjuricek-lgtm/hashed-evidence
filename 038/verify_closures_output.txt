@@ -1,0 +1,14 @@
+THEOREM 3 — transversality
+  odd m<4000 with T2(m)=0 : NONE
+  T1+T2 = m*S(m) violations: NONE
+  slope (closed form)      : +2.344055e-02
+  slope (032, finite diff) : +2.3441e-02
+  |m=1| / sum|rest|        : 871.3
+
+ITEM 1 — the parity zero, through the quotient
+  N_1 = 0 (parity) -> coefficient of e^-2pi = -5.7089   [028: -5.709]
+                      K_1                   = -1.06610e-02  [028: -1.0662e-02]
+
+THEOREM 4 — one coordinate at a time
+  odd m<300, T(m) = 2*sum_{k3 odd} S(m-k3^2) violations: NONE
+  T(1) = 2 = 2*S(0) = 2      T(3) = -8 = 2*S(2) = -8  <- the sqrt2 shell

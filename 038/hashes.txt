@@ -1,0 +1,5 @@
+# SHA-256 hashes — sealed 2026-08-20 20:13:55 UTC
+
+three-closures.md                                            11bba23d8f1ccd3c5f1c86061073bced6b90dbd2bb8c4470e2bab9ad5cd34f0e
+verify_closures.py                                           c2ad55cc4f06151bc141e48d9a8ea2454eb38d90e7eca5cdf79b99cb6c331641
+verify_closures_output.txt                                   048902019da1373a8078fc499dec9130459a037c7adb46695faab69f23543433
