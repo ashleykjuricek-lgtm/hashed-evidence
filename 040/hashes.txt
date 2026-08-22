@@ -1,0 +1,8 @@
+# SHA-256 hashes — sealed 2026-08-22 05:35:02 UTC
+
+balanced_decay.py                                            58de1a36c5d3ebfce47de1df8775df745b7b53515a060d30ccfd4ae56226ff28
+balanced_ratio.py                                            ace9b268fd0e6198beb9913e388dee2187045565ebdd0a3ad8847dea020fa903
+erratum-and-the-sign-law.md                                  67d13b58e06b97b786730758bbbd26540d737d3497d65a7dcdbcc805f14929ce
+marked_circles.py                                            e1a862290da3ffa9e8e3c17a450a323c3a86297077c32d2c1d0822455ac0069d
+output.txt                                                   0c45e01d9cd366d951ce5b406ca53a4a92d1d59e3bf94bc1b20c83166036cfb6
+sign_law.py                                                  1018cca0d18b4a7226a619014d410991e041dbb54350fe59b8cf1d715630e0a7
