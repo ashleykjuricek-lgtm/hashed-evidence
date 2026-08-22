@@ -1,0 +1,9 @@
+# SHA-256 hashes — sealed 2026-08-22 07:08:02 UTC
+
+F8-sweep-of-the-corpus.md                                    66d27321df23e5225937a85f86ae03af920526c29c7452e6447395c1d0194bbc
+break_039.py                                                 9d54269287d3e82d2a98346014b188a5b904045be83fb48971e4a70c07652a3c
+fractional.py                                                7dcbca7b091e21b5b52713ed3e944bedff1ea3e57215644bee6a3ba35abe4a6e
+output.txt                                                   ed14bd35113cc39449367438b8d872094fed2265cb6442e321de229cb77309b7
+penrose_gauntlet.py                                          92e9a6229f96c53d77bdaa029e6898716c45bf0d329c4265fede0efad7a4816c
+penrose_rose_shape.png                                       7fc8c895d823f129182080eb58ab915595abbadcf47d58b8c8f529751e4b8320
+rose_shape_run.py                                            ecbe6ebf86486d9cdf0314977c5b100494916fd107f9ea4a0af6f44e83a1c72c

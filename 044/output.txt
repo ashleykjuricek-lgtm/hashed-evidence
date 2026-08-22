@@ -1,0 +1,48 @@
+=== break_039.py ===
+convergence of R(3,3) and R(3,1):
+  dps= 30  R(3,3) = -0.233673480267327105342115
+            R(3,1) = 0.0416894146027237751200792
+  dps= 45  R(3,3) = -0.233673480267327105342114867705294349267
+            R(3,1) = 0.0416894146027237751200791895411477959452
+  dps= 60  R(3,3) = -0.233673480267327105342114867705294349266650924956100769
+            R(3,1) = 0.0416894146027237751200791895411477959451762762538280901
+
+======================================================================
+IS R(3,3) OR R(3,1) IN Q[sqrt2]?  (the claim 039 tabled as PROVED)
+A 3-term relation with coefficients <= C needs ~3*log10(C) digits.
+We hold 50 verified digits, so C <= 1e16 is honest.
+
+  R(3,3) = -0.2336734802673271053421148677052943492666509249561
+      a*x + b + c*sqrt2 = 0,  coeff <=            1000000: None   (needs ~21 digits, have 50)
+      a*x + b + c*sqrt2 = 0,  coeff <=        10000000000: None   (needs ~33 digits, have 50)
+      a*x + b + c*sqrt2 = 0,  coeff <=  10000000000000000: None   (needs ~51 digits, have 50)
+      algebraic degree <= 2, coeff <= 10000000000000000: SKIPPED (needs ~51)
+      algebraic degree <= 3, coeff <= 1000000000000: SKIPPED (needs ~52)
+      algebraic degree <= 4, coeff <=     1000000000: None   (needs ~50 digits)
+      algebraic degree <= 6, coeff <= 10000000: SKIPPED (needs ~56)
+
+  R(3,1) = 0.041689414602723775120079189541147795945176276253828
+      a*x + b + c*sqrt2 = 0,  coeff <=            1000000: None   (needs ~21 digits, have 50)
+      a*x + b + c*sqrt2 = 0,  coeff <=        10000000000: None   (needs ~33 digits, have 50)
+      a*x + b + c*sqrt2 = 0,  coeff <=  10000000000000000: None   (needs ~51 digits, have 50)
+      algebraic degree <= 2, coeff <= 10000000000000000: SKIPPED (needs ~51)
+      algebraic degree <= 3, coeff <= 1000000000000: SKIPPED (needs ~52)
+      algebraic degree <= 4, coeff <=     1000000000: None   (needs ~50 digits)
+      algebraic degree <= 6, coeff <= 10000000: SKIPPED (needs ~56)
+
+also: is 24*R(3,1) - 1  (= epsilon) anything?
+   eps = 0.000545950465370602881900548987547102684230630092
+   in Q[sqrt2], coeff <=        100000000: None
+   in Q[sqrt2], coeff <=  100000000000000: None
+
+=== penrose_rose.py (Tier-1, run 2026-08-22) ===
+computing decagon rose (N=8)...
+computing octagon rose (N=10)...
+
+decagon (√5):  petal(max)=0.6176  valley(min)=0.5212  MEAN=0.5450   (1/phi=0.6180)
+
+octagon (√2):  petal(max)=1.2952  valley(min)=1.0273  MEAN=1.1762   (1/phi=0.6180)
+
+Saved -> C:\Users\atoms\quasicrystal-tier1\penrose_rose_shape.png
+
+[exited with code 0]
