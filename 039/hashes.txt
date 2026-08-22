@@ -1,0 +1,7 @@
+# SHA-256 hashes — sealed 2026-08-22 05:30:42 UTC
+
+balanced_diagonal.py                                         a3aa49a05b8d9c2f587eee3a62703fdec16e89b493f57a3da782d1ca4e0b36f4
+closed_forms.py                                              1603b7683e627a74deba505cdf83f22163d0e5a5824c475713d88d8ec30e403e
+marked-circles.md                                            2c723eab6c2a4d396f278eef6a21817d9e04698c4bc6bb9cf4e143fbc2df1e1d
+marked_circles.py                                            e1a862290da3ffa9e8e3c17a450a323c3a86297077c32d2c1d0822455ac0069d
+marked_circles_output.txt                                    44b9eed6948d6488646c2e10c6c2e323cb1874a7c5a38dd0f647692e85cab1a8

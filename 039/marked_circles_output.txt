@@ -1,0 +1,79 @@
+=== closed_forms.py ===
+R(1,1)  solver                      -0.5   closed                      -0.5   diff   1.48e-31   EXACT   -1/2
+R(2,1)  solver -0.1035533905932737622004   closed -0.1035533905932737622004   diff   4.31e-31   EXACT   (2^2s - 2^s)/2 = -(sqrt2-1)/4
+R(2,2)  solver -0.2928932188134524755992   closed -0.2928932188134524755992   diff   2.96e-31   EXACT   2^s - 1 = -(1 - 1/sqrt2)
+R(3,3)  solver -0.2336734802673271053421   closed -0.2928932188134524755992   diff     0.0592   differs   2^s - 1  [expected to FAIL: d=2 only]
+
+the March constant, from the derivation rather than a fit:
+   A            = 0.2928932188134524755992
+   -(2^s - 1)   = 0.2928932188134524755992
+   -R(2,2)      = 0.2928932188134524755992
+
+and the thing it was mistaken for:
+   R(3,1)       = 0.04168941460272377512008
+   1/24         = 0.04166666666666666666667
+   24*R(3,1)-1  = 0.000545950465371    <- epsilon, still nonzero
+
+=== marked_circles.py (sign sweep) ===
+check 3 1 -0.0111142427950344 vs -0.0111142427950344
+check 5 2 -0.00937157210640224 vs -0.00937157210640224
+check 2 2 0.0670210888091522 vs 0.0670210888091522
+
+sign of Z(d,j)  [ + = positive, - = negative ]   j = marked circles
+  d |           0           1           2           3           4           5           6
+ -----------------------------------------------------------------------------------------
+  1 |    -0.16667    0.083333                                                            
+  2 |    -0.22882    0.023696    0.067021                                                
+  3 |     -0.2666   -0.011114    0.034781    0.062296                                    
+  4 |    -0.29669   -0.037667    0.011349     0.04168      0.0642                        
+  5 |    -0.32558   -0.062247  -0.0093716    0.024486    0.050275    0.071506            
+  6 |     -0.3573   -0.088613    -0.03087   0.0074921    0.037499    0.062715    0.084764
+  7 |     -0.3957    -0.12021   -0.056191   -0.011951    0.023613    0.054123    0.081241
+  8 |    -0.44568    -0.16133   -0.089016   -0.036932   0.0061186    0.043814    0.077861
+  9 |    -0.51446    -0.21824    -0.13471   -0.071893   -0.018521    0.029152    0.072879
+ 10 |    -0.61346    -0.30093    -0.20179    -0.12393    -0.05597   0.0058909    0.063458
+ 11 |    -0.76159    -0.42596    -0.30451    -0.20497    -0.11587   -0.033331    0.044503
+ 12 |    -0.99091    -0.62159    -0.46733    -0.33572    -0.21517    -0.10173   0.0065137
+ 13 |     -1.3572    -0.93725    -0.73338      -0.553    -0.38442     -0.2236   -0.068559
+ 14 |     -1.9595     -1.4612     -1.1801    -0.92355    -0.67965     -0.4443    -0.21544
+
+=== balanced_diagonal.py ===
+exactly half marked  (j = d/2):
+  d=  2  j= 1   Z =  0.0236955331897
+  d=  4  j= 2   Z =  0.0113490825476  down
+  d=  6  j= 3   Z = 0.00749210634059  down
+  d=  8  j= 4   Z = 0.00611859759884  down
+  d= 10  j= 5   Z = 0.00589087006724  down
+  d= 12  j= 6   Z = 0.00651370870914  UP
+  d= 14  j= 7   Z = 0.00813671430596  UP
+  d= 16  j= 8   Z =  0.0113489720584  UP
+  d= 18  j= 9   Z =  0.0175130470762  UP
+  d= 20  j=10   Z =  0.0296696689058  UP
+  d= 22  j=11   Z =  0.0548121137731  UP
+  d= 24  j=12   Z =   0.109758149842  UP
+
+sign-flip law:  is Z(2j, j) > 0 > Z(2j+1, j) for every j?
+  j=1:  Z(2,1)= 0.023695533   Z(3,1)=-0.011114243   law holds: True
+  j=2:  Z(4,2)= 0.011349083   Z(5,2)=-0.0093715721   law holds: True
+  j=3:  Z(6,3)=0.0074921063   Z(7,3)=-0.011951161   law holds: True
+  j=4:  Z(8,4)=0.0061185976   Z(9,4)=-0.018520919   law holds: True
+  j=5:  Z(10,5)=0.0058908701   Z(11,5)=-0.033331284   law holds: True
+  j=6:  Z(12,6)=0.0065137087   Z(13,6)=-0.068559135   law holds: True
+  j=7:  Z(14,7)=0.0081367143   Z(15,7)= -0.15958835   law holds: True
+  j=8:  Z(16,8)= 0.011348972   Z(17,8)= -0.41679843   law holds: True
+
+=== re-verification of ledger 022, run 2026-08-22 ===
+OK    computation/penrose_deep_dive.py
+OK    computation/penrose_deep_dive_results.json
+OK    computation/penrose_lattice_v2.py
+OK    computation/penrose_results.json
+OK    computation/penrose_unit_circle.py
+OK    computation/penrose_verify.py
+OK    docs/MANIFEST.sha256
+OK    docs/SUMMARY.md
+OK    visualization/penrose-rose-page.html
+OK    visualization/penrose-rose.html
+OK    visualization/penrose-zeta-explorer.html
+OK    visualization/unsmoothed-circle.html
+-- files present but unsealed --
+(none above = clean)
