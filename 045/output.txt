@@ -1,0 +1,97 @@
+=== read_the_shape.py (petal count and plateau structure) ===
+================================================================
+decagon (Penrose P3, 5-fold)
+================================================================
+  min=0.521239  max=0.617630  swing=0.096391  (17.7% of mean)
+  HIGH lobes: 10
+         -4.00 ..    4.00   centre    0.00   width  8.00
+         32.00 ..   40.00   centre   36.00   width  8.00
+         68.00 ..   76.00   centre   72.00   width  8.00
+        104.00 ..  112.00   centre  108.00   width  8.00
+        140.00 ..  148.00   centre  144.00   width  8.00
+        176.00 ..  184.00   centre  180.00   width  8.00
+        212.00 ..  220.00   centre  216.00   width  8.00
+        248.00 ..  256.00   centre  252.00   width  8.00
+        284.00 ..  292.00   centre  288.00   width  8.00
+        320.00 ..  328.00   centre  324.00   width  8.00
+  lobe spacing: mean 36.000 deg   (360/10 = 36.000)
+  lobe width  : mean 8.000 deg   duty cycle 0.2222
+  most-occupied levels (value: %% of sweep):
+      0.5225  :   30.5%
+      0.6176  :   21.6%
+      0.5253  :   11.1%
+      0.5224  :   11.1%
+      0.5213  :    8.3%
+      0.5240  :    5.6%
+
+================================================================
+octagon (silver, 8-fold)
+================================================================
+  min=1.027264  max=1.295178  swing=0.267913  (22.8% of mean)
+  HIGH lobes: 8
+        -14.00 ..   14.00   centre    0.00   width 28.00
+         31.00 ..   59.00   centre   45.00   width 28.00
+         76.00 ..  104.00   centre   90.00   width 28.00
+        121.00 ..  149.00   centre  135.00   width 28.00
+        166.00 ..  194.00   centre  180.00   width 28.00
+        211.00 ..  239.00   centre  225.00   width 28.00
+        256.00 ..  284.00   centre  270.00   width 28.00
+        301.00 ..  329.00   centre  315.00   width 28.00
+  lobe spacing: mean 45.000 deg   (360/8 = 45.000)
+  lobe width  : mean 28.000 deg   duty cycle 0.6222
+  most-occupied levels (value: %% of sweep):
+      1.2658  :   14.4%
+      1.2952  :   11.1%
+      1.2738  :    8.9%
+      1.0274  :    8.9%
+      1.1795  :    7.8%
+      1.0278  :    7.2%
+
+
+[exited with code 0]
+
+=== round_window_control.py (THE CONTROL) ===
+DECAGON PROJECTION (Penrose P3), N=8
+  decagon window (10 corners)        min=0.521239 max=0.617630 swing=0.096391  (17.69% of mean)
+  ROUND window (R=1.01698, area-matched) min=2.927700 max=3.403667 swing=0.475967  (15.39% of mean)
+  -> round/polygon swing ratio = 4.93785
+
+OCTAGON PROJECTION (silver), N=10
+  octagon window (8 corners)         min=1.027264 max=1.295178 swing=0.267913  (22.78% of mean)
+  ROUND window (R=1.02703, area-matched) min=1.027299 max=1.353015 swing=0.325716  (27.08% of mean)
+  -> round/polygon swing ratio = 1.21575
+
+VERDICT: a round-window swing near zero means the rose is the APERTURE.
+         a round-window swing comparable to the polygon's means it is the TILING.
+
+[exited with code 0]
+
+=== count_the_petals.py (raw sweep + cos-basis fits; peak-finder is naive, see note) ===
+==================================================================
+decagon (5-fold, Penrose P3)
+==================================================================
+  peaks found: 269    troughs found: 270
+  peak angle (deg) / height:
+  distinct peak heights?  above-mean n=69 mean=0.617625
+                          below-mean n=200 mean=0.522609
+  ratio big/small = 1.181812    phi = 1.618034   1/phi = 0.618034
+  spread within the tall peaks : 9.64e-02
+  fit to k= 5 basis: residual/std = 0.7881   
+  fit to k=10 basis: residual/std = 0.6965   
+  fit to k=20 basis: residual/std = 0.8439   
+
+==================================================================
+octagon (8-fold, silver)
+==================================================================
+  peaks found: 272    troughs found: 271
+  peak angle (deg) / height:
+  distinct peak heights?  above-mean n=168 mean=1.276019
+                          below-mean n=104 mean=1.043780
+  ratio big/small = 1.222498    phi = 1.618034   1/phi = 0.618034
+  spread within the tall peaks : 2.68e-01
+  fit to k= 5 basis: residual/std = 1.0000   
+  fit to k=10 basis: residual/std = 1.0000   
+  fit to k=20 basis: residual/std = 1.0000   
+
+
+[exited with code 0]

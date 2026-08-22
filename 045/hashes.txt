@@ -1,0 +1,7 @@
+# SHA-256 hashes — sealed 2026-08-22 07:19:49 UTC
+
+count_the_petals.py                                          c9a97e8208184693bbcaa5fea45b24766ac68ed9fa45aeacc747739f89c37d4e
+counting-the-petals.md                                       66dd53382002c9d76379f1632c59ead7c0f8b674ef2aa57ec7ab7b7c6c529344
+output.txt                                                   f86aa71b6c7f096dac0f59598fb1cf93903502fc983f3738256f664057745475
+read_the_shape.py                                            68ac860e1ce65245901710ec0ee4b12b001904c5fc53b5432e641cafb42c56a2
+round_window_control.py                                      74b48b21e0b530ed557fd2163967480d86e7f9eb4725f42e36956bfb88531d00
