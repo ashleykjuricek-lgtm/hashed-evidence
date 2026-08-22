@@ -1,0 +1,12 @@
+# SHA-256 hashes — sealed 2026-08-22 06:07:39 UTC
+
+algebraic_search.py                                          5e3027cad085818faff2a04719aeee9224f2d687d71c279a615cb7bbabd2fa83
+critical_j.py                                                2bafff0b5056af7a3b5faf106fd32a6ecfed93c9a9bdbce9e147c6f54abef68d
+find_the_zero.py                                             b6aa5da210fbf394cda33559c3d1156724d8df5af563ee3ac1017d84a0def13d
+fractional.py                                                7dcbca7b091e21b5b52713ed3e944bedff1ea3e57215644bee6a3ba35abe4a6e
+highprec_root.py                                             51bd42d38db8ded1afddc9880b10652bb9a3f40b4af9a41bcf71aca02d7170b0
+lambda_invariance.py                                         b08d21cf7bc54fd46a55d0c200d78f1132eb7382527a2ee3c8082f2ac89483d7
+output.txt                                                   22cca92177385be5e037b808bebb80deea947872c856a123cb7b2596995ff9e4
+precision2.py                                                4983cc34ee288f88f7178f87d540727c204ee4cb3fa0bcbf702ce40575d0fe6f
+the-zero-has-an-address.md                                   48dfdcb3a6fa1da0ad9c7fe71e89a56bcbd6e9d211e9c2e597beedd80f560640
+threshold.py                                                 71047e0ac581b82e4552aaa6feaa49ff6604c0f822519926c21c9c44fa3db093
