@@ -1,0 +1,6 @@
+# SHA-256 hashes — sealed 2026-08-22 05:39:07 UTC
+
+euler-disc-page-corrections.md                               32c3f9b346679b5b43f67762eab74b0f19a2ec2e95bb6fabb5620013348d6707
+marked_circles.py                                            e1a862290da3ffa9e8e3c17a450a323c3a86297077c32d2c1d0822455ac0069d
+verify_output.txt                                            eb88606760bbb20fee2faa57c219cf8811d4cd31b0b8f624718a54aaac7d8762
+verify_stay_refuted.py                                       45fef4f42a78a33998bdc9b4316ee4cb982c70bcc0fd8f7ffa5b9ba08d0b6c86
