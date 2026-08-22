@@ -1,0 +1,14 @@
+PROOF A -- full character law
+   S(m) = 0                 for m odd
+   S(m) = (-1)^(m/2)*r2(m)  for m even
+   representable m tested: 1171     violations: 0  []
+
+PROOF B -- 3D slicing, T(m) = 2*sum_{k3>=1 odd} S(m - k3^2), for m odd
+   odd m tested: 500     violations: 0  []
+
+PROOF C -- exact formula  T2(m) = m*r2(m)/2 - 2*sum_{k1 even} k1^2   (m odd)
+   odd representable m tested: 552     violations: 0  []
+
+   consequence: T2(m)=0  <=>  mean of k1^2 over the even-k1 half-shell = m/2
+   odd representable m <= 4000 with T2(m) = 0:  0   []
+   sample: T2(1)=2.0  T2(5)=-12.0  T2(25)=22.0  T2(325)=220.0
