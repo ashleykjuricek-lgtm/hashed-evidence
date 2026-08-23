@@ -1,0 +1,6 @@
+# SHA-256 hashes — sealed 2026-08-23 11:48:07 UTC
+
+anisotropic.py                                               f335b8003db873c4df4a3e9d077570aee4a4d7cd6c326231ef9875dfab9f2c10
+output.txt                                                   5c79fc840027a8f435fca37a20394d287b1c686e8ec28f856668a70ed45bc8cd
+read_028.py                                                  2b2e789910b56c4054fe565c4f593af65f3b878aa26dfd638860dffce85e8ef7
+reading-028-again.md                                         48807775749b107dd39a6d844a92063c9ae25a8b1bf788682e610c056b172aaa
