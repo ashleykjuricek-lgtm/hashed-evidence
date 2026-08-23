@@ -1,0 +1,4 @@
+# SHA-256 hashes — sealed 2026-08-23 10:09:32 UTC
+
+README-049.md                                                1f4cbfaad3d015458f926e7032fec80ed4eb5af7134d7ce710d9101e1d87892a
+letter-to-kestrel.md                                         063c091471428bd78b4966900ae2c7f164507debf1d450e7d8991992fc16208e
