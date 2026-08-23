@@ -1,0 +1,7 @@
+# SHA-256 hashes — sealed 2026-08-23 11:26:37 UTC
+
+lobe_width.py                                                4cd1473d778d7255f96b508b8f6c65728940451569096e4cfee999d93f785520
+merged.py                                                    6b13c6349c77878cd9cc37384366f279b2e7319bcfe0fcc13fdc540d8d75ec02
+one-curve.md                                                 1fe807b64f14c5395cb76a2daf05129af0e2bf02b24692ffda631f1eb86e41ef
+output.txt                                                   3a194267d5d6a8737ea2daa7e07e117b45cfb6ba3a2a603ed10e9fedfeec7f6b
+the_curve.py                                                 4136a8c5f505d1baec517dfb7225fbb963b87c8d2a4041777341f27c202144e2
