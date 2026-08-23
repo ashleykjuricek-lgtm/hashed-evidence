@@ -1,0 +1,33 @@
+c1 = 1 CLAIM -- FULL INVENTORY, 2026-08-23
+Generated from C:/Users/atoms/unsmoothed-site/source
+NOTHING WAS EDITED. This is a record of where the scar is, not a patch.
+
+LIVE SURFACES (13) -- assert the claim to a reader
+  src/app/components/ExportButton.tsx
+  src/app/components/ForGregPage.tsx
+  src/app/components/HolographicPage.tsx
+  src/app/components/PaperDraft.tsx
+  src/app/components/PaperPage.tsx
+  src/app/components/ReferencePage.tsx
+  src/app/components/SpectralWorkbench.tsx
+  src/app/components/TwoFacesPage.tsx
+  src/app/components/spectral/BriefingPanel.tsx
+  src/app/components/spectral/DedekindEtaPanel.tsx
+  src/app/components/spectral/EtaAnalysisSections.tsx
+  src/app/components/spectral/EtaClosedFormSections.tsx
+  src/app/components/spectral/math.ts
+  src/imports/PROVEN_FACTS_HANDOFF.md          <- claims document, counts as live
+
+ARCHIVAL (4) -- pasted conversation records; accurate records of what was said
+  src/imports/pasted_text/cott-summary.md
+  src/imports/pasted_text/cubic-torus-casimir.md
+  src/imports/pasted_text/hysteria-ex-machina-discussion-1.md
+  src/imports/pasted_text/hysteria-ex-machina-discussion.md
+
+TOTAL OCCURRENCES: 39
+
+NOTE: the correct value is ALREADY in the corpus --
+  src/imports/pasted_text/cubic-torus-casimir.md:57
+      | 1 | **0 / 4 -> cancels** | -1.0662e-2 | -5.709 |
+sitting in a table, unconnected to the claim it refutes.
+The correction did not fail to exist. It failed to travel.

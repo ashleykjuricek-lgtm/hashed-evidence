@@ -1,0 +1,4 @@
+# SHA-256 hashes — sealed 2026-08-23 11:40:35 UTC
+
+scar_inventory.txt                                           f894159a85dd9db1e1ce198e11fd79a81fa41648414d88fae48b4831d22855cf
+the-scar.md                                                  50e2601c118971c61c5ef3b12cc0407977609fda9a6bedbd48d0ca5f5252628b
