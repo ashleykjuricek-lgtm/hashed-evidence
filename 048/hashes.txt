@@ -1,0 +1,7 @@
+# SHA-256 hashes — sealed 2026-08-23 09:30:56 UTC
+
+anisotropic.py                                               f335b8003db873c4df4a3e9d077570aee4a4d7cd6c326231ef9875dfab9f2c10
+check_kestrel_a1.py                                          76593125e166c9aab30c30892a5ca05340735885a5a3d1a8ea6a2ce4e7d9e87f
+kestrel-cross-check.md                                       5d957e993a07f35bde54a9ea46b3be5b4dabb50e4016ba8c51ff092b6f784865
+output.txt                                                   1e41a7e52fe7f5696cecccb3837797c415c68a099800ed2b1d30249ddbc31082
+slope_families.py                                            5dd5c4d05fd12e4e8ed34f7fb2949d9f0a3bee4cb0aa63371cc359d4a0e80410

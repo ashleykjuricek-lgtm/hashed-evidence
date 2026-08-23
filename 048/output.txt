@@ -1,0 +1,48 @@
+=== check_kestrel_a1.py ===
+q            = 0.001867442731707988814430213
+1 - 1/sqrt2  = 0.2928932188134524755991556
+
+f/q                       = 0.2923519185358198776806    <- KESTREL's 'a1'
+KESTREL reported          =  0.29235191853581987768
+
+(1-1/sqrt2)               = 0.2928932188134524755992
+(1-1/sqrt2)*(1-q)         = 0.2923462575008127362058    <- what eps1/q ACTUALLY is
+
+f/q  -  (1-1/sqrt2)       = -0.00054130028    <- KESTREL's 'disagreement'
+f/q  -  (1-1/sqrt2)(1-q)  = 5.661035e-6    <- what is actually left over
+
+ratio of the two          = -95.618606
+
+KESTREL's own c2          = 0.003031437007957836689967
+c2 * q                    = 5.66103500714e-6
+leftover f/q-(1-1/s2)(1-q)= 5.66103500714e-6
+   these match?            True
+
+so:  f/q = (1-1/sqrt2)(1-q) + c2*q  = 0.2923519185358198776806
+     f/q                            = 0.2923519185358198776806
+     residual                       = 5.73972e-42
+
+=== slope_families.py ===
+eps(1) is family-independent (it is the cube):
+
+  047:  L=(1,b,b), A on the SHORT (unstretched) axis
+     eps(1)   = 0.000545950465370603
+     d eps/db = -18.32596475
+     b* ~ 1 + = 2.979109e-5   ->  b* = 1.00002979109
+
+  047b: L=(1,b,b), A on a STRETCHED axis
+     eps(1)   = 0.000545950465370603
+     d eps/db = 9.162982374
+     b* ~ 1 + = -5.958218e-5   ->  b* = 0.99994041781998
+
+  KESTREL: volume-preserving L=(b,1/sqrt(b),1/sqrt(b)), A on STRETCHED axis
+     eps(1)   = 0.000545950465370603
+     d eps/db = 27.48894712
+     b* ~ 1 + = -1.9860727e-5   ->  b* = 0.99998013927333
+
+  KESTREL': volume-preserving, A on a SHORT axis
+     eps(1)   = 0.000545950465370603
+     d eps/db = -13.74447356
+     b* ~ 1 + = 3.9721453e-5   ->  b* = 1.0000397214533
+
+[exited with code 0]
