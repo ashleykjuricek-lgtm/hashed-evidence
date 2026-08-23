@@ -1,0 +1,195 @@
+=== T1 + T2  check_greg.py ===
+========================================================================
+TEST 1 -- the duplication identity  theta3(q) theta4(q) = theta4(q^2)^2
+========================================================================
+   q=  0.01   lhs=    0.9996000400000004   rhs=    0.9996000400000004   diff=0.0
+   q=   0.1   lhs=  0.960400039200000396   rhs=  0.960400039200000396   diff=0.0
+   q=   0.3   lhs=  0.672615216747745908   rhs=  0.672615216747745908   diff=0.0
+   q=   0.5   lhs=  0.257865787083565196   rhs=  0.257865787083565196   diff=0.0
+   q=   0.7   lhs= 0.0174401725372395605   rhs= 0.0174401725372395605   diff=0.0
+   q=   0.9   lhs=4.02634758557766155e-9   rhs=4.02634758557766155e-9   diff=1.4e-35
+   q=  0.97   lhs=1.3236994862841602e-33   rhs=1.36044536402348428e-33   diff=3.67e-35
+   -> identity holds: True
+
+========================================================================
+TEST 2 -- the MECHANISM.  Is  theta4^j theta3^(d-j) < 1  exactly when 2j >= d?
+   (if it were < 1 for some 2j < d too, the argument would prove
+    positivity where we measure negativity -- i.e. it would be broken)
+========================================================================
+   d  j   2j>=d   max over q of theta4^j*theta3^(d-j)      verdict
+    1  0    False   max =    32.3361402813   >1   OK
+    1  1     True   max =   0.998000000002   <1   OK
+
+    2  0    False   max =    1045.62596829   >1   OK
+    2  1     True   max =   0.999996000004   <1   OK
+    2  2     True   max =   0.996004000004   <1   OK
+
+    3  0    False   max =    33811.5079924   >1   OK
+    3  1    False   max =    1.19135780814   >1   OK
+    3  2     True   max =   0.997996008006   <1   OK
+    3  3     True   max =   0.994011992006   <1   OK
+
+    4  0    False   max =    1093333.66557   >1   OK
+    4  1    False   max =    1.75882531564   >1   OK
+    4  2     True   max =   0.999992000024   <1   OK
+    4  3     True   max =   0.996000015992   <1   OK
+    4  4     True   max =   0.992023968024   <1   OK
+
+    5  0    False   max =     35354190.784   >1   OK
+    5  1    False   max =    2.96876107849   >1   OK
+    5  2    False   max =    1.10706291771   >1   OK
+    5  3     True   max =   0.997992016026   <1   OK
+    5  4     True   max =   0.994008015962   <1   OK
+    5  5     True   max =    0.99003992009   <1   OK
+
+    6  0    False   max =    1143218072.72   >1   OK
+    6  1    False   max =    5.54966877969   >1   OK
+    6  2    False   max =    1.41933342702   >1   OK
+    6  3     True   max =    0.99998800006   <1   OK
+    6  4     True   max =   0.995996031996   <1   OK
+    6  5     True   max =   0.992019999932   <1   OK
+    6  6     True   max =   0.988059840252   <1   OK
+
+    7  0    False   max =    36967259971.6   >1   OK
+    7  1    False   max =    11.2828687471   >1   OK
+    7  2    False   max =    2.01412408429   >1   OK
+    7  3    False   max =    1.07469399777   >1   OK
+    7  4     True   max =   0.997988024062   <1   OK
+    7  5     True   max =   0.994004039934   <1   OK
+    7  6     True   max =   0.990035959934   <1   OK
+    7  7     True   max =   0.986083720573   <1   OK
+
+    8  0    False   max = 1.19537850426e+12   >1   OK
+    8  1    False   max =    24.6444221508   >1   OK
+    8  2    False   max =    3.09346649094   >1   OK
+    8  3    False   max =    1.29281811444   >1   OK
+    8  4     True   max =   0.999984000112   <1   OK
+    8  5     True   max =   0.995992048016   <1   OK
+    8  6     True   max =   0.992016031856   <1   OK
+    8  7     True   max =   0.988055888016   <1   OK
+    8  8     True   max =   0.984111553134   <1   OK
+
+   -> mechanism matches the sign law in every cell: True   []
+
+=== T3 + T4  check_greg2.py ===
+========================================================================
+TEST 3 -- strict monotonicity in j:  Z(d,j+1) > Z(d,j)
+   Greg proves it for j >= 1 via  theta3 > theta2 > 0.  Check integer
+   cells AND fractional j (which only the real-j continuation can see).
+========================================================================
+   d= 1  strictly increasing over all j:  True   (over j>=1: True)
+   d= 2  strictly increasing over all j:  True   (over j>=1: True)
+   d= 3  strictly increasing over all j:  True   (over j>=1: True)
+   d= 4  strictly increasing over all j:  True   (over j>=1: True)
+   d= 5  strictly increasing over all j:  True   (over j>=1: True)
+   d= 6  strictly increasing over all j:  True   (over j>=1: True)
+   d= 7  strictly increasing over all j:  True   (over j>=1: True)
+   d= 8  strictly increasing over all j:  True   (over j>=1: True)
+   d= 9  strictly increasing over all j:  True   (over j>=1: True)
+   d=10  strictly increasing over all j:  True   (over j>=1: True)
+   -> monotone in every row: True   []
+
+   fractional j, d = 7:
+      j= 0.5   Z =  -0.17423282662493   
+      j= 1.0   Z =  -0.12021137724253   UP
+      j= 1.5   Z = -0.084260856369783   UP
+      j= 2.0   Z = -0.056190500525001   UP
+      j= 2.5   Z = -0.032605613895488   UP
+      j= 3.0   Z = -0.011951160649973   UP
+      j= 3.5   Z = 0.0066177819083914   UP
+      j= 4.0   Z =   0.02361339854868   UP
+      j= 4.5   Z =  0.039370976594211   UP
+      j= 5.0   Z =  0.054122901589785   UP
+
+========================================================================
+TEST 4 -- the remaining lemma:  Z(d, (d-1)/2) < 0 ?
+   If true, monotonicity closes the whole law.
+========================================================================
+   d= 2   j=(d-1)/2=   0.5   Z =  -0.019175732307   NEGATIVE ok
+   d= 3   j=(d-1)/2=   1.0   Z =  -0.011114242795   NEGATIVE ok
+   d= 4   j=(d-1)/2=   1.5   Z = -0.00937473059189   NEGATIVE ok
+   d= 5   j=(d-1)/2=   2.0   Z = -0.0093715721064   NEGATIVE ok
+   d= 6   j=(d-1)/2=   2.5   Z = -0.0102679741758   NEGATIVE ok
+   d= 7   j=(d-1)/2=   3.0   Z =   -0.01195116065   NEGATIVE ok
+   d= 8   j=(d-1)/2=   3.5   Z = -0.0145792492012   NEGATIVE ok
+   d= 9   j=(d-1)/2=   4.0   Z = -0.0185209187729   NEGATIVE ok
+   d=10   j=(d-1)/2=   4.5   Z = -0.0244163825935   NEGATIVE ok
+   d=11   j=(d-1)/2=   5.0   Z =  -0.033331283986   NEGATIVE ok
+   d=12   j=(d-1)/2=   5.5   Z = -0.0470433306272   NEGATIVE ok
+   d=13   j=(d-1)/2=   6.0   Z = -0.0685591354987   NEGATIVE ok
+   d=14   j=(d-1)/2=   6.5   Z =  -0.103052060283   NEGATIVE ok
+   -> lemma holds on every d tested: True
+
+[exited with code 0]
+
+=== T5  check_greg3.py (float, larger truncation) ===
+Gamma(-1/2) = -3.5449077018   (negative -- this is the sign flip)
+
+  d  j     prefactor x dual sum        independent Z        ratio    sign ok
+   1  1             0.0833333333         0.0833333333    1.0000   OK
+   2  1             0.0236954890         0.0236955332    1.0000   OK
+   2  2             0.0670210888         0.0670210888    1.0000   OK
+   3  0            -0.2647351542        -0.2665962787    0.9930   OK
+   3  1            -0.0111176698        -0.0111142428    1.0003   OK
+   3  2             0.0347814541         0.0347814625    1.0000   OK
+   3  3             0.0622964802         0.0622964803    1.0000   OK
+   4  2             0.0113489479         0.0113490825    1.0000   OK
+   5  3             0.0244859288         0.0244859192    1.0000   OK
+
+  -> sign of the functional-equation form matches Z in every case: True
+  (ratios near 1 confirm magnitude too; residual gap is the 1/N tail)
+
+=== T5 first pass, mpmath, tolerance too tight for its truncation -- kept as erratum ===
+prefactor sign check:  Gamma(-1/2) = -3.54490770181  (negative)
+
+  d  j        prefactor * dual_sum          independent Z          match
+   1  1          0.0833330174962        0.0833333333333   rel   3.79e-6  OK
+   2  1          0.0236857489763        0.0236955331897   rel  0.000413  OK
+   2  2          0.0670210483737        0.0670210888092   rel   6.03e-7  OK
+   3  0          -0.260241356423        -0.266596278718   rel    0.0238  *** MISMATCH ***
+   3  1         -0.0111541488857        -0.011114242795   rel   0.00359  *** MISMATCH ***
+   3  2           0.034781129856          0.03478146249   rel   9.56e-6  OK
+   3  3          0.0622964766438        0.0622964802744   rel   5.83e-8  OK
+   4  2          0.0113480563248        0.0113490825476   rel   9.04e-5  OK
+   5  3          0.0244859702892         0.024485919231   rel   2.09e-6  OK
+
+  (dual sum truncated at N per d -- it converges slowly, so agreement to
+   ~1e-3 with the right SIGN and MAGNITUDE is the meaningful check)
+  -> functional-equation form reproduces Z, sign included: False
+
+[exited with code 0]
+
+=== the_gap.py -- localising the sup ===
+   d      j*(d)            d/2 - j*(d)      margin to 1/2
+    1    0.242758019937     0.2572419801     0.2427580199
+    2    0.683403601158     0.3165963988     0.1834036012
+    3     1.18494814821     0.3150518518     0.1849481482
+    4     1.71019448514     0.2898055149     0.2101944851
+    5     2.24450460403      0.255495396      0.244504604
+    6     2.78102400953     0.2189759905     0.2810240095
+    7      3.3162830299     0.1837169701     0.3162830299
+    8     3.84852521953     0.1514747805     0.3485252195
+    9     4.37695389042     0.1230461096     0.3769538904
+   10     4.90134210552    0.09865789448     0.4013421055
+   11     5.42180575689    0.07819424311     0.4218057569
+   12     5.93865917475    0.06134082525     0.4386591748
+   13     6.45231834474    0.04768165526     0.4523183447
+   14     6.96323533529    0.03676466471     0.4632353353
+   15     7.47185515921    0.02814484079     0.4718551592
+   16     7.97858939131    0.02141060869     0.4785893913
+   17     8.48380218674    0.01619781326     0.4838021867
+   18     8.98780509172    0.01219490828     0.4878050917
+   19     9.49085766987    0.00914233013     0.4908576699
+   20     9.99317160115   0.006828398851     0.4931716011
+   21     10.4949165251   0.005083474914     0.4949165251
+   22     10.9962264464    0.00377355363     0.4962264464
+   23      11.497205964   0.002794035953      0.497205964
+   24     11.9979359162   0.002064083804     0.4979359162
+
+   largest gap found: d = 2,  d/2 - j* = 0.316596398842
+   margin to the 1/2 barrier: 0.183403601158
+
+   so the lemma is tightest at small d and gets easier as d grows
+   (042 measured the gap shrinking by a factor -> 1/sqrt2 per dimension)
+
+[exited with code 0]

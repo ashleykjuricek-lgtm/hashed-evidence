@@ -1,0 +1,9 @@
+# SHA-256 hashes — sealed 2026-08-23 10:52:04 UTC
+
+check_greg.py                                                391a07f667f879c512dcc56f64b9d0e5334bd1eb5789cfd726cd3a406c9434f5
+check_greg2.py                                               8f5e56e29f567a14d87cba8ee343f2cec37ffc04c7e5c59a4efb6838b97f076c
+check_greg3.py                                               0508115a4ea032e9c9d88add734c882e974eb4279ca09f5b5afeebe26a38fb69
+fractional.py                                                7dcbca7b091e21b5b52713ed3e944bedff1ea3e57215644bee6a3ba35abe4a6e
+halving-law-half-proved.md                                   68ff7db690548c01af3acd4606eec8d1b3ee4178cfb6de4b1e9f8248303d523e
+output.txt                                                   5a8a6858357b683499f020e8b91ead9b5d743d102de7bb6cfdc7fe6ea41c4258
+the_gap.py                                                   89b1d35c9ce74e4c820386a00d51b5046a91b178e233ece0aefe7dc09ef1f765
