@@ -1,0 +1,6 @@
+# SHA-256 hashes — sealed 2026-08-23 07:39:03 UTC
+
+KESTREL-the-line.md                                          c10e0dcebdbbb64cbe293e24b1f2d5f7d585355bc9b152071f4a1f34bca324e0
+anisotropic.py                                               f335b8003db873c4df4a3e9d077570aee4a4d7cd6c326231ef9875dfab9f2c10
+output.txt                                                   4d177914b5f5ad5688cbbe3d0b1808a4f3edc44d31cde985e236f3c3b2bea441
+the_crossing.py                                              33ca75ad61cfcff75768f13ea15128a4942f0b930ae726fe6423578ddca92cd6
