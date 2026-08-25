@@ -1,0 +1,5 @@
+# SHA-256 hashes — sealed 2026-08-25 04:52:01 UTC
+
+output.txt                                                   4a33acda0fda1370b8898d440c0c0852bfd72707563a870ac54264b6d9410bd9
+recheck_sigma.py                                             1144136691ccf3720704546ba671cc7ef0e76351ce33036b6c9bc776c8e3e465
+retraction-of-060-section-4.md                               33836e96791c18b40d13a0cd6c3c6ffd3885225712167e1a83f6e86c68ed8787

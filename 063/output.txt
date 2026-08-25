@@ -1,0 +1,22 @@
+TEST EXPRESSED IN H0 UNITS  (what 060 called 'forward')
+   from T_CMB:  H0 = 66.894 +/- 0.028
+   vs Planck  67.4 +/- 0.5:  diff   0.506  comb.err   0.501  1.01 sigma
+   vs SH0ES   73.0 +/- 1.0:  diff    6.11  comb.err     1.0  6.1 sigma
+
+TEST EXPRESSED IN T UNITS  (what 060 called 'reverse')
+   from Planck H0:  T_CMB = 2.7357686 +/- 0.0101
+   measured         T_CMB = 2.72548 +/- 0.00057
+
+   060 computed:  diff / (measured error only)
+      0.0102886 / 0.00057 = 18.05 sigma      <-- the '18 sigma'
+
+   correct:       diff / sqrt(both errors)
+      0.0102886 / 0.0102 = 1.012 sigma
+
+VERDICT
+   H0-units test: 1.01 sigma
+   T-units test : 1.012 sigma
+   -> the SAME test. One constraint between two measured quantities.
+      Expressing it in different units cannot change its significance.
+      060's 'asymmetry' came from dropping the PREDICTED value's error bar
+      in one direction and keeping it in the other.
