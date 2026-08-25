@@ -1,0 +1,7 @@
+# SHA-256 hashes — sealed 2026-08-25 11:31:26 UTC
+
+README-086.md                                                2663e99141b89eb38cb379f23ede3c10a3ec3099f4df41c97e4cc716670cc809
+condition-c-cott-prompt.md                                   4454144e4406fb79ea7ae943d88d3da63661cc67c3d416cfc2d3d54fd7a8b1ba
+condition-c-note.md                                          11132e3bde167f61c15beca6708d893525aee1f76c00fa573325f43a91d3b826
+dar-corroboration.md                                         0ea9df4450b01ba603155093a09945efcf199e55d000f342f5f47f9592b93180
+surprisal-scar.md                                            784429712ab0d8194b29ef79cd823a5b83fa81cd486c1ccf70dbb64a4540563f

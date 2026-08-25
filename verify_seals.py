@@ -39,13 +39,15 @@ for d in folders:
             print(f"BROKEN   {d}/{name}"); print(f"           sealed {h}"); bad += 1
     # A file PRESENT in a sealed folder but ABSENT from its hashes.txt wears the
     # seal's authority with zero coverage, and until 2026-08-25 nothing noticed
-    # (first instance: 080/surprisal-scar.md). Reported, not (yet) fatal --
-    # promote to a failure once the current instance is rehomed to an open folder.
+    # (first instance: 080/surprisal-scar.md). The four instances were rehomed to
+    # 086, so as of 086 this is PROMOTED TO A REAL FAILURE, as that entry's
+    # predecessor comment asked. An addition to a sealed folder now breaks the
+    # chain and blocks the next seal, exactly like a modification.
     for name in sorted(os.listdir(d)):
         if name == 'hashes.txt' or not os.path.isfile(os.path.join(d, name)): continue
         if name not in listed:
             print(f"UNLISTED {d}/{name}   (inside a sealed folder, not covered by its seal)")
-            unlisted += 1
+            unlisted += 1; bad += 1
 
 print()
 print(f"folders checked      : {len(folders)}")
