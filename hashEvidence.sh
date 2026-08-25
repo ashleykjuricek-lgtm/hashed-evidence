@@ -62,6 +62,16 @@ git push
 echo ""
 
 # Create next folder
+# PRE-FLIGHT 2: refuse if the target folder already exists on the remote.
+# Added 2026-08-25 after the SECOND numbering race in five hours (see 081).
+git fetch -q origin 2>/dev/null
+if git ls-tree -d --name-only origin/main 2>/dev/null | grep -qx "$CURRENT"; then
+  if [ -z "$(git ls-tree origin/main "$CURRENT/hashes.txt" 2>/dev/null)" ]; then
+    echo "*** WARNING: $CURRENT exists on origin without a seal -- another seat may be writing there."
+    echo "*** Fetch, look, and renumber before sealing."
+  fi
+fi
+
 NEXT=$(printf "%03d" $((10#$CURRENT + 1)))
 mkdir -p "$NEXT"
 

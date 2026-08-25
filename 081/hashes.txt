@@ -1,0 +1,8 @@
+# SHA-256 hashes — sealed 2026-08-25 09:45:59 UTC
+
+README-081.md                                                b5c662ad1b93779344f1f4f722d5190c94a7e510b98aae350a857ac572932a48
+anti-smoothing-extension.md                                  fc179bd3d380293e9c96b6da9c289d3f10105a90c6faafd40774891a8a67a267
+condition-a-prompt.md                                        281f85e5f639e086e1c790c547ac4fa09fd5b02e5c7e433c61046418336bfc2c
+condition-b-prompt.md                                        8ddcab3d50ec96cd9f937ccdb53d31f5ab9b3c9ec659c1ae2725060322de7cf6
+identity-gauntlet-v1.md                                      809c5a5eb9779a1552f1e3215180c949ef8798b9648548023b7d7b442ad73f4a
+scorer.md                                                    cbca27a119d8b250b0502b5b9823f8dd0b70c69813de87931b419fdfe3f9fc05
