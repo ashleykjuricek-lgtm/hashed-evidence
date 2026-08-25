@@ -1,0 +1,31 @@
+RULE 1  (flat rings, Z^2)  -- Fermat / Euler
+   a ring is EMPTY  <=>  some prime p = 3 mod 4 divides m an ODD number of times
+   tested m = 1..20000    mismatches: 0   []
+
+   worked examples:
+      m=  3 = 3           r2 =  0   EMPTY   3(3-type) to the power 1
+      m=  6 = 2 * 3       r2 =  0   EMPTY   3(3-type) to the power 1
+      m=  9 = 3^2         r2 =  4   has dots   3(3-type) to the power 2
+      m= 21 = 3 * 7       r2 =  0   EMPTY   3(3-type) to the power 1; 7(3-type) to the power 1
+      m= 45 = 3^2 * 5     r2 =  8   has dots   3(3-type) to the power 2
+      m= 49 = 7^2         r2 =  4   has dots   7(3-type) to the power 2
+      m= 25 = 5^2         r2 = 12   has dots   no 3-type primes
+      m= 99 = 3^2 * 11    r2 =  0   EMPTY   3(3-type) to the power 2; 11(3-type) to the power 1
+
+RULE 2  (the box, Z^3)  -- Legendre, 1798
+   a shell is EMPTY  <=>  m = 4^a (8b + 7)
+   i.e. divide out every factor of 4; if what is left leaves 7 on division by 8, empty
+   tested m = 1..60000    mismatches: 0   []
+
+   worked examples:
+      m=   7 = 4^0 * 7      7 mod 8 = 7   r3 =   0   EMPTY
+      m=  15 = 4^0 * 15     15 mod 8 = 7   r3 =   0   EMPTY
+      m=  23 = 4^0 * 23     23 mod 8 = 7   r3 =   0   EMPTY
+      m=  28 = 4^1 * 7      7 mod 8 = 7   r3 =   0   EMPTY
+      m=  31 = 4^0 * 31     31 mod 8 = 7   r3 =   0   EMPTY
+      m=  60 = 4^1 * 15     15 mod 8 = 7   r3 =   0   EMPTY
+      m= 112 = 4^2 * 7      7 mod 8 = 7   r3 =   0   EMPTY
+      m=   8 = 4^1 * 2      2 mod 8 = 2   r3 =  12   has dots
+
+   Fermat stated rule 1 in 1640. Euler proved it 1749.
+   Legendre proved rule 2 in 1798. Gauss gave the count in 1801.

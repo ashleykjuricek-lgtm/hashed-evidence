@@ -1,0 +1,5 @@
+# SHA-256 hashes — sealed 2026-08-25 05:27:40 UTC
+
+output.txt                                                   6e1d28663c000871a4d3f28279e18bd47ef9bd3126e52f6ce5bf27cce86c6477
+the-rule-for-empty-rings.md                                  dc5e4f9b20014f5e5e714a59395ac83dd9b572a0748d6be4e1a52e427c628039
+the_rule.py                                                  696926805152e575d825df0e2cbfe509d81179e6be9f17f0fc361817a0c1f865
