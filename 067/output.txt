@@ -1,0 +1,32 @@
+=== r2(m): the number of (x,y) in Z^2 with x^2 + y^2 = m ===
+   the actual counts, m = 1..24:
+    1:4 2:4 3:0 4:4 5:8 6:0 7:0 8:4 9:4 10:8 11:0 12:0 13:8 14:0 15:0 16:4 17:8 18:4 19:0 20:8 21:0 22:0 23:0 24:0
+
+   r2(m) = 0 for m = [3, 6, 7, 11, 12, 14, 15, 19, 21, 22, 23, 24, 27, 28] ...
+   79.0% of all shells below 2000000 are EMPTY.
+
+   running mean of r2 -- this is what pi IS:
+      mean over m <=       100 : 3.16000000     pi = 3.14159265
+      mean over m <=     10000 : 3.14160000     pi = 3.14159265
+      mean over m <=    500000 : 3.14160800     pi = 3.14159265
+      mean over m <=   2000000 : 3.14161200     pi = 3.14159265
+
+=== r3(m): the same in Z^3 ===
+   the actual counts, m = 1..20:
+    1:6 2:12 3:8 4:6 5:24 6:24 7:0 8:12 9:30 10:24 11:24 12:8 13:24 14:48 15:0 16:6 17:48 18:36 19:24 20:24
+
+   r3(m) = 0 for m = [7, 15, 23, 28, 31, 39, 47, 55, 60, 63, 71, 79] ...
+   Legendre: r3(m) = 0 exactly when m = 4^a (8b + 7).  7, 15, 23, 28, 31, ...
+
+   r3(m) averages 2 pi sqrt(m):
+      sum r3(m), m <=    1000 : 132450.0   vs (4/3) pi X^(3/2) = 132461.2   ratio 0.999916
+      sum r3(m), m <=   50000 : 46832034.0   vs (4/3) pi X^(3/2) = 46832098.2   ratio 0.999999
+      sum r3(m), m <=  200000 : 374656122.0   vs (4/3) pi X^(3/2) = 374656785.7   ratio 0.999998
+
+=== the point ===
+   r2, r3 : integers. Wildly irregular. Often ZERO. No pi.
+   pi     : their average.  Nothing else.
+
+   pi never vanishes. r2 vanishes on the majority of shells (computed above); r3 on the 4^a(8b+7).
+   Every shell the smoothing cannot see is a shell where the count is 0
+   and the average says 3.14159...
