@@ -1,0 +1,64 @@
+{
+  "claim": "the slope of eps = 24R-1 in the anisotropic deformation, at the cube",
+  "code": "witness_slope.py::witness",
+  "conventions": {
+    "chart": "which axis carries b^2 in the quadratic form; 'direct' is 028 App A.3, 'momentum' is 047",
+    "marked": "semantic label; its axis INDEX is family-dependent -- see the v1 bug note in witness_slope.py"
+  },
+  "discharged_by": [
+    {
+      "artefact": "028 App A.3 (2026-06-20)",
+      "claimed": "~ +18.3",
+      "inputs": "1bb|direct|short",
+      "ok": true
+    },
+    {
+      "artefact": "047 sec.B (2026-08-23)",
+      "claimed": "-18.3259647484177",
+      "inputs": "1bb|momentum|short",
+      "ok": true
+    },
+    {
+      "artefact": "KESTREL (2026-08-23)",
+      "claimed": "27.4889471200",
+      "inputs": "volpres|momentum|stretched",
+      "ok": true
+    }
+  ],
+  "environment": {
+    "mpmath": "1.3.0",
+    "python": "3.13.9"
+  },
+  "expected": {
+    "1bb|direct|short": "+18.3259647484177",
+    "1bb|momentum|short": "-18.3259647484177",
+    "volpres|momentum|stretched": "+27.4889471226266"
+  },
+  "input_signature": {
+    "chart": [
+      "direct",
+      "momentum"
+    ],
+    "family": [
+      "1bb",
+      "volpres"
+    ],
+    "marked": [
+      "short",
+      "stretched"
+    ]
+  },
+  "precision": {
+    "mp_dps": 25,
+    "note": "absolute tolerance FAILS: a claim stated to 12 figures cannot discharge 1e-9 absolute on a value of size ~27",
+    "tolerance": "RELATIVE 1e-9"
+  },
+  "predicate_examples": {
+    "sign_at_cube": "sign(d eps/db) -- chart-dependent, MUST cite its inputs",
+    "transversality": "d eps/db != 0 -- family-INdependent, safe to state bare"
+  },
+  "route": "Ewald/Poisson anisotropic Epstein zeta at s=-1/2; mpmath diff at b=1",
+  "status_note": "the witness carries IDENTITY, not truth. Truth is the four-word column.",
+  "status_word": "OBSERVED",
+  "witness_id": "slope-of-eps-anisotropic/v1"
+}

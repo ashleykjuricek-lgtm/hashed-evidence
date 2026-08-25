@@ -1,0 +1,10 @@
+# SHA-256 hashes — sealed 2026-08-25 06:14:45 UTC
+
+anisotropic.py                                               f335b8003db873c4df4a3e9d077570aee4a4d7cd6c326231ef9875dfab9f2c10
+bundle.py                                                    8e2a2857aeed7d13e4d5ed863ca959ca61a9bfdcb485f237c9c9421c6ad37724
+expected.json                                                9582a5682099ad54ef3f13540347e499f738e2c7d6cb2992b7742a41591329dc
+expected.sha256                                              d5582c8b9a09ea1cd1fdc8a58d0da7bbc23ceefdbe926293320d0a24cedfb3cf
+output.txt                                                   2348481b802e50c7284acac1a17ba23af64ef8d0c4766cbf5746697795ffcf3d
+predicate_demo.py                                            d3b5cb0827781fc7141e126963252cc371db40d2926a3643c1e44a4c7e085036
+witness-built-and-tested.md                                  8c59777bb32063dc33c7dc895bff58dacf724e7efd50e25d2257c0f53b3c25ed
+witness_slope.py                                             ee5496cd6034eeb1168d418e28e80791e31d471d97a710f17c149458a132b761

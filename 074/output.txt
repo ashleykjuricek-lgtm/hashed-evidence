@@ -1,0 +1,76 @@
+=== witness_slope.py ===
+========================================================================
+Three historical artefacts, run against ONE witness
+========================================================================
+  028 App A.3 (June): 'd eps/db ~ +18.3'
+     inputs   {'family': '1bb', 'chart': 'direct', 'marked': 'short'}
+     claimed  18.3259647484177
+     witness  18.3259647484177
+     DISCHARGES: True
+
+  047 (Aug 23): 'd eps/db = -18.3259647484177'
+     inputs   {'family': '1bb', 'chart': 'momentum', 'marked': 'short'}
+     claimed  -18.3259647484177
+     witness  -18.3259647484177
+     DISCHARGES: True
+
+  KESTREL (Aug 23): 'the true slope is ~ -27.49'
+     inputs   {'family': 'volpres', 'chart': 'momentum', 'marked': 'stretched'}
+     claimed  27.4889471200
+     witness  27.4889471226266
+     DISCHARGES: True
+
+========================================================================
+VERDICT
+========================================================================
+  all three discharge the same witness: True
+  -> they are the SAME CLAIM, evaluated at THREE DIFFERENT INPUT POINTS.
+  The 'disagreement' is a disagreement about arguments, not about the world.
+
+  And the refuted charge, in one line:
+     KESTREL called 028's number 'a fitted guess'.
+     A fitted guess cannot discharge a witness. 028's DOES.
+     Running it settles a PROVENANCE claim, which no metadata layer can.
+
+=== predicate_demo.py ===
+==========================================================================
+(witness, predicate) against the three recorded Tier-2 errors
+==========================================================================
+
+  066 sec.1   template: R sits a hair ___ 1/24
+     witness output : {"R": 0.041689414602723775, "eps": 0.0005459504653706482}
+     predicate says : over
+     what was sealed: under
+     -> CONTRADICTS -- the wrong sentence is UNWRITABLE
+
+  067 sec.2   template: ___ of shells below the cutoff are empty
+     witness output : {"cutoff": 2000000, "empty": 1579039, "pct": 78.95195}
+     predicate says : 79.0%
+     what was sealed: 76%
+     -> CONTRADICTS -- the wrong sentence is UNWRITABLE
+
+  070 sec.2   template: the two divisions are ___
+     witness output : {"both": 99, "neither": 109, "total": 430}
+     predicate says : independent -- they agree on 208/430
+     what was sealed: complementary -- each blind exactly where the other sees
+     -> CONTRADICTS -- the wrong sentence is UNWRITABLE
+
+==========================================================================
+Tier-2 errors caught by rendering the predicate: 3 of 3
+==========================================================================
+
+  All three were emphasised sentences that survived multiple rereads by
+  their author and were caught only by another seat. A rendered predicate
+  catches all three MECHANICALLY -- the direction word is no longer typed.
+
+  What it does NOT touch: Tier 3. There is no witness for
+  'is R the right object?' or 'is the integer requirement ours or the world's?'
+
+=== bundle.py ===
+bundle written.
+  witness_id : slope-of-eps-anisotropic/v1
+  discharged : 3 of 3 artefacts
+  sha256     : 63da8bbdcad0e8c95f052e75f29a2c4dca0969660f3e2be7e2c63b14bdcd703f
+
+  three artefacts, three charts, one claim -- and the resolution is now STORED,
+  so no future seat re-fights it. That is the rendezvous, not an oracle.
