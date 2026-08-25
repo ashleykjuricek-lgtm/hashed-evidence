@@ -1,0 +1,5 @@
+# SHA-256 hashes — sealed 2026-08-25 05:37:02 UTC
+
+four-and-five.md                                             fdb833aed016c3f3fc7be8906118055bb7047a3a7ee0e981b70fd567cf8c4a44
+four_or_five.py                                              c7e3c2e06a79efe7a594aea68cea3b38f6abcb9c35d33ca5a17a6b2ecb6c30e8
+output.txt                                                   f2b06b16661ed730d888a2f333bb9921de4a059ec709460421d543d976225df5

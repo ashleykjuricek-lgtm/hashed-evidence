@@ -1,0 +1,41 @@
+=== the two prime rules ===
+
+  Z[i]  -- a prime is represented by x^2 + y^2  iff  p = 2 or p = 1 mod 4
+     primes tested to 3000: 430    mismatches: 0  []
+     represented: [2, 5, 13, 17, 29, 37, 41]
+     not:         [3, 7, 11, 19, 23, 31, 43]
+
+  Z[phi] -- a prime is represented by x^2 + xy - y^2  iff  p = 5 or p = +-1 mod 5
+     primes tested to 3000: 430    mismatches: 0  []
+     represented: [5, 11, 19, 29, 31, 41]
+     not:         [2, 3, 7, 13, 17, 23, 37, 43]
+
+=== the two worlds ===
+
+            field        norm form        prime rule    lattice        symmetry
+   ------------------------------------------------------------------------------
+   FOUR     Q(i)         x^2 + y^2        p mod 4       Z^2, Z^3       2,3,4,6-fold
+            disc -4                                     PERIODIC       10-fold FORBIDDEN
+
+   FIVE     Q(sqrt5)     x^2 + xy - y^2   p mod 5       Penrose        10-fold
+            disc +5                                     QUASIPERIODIC  from Z^5 -> R^2
+
+   the cubic torus lives in the first. the rose lives in the second.
+   065 separated them by the crystallographic restriction.
+   this is the same wall seen from the number-theory side.
+
+=== and they are NOT the same division ===
+   lit in BOTH worlds   :  99   [5, 29, 41, 61, 89, 101, 109, 149, 181, 229]
+   lit only in FOUR     : 113   [2, 13, 17, 37, 53, 73, 97, 113, 137, 157]
+   lit only in FIVE     : 109   [11, 19, 31, 59, 71, 79, 131, 139, 151, 179]
+   dark in BOTH         : 109   [3, 7, 23, 43, 47, 67, 83, 103, 107, 127]
+
+   11, 19, 31 are 3 mod 4 -- they EMPTY a square ring.
+   11, 19, 31 are +-1 mod 5 -- they FILL a golden one.
+
+   13, 17, 37 are 1 mod 4 -- they fill a square ring.
+   13, 17, 37 are 2 or 3 mod 5 -- they empty a golden one.
+
+   So a shell that is DARK in one world can be LIT in the other.
+   There is not one circle divided one way. There are two divisions,
+   and each is blind exactly where the other sees.
