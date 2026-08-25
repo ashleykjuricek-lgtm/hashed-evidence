@@ -1,0 +1,25 @@
+counting lattice points to |n|^2 <= 20000000 ...
+
+      X        lit%     empty%    mean over ALL   mean over LIT    L-R pred lit%
+  ----------------------------------------------------------------------------
+         100    43.00%   57.00%     3.16000000        7.3488      35.61%
+       10000    27.49%   72.51%     3.14160000       11.4282      25.18%
+     1000000    21.63%   78.37%     3.14154800       14.5213      20.56%
+     2000000    21.05%   78.95%     3.14161200       14.9259      20.06%
+     5000000    20.34%   79.66%     3.14159440       15.4430      19.46%
+    20000000    19.40%   80.60%     3.14159320       16.1933      18.64%
+
+  pi = 3.14159265
+
+=== the identity ===
+  at X = 20000000:   f = 0.19400595   mean_lit = 16.193283
+  f * mean_lit = 3.14159320        pi = 3.14159265
+
+  trivially exact by construction (both are total/X and total/lit),
+  but the CONTENT is that f -> 0 and mean_lit -> infinity separately,
+  while their product is pinned to pi at every cutoff.
+
+=== Landau 1908 / Landau-Ramanujan ===
+  #{m <= X : m is a sum of two squares} ~ K X / sqrt(log X),  K = 0.76422365...
+  so the LIT fraction dies like 1 / sqrt(log X)  -- to ZERO, always.
+  Empty fraction -> 100%. 'Four in five' is a snapshot, not a fact.

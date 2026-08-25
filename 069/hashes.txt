@@ -1,0 +1,6 @@
+# SHA-256 hashes — sealed 2026-08-25 05:33:17 UTC
+
+collaboration-brief-v2.md                                    40666a476154afb3c856fd9a46e214c01c75b5eeb8c848c6cbb5576b7c83b39c
+output.txt                                                   02949b266f270cb1bed77e79a705ffca5639030bbd7b9c05667d7e03a64a3e9e
+third-seat-review.md                                         20e68de001f2fdf3588f5cd918b6a7f174d8167e5f7f485d112fcd3a5fe6376a
+two_divergences.py                                           372d9c853fbd80f43888f08eb46a44929080ecbab0af935980eefd2c6f8dd4f4
