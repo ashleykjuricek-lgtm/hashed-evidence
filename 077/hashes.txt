@@ -1,0 +1,5 @@
+# SHA-256 hashes — sealed 2026-08-25 06:53:28 UTC
+
+README-077.md                                                1d3a050c948fc91a0f47161b9c225e8357319dbae605bdec1ca49ab9bc995d78
+expected-v2.json                                             3a7b59a99ce12417d2363f2f2b4c38818d647ac0098147f3795780350c2020ba
+expected-v2.sha256                                           5faf22feed4458ce1f28432575bbf778db3a4845cef665d5b8aa2c7f86422269

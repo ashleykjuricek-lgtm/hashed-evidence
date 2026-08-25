@@ -60,5 +60,13 @@
   "route": "Ewald/Poisson anisotropic Epstein zeta at s=-1/2; mpmath diff at b=1",
   "status_note": "the witness carries IDENTITY, not truth. Truth is the four-word column.",
   "status_word": "OBSERVED",
-  "witness_id": "slope-of-eps-anisotropic/v1"
+  "supersedes": "slope-of-eps-anisotropic/v1 (ledger 074) -- v1 is unchanged and still sealed",
+  "uniqueness_class": {
+    "added": "2026-08-25, ledger 077, after Greg's counterexample",
+    "class": "designation",
+    "statement": "this exact code, these exact inputs",
+    "sufficient_because": "NOT a theorem. The witness identifies by POINTING, not by TESTING.",
+    "warning": "the input signature is finite (8 cells, 3 pinned); infinitely many functions discharge it -- see ledger 076 section 2 for a constructed impostor"
+  },
+  "witness_id": "slope-of-eps-anisotropic/v2"
 }
