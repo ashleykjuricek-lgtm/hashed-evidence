@@ -1,0 +1,47 @@
+==========================================================================
+CORRECTION 1 -- 069 sec.5 says 1/Gamma((d+1)/2) 'decays vertically'.
+Greg: it GROWS like e^{pi|Im d|/4}. Stirling.
+==========================================================================
+
+   |1/Gamma((d+1)/2)| along d = 3 + iy :
+      y        |1/Gamma((d+1)/2)|      e^{pi y/4}         ratio
+       0                    1.0              1.0            1.0
+       5            4.755995859      50.75401951    0.093706782
+      10            90.13205526      2575.970497    0.034989553
+      20            83297.34291      6635623.999    0.012553053
+      40        1.961491453e+11   4.403150586e+13   0.0044547453
+      80        3.056409079e+24   1.938773508e+27   0.0015764653
+
+   -> |1/Gamma| GROWS. 069's 'decays vertically' is WRONG. Greg is right.
+
+   the growth EXPONENT, extracted:
+      y=  40   log|1/Gamma| / y = 0.6500535288     pi/4 = 0.7853981634
+      y=  80   log|1/Gamma| / y = 0.7047410369     pi/4 = 0.7853981634
+      y= 160   log|1/Gamma| / y = 0.7385728096     pi/4 = 0.7853981634
+
+   Carlson permits type c < pi on vertical lines.  pi/4 = 0.785 < pi = 3.14.
+   -> the STATED proof fails; the CONCLUSION may survive with room to spare.
+
+==========================================================================
+CORRECTION 2 -- 074's witness: does discharging it pin the claim?
+Greg's counterexample, applied to OUR OWN build.
+==========================================================================
+
+   074's witness has a finite input signature:
+      family in {1bb, volpres} x chart in {direct, momentum} x marked in {short, stretched}
+      = 8 cells, of which 3 are pinned.
+
+   Construct a DIFFERENT function agreeing on all 3 pinned cells:
+
+      ('1bb', 'direct', 'short')                 impostor      18.3259647484  MATCHES
+      ('1bb', 'momentum', 'short')               impostor     -18.3259647484  MATCHES
+      ('volpres', 'momentum', 'stretched')       impostor      27.4889471226  MATCHES
+      ('volpres', 'momentum', 'short')           impostor                0.0  real: -13.7444735613
+
+   The impostor DISCHARGES the witness on every pinned cell and is a
+   different function. Greg's f(x)=x^2 vs g(x)=x^2+(x-3), in our own build.
+
+   -> 'same witness => same claim' is FALSE.
+      'different witness => different claim' remains TRUE and useful.
+
+   The witness is a DISCRIMINATOR, not a definition of identity.
