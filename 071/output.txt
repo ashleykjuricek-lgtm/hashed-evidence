@@ -1,0 +1,36 @@
+small-t behaviour: does the DIFFERENCE stay tame while each blows up?
+      t        Theta_P        Theta_A       Theta_P - Theta_A
+      0.5      1.164994357   0.9013708945     0.2636234627
+      0.2      3.026140166     3.02488345   0.001256716382
+      0.1      7.743091625    7.743091596   2.881152692e-8
+     0.05      20.83265717    20.83265717   3.01375522e-18
+     0.02      79.91454765    79.91454765   -1.654361225e-24
+     0.01      223.7834135    223.7834135   -3.30872245e-24
+
+   each grows like t^(-3/2); the difference stays O(1).
+   -> the poles cancel, exactly as 061 proved for any M x S^1 --
+      and here for a quotient rather than a product.
+
+size of the low-t integrand, to justify where it is cut:
+      t=0.20   |t^(s-1)(ThA-ThP)| = 0.01405
+      t=0.10   |t^(s-1)(ThA-ThP)| = 9.111e-7
+      t=0.07   |t^(s-1)(ThA-ThP)| = 9.47e-11
+      t=0.05   |t^(s-1)(ThA-ThP)| = 2.696e-16
+   -> cut at t=0.05; everything below is under the numerical floor.
+
+lam-independence -- the acceptance test:
+      lam= 0.7   0.70414935594848
+      lam= 1.0   0.70414935594848
+      lam= 1.6   0.70414935594848
+      lam= 2.5   0.70414935594848
+   spread = 1.292e-26   INVARIANT
+
+Casimir energy DIFFERENCE between the two spin structures on RP^3 = SO(3):
+   Z_twisted - Z_untwisted = 0.704149355948
+
+   for comparison:
+      T^3  (flat)      Z_APP - Z_PPP = 0.255482035923
+      S^1 x S^2        Z_A   - Z_P   = 0.2503281026     (061)
+
+   NOTE: Casimir energy on RP^3 is a standard example in QFT on curved
+   space. This number is very probably in the literature. Not searched.
