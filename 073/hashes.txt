@@ -1,0 +1,4 @@
+# SHA-256 hashes — sealed 2026-08-25 06:03:16 UTC
+
+HANDOFF-human-and-ai.md                                      3748b2b94a786789de884d1469b09a7f987183e335305666b582dd7147170031
+README-073.md                                                bb89f2a2190d9ddc140b609cfd9b7a5f899e51ba33bb4e2324ac1b334682b42f
