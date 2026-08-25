@@ -1,0 +1,17 @@
+N= 120  |m|^2 <= 14400
+    numerator  SUM' (-1)^m1 |m|^-4 = 0.689216630871    (alternating: converges fast)
+    denominator SUM'      |m|^-4   = 16.427588243  + tail 0.104720 = 16.532307998
+    R = 0.0416890752      reference 0.0416894146
+
+N= 200  |m|^2 <= 40000
+    numerator  SUM' (-1)^m1 |m|^-4 = 0.689221652513    (alternating: converges fast)
+    denominator SUM'      |m|^-4   = 16.469482584  + tail 0.062832 = 16.532314437
+    R = 0.0416893627      reference 0.0416894146
+
+N= 300  |m|^2 <= 90000
+    numerator  SUM' (-1)^m1 |m|^-4 = 0.689222585288    (alternating: converges fast)
+    denominator SUM'      |m|^-4   = 16.490427713  + tail 0.041888 = 16.532315615
+    R = 0.0416894161      reference 0.0416894146
+
+known value of the denominator, from 028 section 5:  Z_PPP(2) = 16.5323159598
+   -> R would be 0.0

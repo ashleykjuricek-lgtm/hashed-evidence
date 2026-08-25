@@ -1,0 +1,5 @@
+# SHA-256 hashes — sealed 2026-08-25 05:05:05 UTC
+
+output.txt                                                   36d6275b61bec91a618a8975f9bb99b0caa660c8a0cd1c909a845db3fb33040d
+pi-is-in-the-road.md                                         3fa1581cd7433f1a1429601d39bdc36a247b81855d7e8eafe9dcdbe0b3b3d858
+pi_free_R.py                                                 87e4234d10229b20f07bc24f413c0c9eb5cfd487ba11a3cac4743a51cb9b40d6
