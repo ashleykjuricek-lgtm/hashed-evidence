@@ -1,0 +1,31 @@
+CLAIM 1: "Q(n) = n1^2/L1^2 + ... -- no transcendentals. No pi."
+   The SUMMAND is pi-free. True.
+   The SUM is not. The functional equation used in 050 test 5:
+      Z(d,j) = pi^(-1-d/2) * Gamma((d+1)/2)/Gamma(-1/2) * SUM' chi(m)|m|^-(d+1)
+      d=2: prefactor = -0.0253302959106   (pi^(-1-d/2) alone = 0.10132118)
+      d=3: prefactor = -0.0161257672166   (pi^(-1-d/2) alone = 0.057164356)
+   Gamma(-1/2) = -3.54490770181 = -2 sqrt(pi)
+   -> pi is in the VALUE of every Z this programme has ever computed.
+      It is also in the Ewald split (pi^(d/2), exp(-pi^2 k^2/t)) and in
+      the heat kernel (4 pi t)^(-d/2) on the FLAT torus.
+
+CLAIM 2: "My eigenfunctions are e^(i n x / L) -- winding modes"
+   n=1: e^(i n 0/L) = (1.0 + 0.0j)   e^(i n L/L) = (0.540302 + 0.841471j)   equal? False
+   n=2: e^(i n 0/L) = (1.0 + 0.0j)   e^(i n L/L) = (-0.416147 + 0.909297j)   equal? False
+   n=3: e^(i n 0/L) = (1.0 + 0.0j)   e^(i n L/L) = (-0.989992 + 0.14112j)   equal? False
+   -> e^(i n x / L) is NOT periodic on a circle of circumference L.
+      The correct mode is e^(2 pi i n x / L). The 2 pi is in the exponent
+      on a torus exactly as on a sphere. It is not a patching tax.
+
+CLAIM 3: "hbar -> h/L"
+   hbar : J s          (action)
+   h/L  : J s / m = kg m / s   (momentum)
+   -> different units. h/L is the momentum quantum p_n = n h / L on a
+      circle, which is correct and standard -- but it does not replace hbar.
+
+CLAIM 4: "the sphere is the torus with the periodicity forgotten"
+   Gaussian curvature:  flat T^3 = 0 everywhere;  S^2 of radius a = 1/a^2 > 0.
+   Zooming in on a flat torus gives FLAT space, at every scale.
+   And from 061 above:  pi_1(T^3) = Z^3 vs pi_1(S^2) = 0;
+   heat coefficient a_4 = 0 (flat) vs sqrt(pi)/15 (S^1 x S^2).
+   -> neither is a limit of the other, in curvature OR in topology.

@@ -1,0 +1,7 @@
+# SHA-256 hashes — sealed 2026-08-25 04:43:09 UTC
+
+output-sphere.txt                                            90ac4d7101087194832d356b7aba4e293177a59ab1469c5e88e196d3521bea97
+output-why-torus.txt                                         96d3ef833db161e59eaa0e0d2d56f4dec9e58e7fb64399a1a78a6bf639ddc755
+sphere-or-torus.md                                           b357814313692326a09d919177bca6c194f4decda4d7584eccb1b30294e8311e
+sphere.py                                                    4cf767d8f8e02661a7d3c9fcf17e5d49dd60309b845dafa4efd36c2161d467d5
+why_torus_check.py                                           8374ff4e568bf538b8a1027918cc323572bc12268b9e74a62939f147222db42b

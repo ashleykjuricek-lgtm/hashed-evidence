@@ -1,0 +1,52 @@
+=== 1. the S^2 heat trace and its small-t expansion ===
+   claim:  S2(t) ~ 1/t + 1/3 + t/15 + 4t^2/315 + ...
+   t=   0.2  S2 =    5.34720205373   series =    5.34717460317   diff = 2.75e-5
+   t=   0.1  S2 =    10.3401302802   series =    10.3401269841   diff = 3.3e-6
+   t=  0.05  S2 =    20.3366988169   series =    20.3366984127   diff = 4.04e-7
+   t=  0.02  S2 =    50.3346717716   series =     50.334671746   diff = 2.56e-8
+   t=  0.01  S2 =    100.334001273   series =     100.33400127   diff = 3.19e-9
+
+=== 2. where the pole is ===
+   Theta(t) = theta_alpha(t) * S2(t)  ~  sqrt(pi/t) * [1/t + 1/3 + t/15 + ...]
+            =  sqrt(pi) [ t^-3/2 + (1/3) t^-1/2 + (1/15) t^+1/2 + ... ]
+
+   Mellin:  INT_0^lam t^(s-1) t^((k-3)/2) dt  has a pole at s = -(k-3)/2
+     k=0  ->  pole at s = +3/2
+     k=2  ->  pole at s = +1/2
+     k=4  ->  pole at s = -1/2      <-- EXACTLY where we work
+
+   coefficient of t^+1/2 is sqrt(pi)/15 = 0.1181635901 != 0
+   -> zeta(s) HAS A POLE at s = -1/2 on S^1 x S^2.
+   On a FLAT torus the expansion terminates at k=0 (no curvature terms),
+   so there is no pole and Z(-1/2) is finite and unambiguous.
+
+=== 3. but the DIFFERENCE is always finite ===
+   theta_P(t) - theta_A(t) = sqrt(pi/t) * 4 * sum_{k>=1 odd} exp(-pi^2 k^2 / t)
+   t=   0.5  thP-thA = 2.682381008e-8   predicted 2.682381008e-8
+   t=   0.2  thP-thA = 5.868898145e-21   predicted 5.86875906e-21
+   t=   0.1  thP-thA = 2.067951531e-25   predicted 3.072469837e-42
+   t=  0.05  thP-thA =            0.0   predicted 5.954637475e-85
+
+   exponentially small as t->0, for ANY manifold factor.
+   So Theta_P - Theta_A is exponentially small, the poles CANCEL,
+   and Z_A - Z_P is finite even when each term diverges.
+
+=== 4. what survives: the DIFFERENCE, computed on S^1 x S^2 ===
+   (v1 of this section was WRONG: it truncated the theta sums at n=+/-40.
+    A truncated theta does NOT have the exponential-smallness property --
+    that is asymptotic to the FULL sum. The truncated difference read 2e-5
+    instead of exp(-pi^2/t), and t^-3/2 at t=1e-6 multiplied it by 1e9.
+    Verdict discarded, not patched. Redone with the exact dual form.)
+
+   size of the low-t integrand, to justify cutting it:
+      t=0.30   |t^(s-1) (thA-thP) S2| = 1.498e-12
+      t=0.25   |t^(s-1) (thA-thP) S2| = 3.532e-15
+      t=0.20   |t^(s-1) (thA-thP) S2| = 3.509e-19
+
+   low piece  = -5.612619599e-5
+   lam^s / s  = -2.0
+   high piece = 1.112666107
+   Z_A - Z_P on S^1 x S^2 (unit radii) = 0.2503281026
+
+   finite, as the argument requires -- while Z_A and Z_P each diverge.
+   flat comparison, T^3:  Z_APP - Z_PPP = 0.255482035923
