@@ -1,0 +1,29 @@
+PURE PAIR COUNT -- the only operation is n1^2 + c*n2^2, and comparison to X.
+
+  square world   Z[i]        a^2 + b^2
+     pairs<=(    2,000) =        6,292   ideals =       1,573   A(X)/X = 0.78650000
+     pairs<=(   20,000) =       62,844   ideals =      15,711   A(X)/X = 0.78555000
+     pairs<=(  200,000) =      628,324   ideals =     157,081   A(X)/X = 0.78540500
+     pairs<=(2,000,000) =    6,283,224   ideals =   1,570,806   A(X)/X = 0.78540300
+
+                 Z[sqrt-2]   a^2 + 2b^2
+     pairs<=(    2,000) =        4,438   ideals =       2,219   A(X)/X = 1.10950000
+     pairs<=(   20,000) =       44,402   ideals =      22,201   A(X)/X = 1.11005000
+     pairs<=(  200,000) =      444,298   ideals =     222,149   A(X)/X = 1.11074500
+     pairs<=(2,000,000) =    4,442,824   ideals =   2,221,412   A(X)/X = 1.11070600
+
+REAL worlds -- infinite units, so NO finite element count. Rule used is a theorem:
+  D=  5  golden world   Z[(1+sqrt5)/2]    A(X)/X = 0.43040600
+  D=  8                 Z[sqrt2]    A(X)/X = 0.62324200
+  D= -4  [control] Z[i] by the same rule    A(X)/X = 0.78540300
+  D= -8  [control] Z[sqrt-2] same rule    A(X)/X = 1.11070600
+
+CONTROL: do the pair-count and the rule agree on the two worlds where both exist?
+   c=1:  pair count 0.78540300   vs rule 0.78540300   AGREE
+   c=2:  pair count 1.11070600   vs rule 1.11070600   AGREE
+
+MEASURED, nothing named:
+     D =  -4    0.78540300
+     D =  -8    1.11070600
+     D =   5    0.43040600
+     D =   8    0.62324200

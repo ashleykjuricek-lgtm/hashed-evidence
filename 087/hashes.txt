@@ -1,0 +1,9 @@
+# SHA-256 hashes — sealed 2026-08-25 11:36:09 UTC
+
+cleanroom-output.txt                                         50ebcc2c2f532d6c97732bc5543611fa71bb053da0f68feebe417962b0e12eae
+cleanroom3.py                                                2b321863056bb120aebc18c2d41f1113a3b404dfb32cd6fad4ac9a71c35b7716
+d5-d6-and-the-clean-room.md                                  8f29e99a4d60734039f1251cb23ed9c02146f3face23eb1f323b554af56be4af
+d56-output.txt                                               8a5836e789861f6d55e6ccda14874e22388c1b03787ac29ce0a4e0f8bab1061d
+d56.py                                                       5fe3d64069e557fb14a7e9290e987e576ac55c90c842bf83efb8de9b03aff46f
+walkin-output.txt                                            77b236c914f027bcc5c23a815d97e40191a3887aaa1baa9832aff624e25eb7ad
+walkin2.py                                                   597daae328103a16461bb3d4c3baf4f6333e4c43db8f5efea77a6233dfa1fc65

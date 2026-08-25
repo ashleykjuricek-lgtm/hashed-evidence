@@ -1,0 +1,20 @@
+Where does each measured constant COME FROM? Two different places.
+
+REAL worlds -- an INTEGER SEARCH, then one logarithm.
+   search: smallest (a,b), b>0, with  a^2 - D*b^2 = +-4.   unit = (a + b*sqrt D)/2
+   --------------------------------------------------------------------------
+   D= 5: pair (1, 1)   -> unit 1.6180339887 -> 2*log(u)/sqrt(D) = 0.43040894   measured 0.43040600  AGREE
+   D= 8: pair (2, 1)   -> unit 2.4142135624 -> 2*log(u)/sqrt(D) = 0.62322524   measured 0.62324200  AGREE
+   D=12: pair (4, 1)   -> unit 3.7320508076 -> 2*log(u)/sqrt(D) = 0.76034600   measured 0.76034450  AGREE
+   D=13: pair (3, 1)   -> unit 3.3027756377 -> 2*log(u)/sqrt(D) = 0.66273539   measured 0.66272700  AGREE
+
+IMAGINARY worlds -- NO integer search exists. The constant is an AREA.
+   --------------------------------------------------------------------------
+   D=-4: disk a^2+b^2<=X, area pi*X, / 4 units
+          area/units = 0.78539816   measured = 0.78540300   AGREE to 4.8e-06
+   D=-8: ellipse a^2+2b^2<=X, area pi*X/sqrt2, / 2 units
+          area/units = 1.11072073   measured = 1.11070600   AGREE to 1.5e-05
+
+ASYMMETRY: real worlds' constants are an integer pair wearing a logarithm.
+           square worlds' constants are not any integer object at all --
+           only the limit of a count divided by a scale.

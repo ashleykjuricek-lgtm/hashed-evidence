@@ -1,0 +1,23 @@
+A - PARITY PURITY: how many of the (d+1) parity classes are occupied on a shell?
+    (a shell is 'pure' when every point on it has the same number of odd coords)
+   --------------------------------------------------------------------------------
+   d=1:  max classes on any shell = 1;  pure shells 89/89 = 100.0%   distribution [np.int64(89), np.int64(0)]
+   d=2:  max classes on any shell = 1;  pure shells 2230/2230 = 100.0%   distribution [np.int64(2230), np.int64(0), np.int64(0)]
+   d=3:  max classes on any shell = 1;  pure shells 6668/6668 = 100.0%   distribution [np.int64(6668), np.int64(0), np.int64(0), np.int64(0)]
+   d=4:  max classes on any shell = 2;  pure shells 7000/8000 =  87.5%   distribution [np.int64(7000), np.int64(1000), np.int64(0), np.int64(0), np.int64(0)]
+   d=5:  max classes on any shell = 2;  pure shells 5000/8000 =  62.5%   distribution [np.int64(5000), np.int64(3000), np.int64(0), np.int64(0), np.int64(0), np.int64(0)]
+   d=6:  max classes on any shell = 2;  pure shells 3001/8000 =  37.5%   distribution [np.int64(3001), np.int64(4999), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0)]
+
+B - the mirror, and its fixed point, at d=5 and d=6
+   --------------------------------------------------------------------------------
+   d=5  X(d,j) = (-1)^m X(d,d-j), all j      HOLDS  exc 0
+   d=5  ODD -> no self-dual slot; vanishing markings found: NONE
+   d=6  X(d,j) = (-1)^m X(d,d-j), all j      HOLDS  exc 0
+   d=6  self-dual j=3 vanishes on odd m   HOLDS  exc 0
+
+C - does the d=3 'fixed multiplier' law survive?   d*X(d,1)(m) / r_d(m)
+   --------------------------------------------------------------------------------
+   d=3  by m mod 8: [+3  +1  -1  -3  +3  +1  -1  -]   -> ONE MULTIPLIER PER CLASS
+   d=4  by m mod 8: [+4  +2  +0  -2  -1.33  +2  +0  -2]   -> ONE MULTIPLIER PER CLASS
+   d=5  by m mod 8: [14 values  +3  +1  -1  3 values  +0.714  +1  -1]   -> NO fixed multiplier
+   d=6  by m mod 8: [19 values  533 values  +2  +0  2 values  527 values  +1.06  +0]   -> NO fixed multiplier
