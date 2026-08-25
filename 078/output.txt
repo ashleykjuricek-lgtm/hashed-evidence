@@ -1,0 +1,60 @@
+==============================================================================
+ATTACK 1 -- the closed predicate language against the PROVED column
+==============================================================================
+
+  P1   NOT EXPRESSIBLE  universal over infinitely many m
+  P2   NOT EXPRESSIBLE  universal
+  P3   NOT EXPRESSIBLE  universal over a FUNCTION SPACE
+  P4   NOT EXPRESSIBLE  universal + NEGATIVE existential
+  P5   NOT EXPRESSIBLE  universal
+  P6   NOT EXPRESSIBLE  universal (an identity)
+  P7   NOT EXPRESSIBLE  universal over a continuum
+  P8   EXPRESSIBLE      two numbers, one point
+  P9   EXPRESSIBLE      two integers
+  P10  NOT EXPRESSIBLE  universal over the lattice
+  P11  NOT EXPRESSIBLE  NEGATIVE existential over a function class
+  P12  NOT EXPRESSIBLE  universal over d, j
+  P13  NOT EXPRESSIBLE  universal
+  P14  NOT EXPRESSIBLE  universal over d and s
+  P15  NOT EXPRESSIBLE  NON-NUMERICAL: a topological fact
+
+  expressible     :  2 of 15   (P8, P9)
+  NOT expressible : 13 of 15
+
+  by reason:
+      3  universal
+      1  universal over infinitely many m
+      1  universal over a FUNCTION SPACE
+      1  universal + NEGATIVE existential
+      1  universal (an identity)
+      1  universal over a continuum
+      1  universal over the lattice
+      1  NEGATIVE existential over a function class
+      1  universal over d, j
+      1  universal over d and s
+      1  NON-NUMERICAL: a topological fact
+
+==============================================================================
+THE ANSWER THEY ASKED FOR
+==============================================================================
+
+  P11 is the cleanest kill:
+     'NO integer-power series in q = e^(-2pi) can be exact.'
+     A negative existential over a function class. There is no output field
+     whose sign, interval, or digits witnesses the NON-EXISTENCE of a series.
+     P11 is 028's murder weapon -- the result the whole programme turns on.
+
+  P3 is the second:
+     'holds for ANY radial weight' quantifies over a FUNCTION SPACE.
+     It is the property that makes the parity theorem survive every smoothing
+     (062), i.e. the reason it is the one result never walked back.
+
+  P15 is the third, and different in kind:
+     pi_1(S^2) = 0 is not a number. No witness tuple has a homotopy group in it.
+
+  SCOPE RESULT:
+     the (witness, predicate) machinery covers the OBSERVED column almost
+     entirely -- R, eps, c2, d*, b*, the slopes, the bins, all are pinned
+     numbers with signs and digits -- and covers 2 of 15 PROVED claims.
+
+     It is a discipline for MEASUREMENTS, not for THEOREMS.
