@@ -1,0 +1,4 @@
+# SHA-256 hashes — sealed 2026-08-25 03:58:09 UTC
+
+ircdl2025-knowledge-provenance-fulltext.txt                  458ccde4e161af60f74e7ec5934bdaf6df69a28fc3f20109686430cbe69efee3
+literature-check.md                                          161d8bf5a7515693aba907125aa56b94c785e19f5a7b03b60db530d767969acb
