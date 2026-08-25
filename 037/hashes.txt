@@ -1,0 +1,7 @@
+# SHA-256 hashes — sealed 2026-08-25 05:28:27 UTC
+
+README-037.md                                                ee79b70e10ec139b23404e73d251aaf51bdb72fa4b4a95b77a8e6e75c70f3982
+letter-to-james-2026-08.md                                   ecd1a151906448dc41ec35dc6d28a7512364942399ef6d1537063762c4b0825f
+letter-to-james-by-programme.md                              47fe4cb37f88c3ff4d1285d7cf8fb29b3a07b66257f85acbc7115fa982afa923
+letter-to-james-short.md                                     9648cd0f504e8ef76518477085c8ccb34d6472a88a327a4e80fc65e9374aed28
+letter-to-james-v2.md                                        4ede640216229f8010aa0af1c3f2c039f2a122d498b8144e19325ccc0028c4bc
