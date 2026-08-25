@@ -1,0 +1,6 @@
+# SHA-256 hashes — sealed 2026-08-25 09:44:25 UTC
+
+kron.py                                                      9c049e5c0170e6fc87c815684f84f9014f4c96ba7a252d4bb1fd3785f5176b3f
+output.txt                                                   b0f0f82bd15ca49fffc2316fb477fbf249cf33b221e4b066a97e86dccbfd573b
+pi-is-one-row.md                                             6dd3caf54148963781d138794c1752cfcdfab5df7d4f34b1e90afe705fcc5ef6
+pi_is_one_row.py                                             193554afafa3611a0abab10c34d78842591314e28b678bcbb02d0c86b68792cb
