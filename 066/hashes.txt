@@ -1,0 +1,4 @@
+# SHA-256 hashes — sealed 2026-08-25 05:15:47 UTC
+
+README-066.md                                                7b68a42d0a1ad009f19ffcf3161505acd48580655c7212f0f4e7169ffcaef744
+cubic-torus-collaboration-brief.md                           0ebcf399db527b34c45c70b3a4c75a83eb713bd4420ecd053802d2438a38645d
