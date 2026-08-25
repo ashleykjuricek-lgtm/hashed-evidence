@@ -1,0 +1,46 @@
+LAW 1 — marking-complement duality:   X(d,j) = (-1)^m * X(d, d-j)
+   ------------------------------------------------------------------------------------
+   d = 1   (all j from 0 to 1)                              HOLDS   exceptions 0 / 40000
+   d = 2   (all j from 0 to 2)                              HOLDS   exceptions 0 / 60000
+   d = 3   (all j from 0 to 3)                              HOLDS   exceptions 0 / 80000
+   d = 4   (all j from 0 to 4)                              HOLDS   exceptions 0 / 100000
+   d = 5   (all j from 0 to 5)                              HOLDS   exceptions 0 / 120000
+   d = 6   (all j from 0 to 6)                              HOLDS   exceptions 0 / 140000
+
+LAW 2 — the SELF-DUAL marking (j = d/2) must vanish on odd m
+   ------------------------------------------------------------------------------------
+   d = 1   no j with j = d-j   ->  predict NO vanishing marking.   found: none
+   d = 2, j = 1  SELF-DUAL  ->  X = 0 on odd m              HOLDS   exceptions 0 / 10000
+   d = 3   no j with j = d-j   ->  predict NO vanishing marking.   found: none
+   d = 4, j = 2  SELF-DUAL  ->  X = 0 on odd m              HOLDS   exceptions 0 / 10000
+   d = 5   no j with j = d-j   ->  predict NO vanishing marking.   found: none
+   d = 6, j = 3  SELF-DUAL  ->  X = 0 on odd m              HOLDS   exceptions 0 / 10000
+
+LAW 3 — d=3, ONE circle marked:  3*X(3,1)(m) = eps(m mod 4) * r_3(m)
+        eps = +3, +1, -1, -3   for m = 0, 1, 2, 3 mod 4
+   ------------------------------------------------------------------------------------
+   3 * X(3,1)(m) == eps(m mod 4) * r_3(m)                   HOLDS   exceptions 0 / 20000
+   ...and the same eps law for X(3,2), via LAW 1            HOLDS   exceptions 0 / 20000
+
+   the four multipliers, checked directly (m, r_3, X(3,1), ratio):
+      m=  4 (m mod 4 = 0)   r_3 =    6   marked =     6   3*marked/r_3 = +3
+      m=  8 (m mod 4 = 0)   r_3 =   12   marked =    12   3*marked/r_3 = +3
+      m= 12 (m mod 4 = 0)   r_3 =    8   marked =     8   3*marked/r_3 = +3
+      m=  1 (m mod 4 = 1)   r_3 =    6   marked =     2   3*marked/r_3 = +1
+      m=  5 (m mod 4 = 1)   r_3 =   24   marked =     8   3*marked/r_3 = +1
+      m=  9 (m mod 4 = 1)   r_3 =   30   marked =    10   3*marked/r_3 = +1
+      m=  2 (m mod 4 = 2)   r_3 =   12   marked =    -4   3*marked/r_3 = -1
+      m=  6 (m mod 4 = 2)   r_3 =   24   marked =    -8   3*marked/r_3 = -1
+      m= 10 (m mod 4 = 2)   r_3 =   24   marked =    -8   3*marked/r_3 = -1
+      m=  3 (m mod 4 = 3)   r_3 =    8   marked =    -8   3*marked/r_3 = -3
+      m= 11 (m mod 4 = 3)   r_3 =   24   marked =   -24   3*marked/r_3 = -3
+      m= 19 (m mod 4 = 3)   r_3 =   24   marked =   -24   3*marked/r_3 = -3
+
+LAW 3's PROOF — it rests only on 'a square is 0 or 1 mod 4, and 0,1,4 mod 8'.
+   split every solution of Q(n)=m by the PARITIES of its three coordinates:
+   ------------------------------------------------------------------------------------
+   m=0 mod 4 -> ONLY all-even solutions                     HOLDS   exceptions 0 / 4000
+   m=2 mod 4 -> NO all-even solutions                       HOLDS   exceptions 0 / 4000
+   m=1 mod 4 -> NO all-odd solutions                        HOLDS   exceptions 0 / 4000
+   m=3 mod 4 -> NO two-even-one-odd solutions               HOLDS   exceptions 0 / 4000
+   m=1,2 mod 4 -> r_3(m) divisible by 3                     HOLDS   exceptions 0 / 4000

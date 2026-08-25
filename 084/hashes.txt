@@ -1,0 +1,6 @@
+# SHA-256 hashes — sealed 2026-08-25 10:53:25 UTC
+
+duality-output.txt                                           5635dd60b59a7f54ebbbbfd552e6fdbdcefe087bfc72524a0618c09f20d1d37d
+duality.py                                                   8cba6b5765122ee639203de319ee6f1a0dad0dc2784505a66614d2086725a3e5
+integers-only.md                                             4d7314cd9529bf50a08e65f61135ba85aee3f5e3ddf77ea197d4fa50f20f2f1c
+integers.py                                                  150e3de8d0ab81eb92e767edd4e84367fe9ece6bc75f83ada23bd23830e53ce7
