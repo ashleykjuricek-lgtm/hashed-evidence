@@ -1,0 +1,5 @@
+# SHA-256 hashes — sealed 2026-08-25 04:46:38 UTC
+
+output.txt                                                   251c6fc31ecb00efb20501f745629e51aaea876c5e6a62768a926322fd115d64
+pi-marks-the-smoothing.md                                    1dee7445bc36ad8e3e17324f4d0a907addbc8709bcb0a07ead7dff197c0e770c
+where_pi_is.py                                               ba00d0eb5807632c62b3a669e1065a3c6663843004eb03a8da07d881abd195c2

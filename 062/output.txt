@@ -1,0 +1,61 @@
+=== every PROVED result, checked for pi ===
+
+1. parity theorem  S(m) = 0 for odd m
+   a finite sum of +/-1 on a lattice ring.  S(1)= 0  S(5)= 0
+   pi: ABSENT
+
+2. character law   S(m) = (-1)^(m/2) r2(m) for even m
+   integers only.   pi: ABSENT
+
+3. Theorem 4       T(m) = 2 sum S(m - k3^2)
+   integers only.   pi: ABSENT
+
+4. T2 formula      T2(m) = m r2(m)/2 - 2 sum k1^2
+   integers only.   pi: ABSENT
+
+5. R(2,2) = 2^s - 1  and  R(2,1) = (2^2s - 2^s)/2   -- for ALL s
+   at s=-1/2:  R(2,2) = -0.2928932188134524756
+               1/sqrt2 - 1 = -0.2928932188134524756
+   proof input: r2(2m) = r2(m).  Integers.
+   pi: ABSENT from the statement AND from the proof
+
+6. A = 1 - 1/sqrt2 = -R(2,2) = 0.2928932188134524756    pi: ABSENT
+
+7. d=3 has no doubling:  r3(1)=6, r3(2)=12.   pi: ABSENT
+
+8. one mark kills the zero mode: |n+alpha|^2 != 0.  pi: ABSENT
+
+9. 028's obstruction: e^(-2 pi sqrt2) cannot sit in a series in q=e^(-2 pi)
+   pi appears -- but in BOTH exponents. The content is that sqrt2 is irrational:
+   e^(-2 pi sqrt2) = q^sqrt2 requires sqrt2 in Z.  pi cancels out of the argument.
+   pi: PRESENT BUT INERT
+
+10. Greg's halving half:  theta3 theta4 = theta4(q^2)^2, and 0 < theta4 < 1
+    identity at q=0.3: 0.672615216747745908 = 0.672615216747745908
+    a q-series identity. No pi in it.
+    The sign flip uses Gamma(-1/2) = -3.54490770181 -- only its SIGN is used.
+    pi: PRESENT BUT INERT (sign only)
+
+11. monotonicity: theta3 > theta2 > 0, and Gamma(-1/2) < 0.  Same. INERT
+
+==================================================================
+=== every OBSERVED result, same check ===
+==================================================================
+R  = 0.0416894146027237751...    pi: LOAD-BEARING
+eps, c2, d*, b', every slope     pi: LOAD-BEARING
+the functional equation prefactor pi^(-1-d/2) Gamma((d+1)/2)/Gamma(-1/2):
+   d=2: -0.0253302959106
+   d=3: -0.0161257672166
+
+==================================================================
+=== and WHERE does pi enter the machinery? ===
+==================================================================
+   Gaussian integral      INT exp(-x^2) dx      = 1.77245385090552
+   Gamma(1/2)                                   = 1.77245385090552  (same thing)
+   heat kernel on the FLAT torus  (4 pi t)^(-d/2)
+   Poisson summation   sum exp(-t n^2) = sqrt(pi/t) sum exp(-pi^2 k^2/t)
+      t=0.7: 2.11849074102217 = 2.11849074102217
+      t=1.3: 1.55611330440016 = 1.55611330440016
+
+   EVERY pi in this programme enters through a GAUSSIAN.
+   Heat kernel, Mellin/Gamma, Ewald, Poisson -- all Gaussian machinery.
