@@ -1,0 +1,32 @@
+T_max = hbar c / (8 pi l_p k_B) = 5.6372051e+30 K
+   page says '~10^32 K (Planck temperature scale)'
+   actual Planck temperature   = 1.4167839e+32 K
+   ratio T_planck / T_max      = 25.132737  = 8*pi = 25.132741
+   -> T_max is 10^30.75, NOT 10^32.  The page's exponent is off by 8*pi ~ 25.
+
+H0 =  66.8712 km/s/Mpc   R_H = 1.38335e+26 m
+     T_min = 1.31726e-30 K      T_CMB = sqrt(T_max T_min) = 2.7250076 K
+H0 =     67.4 km/s/Mpc   R_H = 1.3725e+26 m
+     T_min = 1.32768e-30 K      T_CMB = sqrt(T_max T_min) = 2.7357607 K
+H0 =     73.0 km/s/Mpc   R_H = 1.26721e+26 m
+     T_min = 1.43799e-30 K      T_CMB = sqrt(T_max T_min) = 2.847145 K
+
+measured T_CMB (Fixsen 2009) = 2.72548 +/- 0.00057 K
+
+INVERSION  H0 = (T_CMB^2 / T_max) * k_B * 4 pi / hbar
+   H0 = 66.8943888 +/- 0.028 km/s/Mpc
+   page claims 66.8712 +/- 0.0019
+
+   NOTE: the error bar is PROPAGATED from T_CMB, not measured.
+         dH0/H0 = 2 dT/T = 0.04183 %
+
+TENSION CHECK
+   vs Planck 2018  67.4 +/- 0.5:  diff 0.506  = 1.01 sigma
+   vs SH0ES local  73.0 +/- 1.0:  diff 6.11  = 6.1 sigma
+
+REVERSE: what T_CMB does the relation require, given Planck's H0?
+   T_CMB required = 2.7357607 K   vs measured 2.72548
+   discrepancy    = 0.3772 %  = 18.04 sigma of the T_CMB measurement
+
+LISA geometric-mean prediction (the page's own addition, not Haug's):
+   sqrt(66.8712 * 73.0) = 69.8684 km/s/Mpc

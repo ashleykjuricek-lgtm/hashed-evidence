@@ -1,0 +1,5 @@
+# SHA-256 hashes — sealed 2026-08-25 04:27:47 UTC
+
+check_haug.py                                                d9bc801ba45fd7fcfb94e6a59e2e3b0e2cf8d6dbdd1ccc1debbdd724da6cfe4e
+haug-carnot-audit.md                                         66522ffec72448e1a76b24c7dcafa5ac0789751916e4bcc5319edf4819afd1d3
+output.txt                                                   9fcb96fd0d5c2638e5d484fe66e6d5f9793c3084562197f07ad6259312dc7540
