@@ -1,0 +1,50 @@
+isotropic:  N = 0.6892200327   D = 16.453773   R0 = 0.0418882664
+
+DENOMINATOR response matrix (f = 1):
+[[ 5.48459105 -0.          0.        ]
+ [-0.          5.48459105 -0.        ]
+ [ 0.         -0.          5.48459105]]
+   isotropic?  off-diagonals ~0 and M11=M22=M33 -> True
+
+NUMERATOR response matrix (f = (-1)^n1):
+[[-2.92620459  0.         -0.        ]
+ [ 0.          1.80771231 -0.        ]
+ [-0.         -0.          1.80771231]]
+   diag(A, B, B) with A = -2.9262045876, B = 1.8077123102,  A - B = -4.7339168978
+   off-diagonal max = 9.044e-17
+
+sweep u = (sin t, 0, cos t): dR/deps vs the quadrupole prediction
+   angle(deg)   dR/deps           B + (A-B) ux^2  form      ratio
+          0   -0.1918067406    -0.1918067406    ratio 1.00000000
+         15   -0.1532608946    -0.1532608946    ratio 1.00000000
+         30   -0.0479516851    -0.0479516851    ratio 1.00000000
+         45    0.0959033703     0.0959033703    ratio 1.00000000
+         60    0.2397584257     0.2397584257    ratio 1.00000000
+         75    0.3450676352     0.3450676352    ratio 1.00000000
+         90    0.3836134811     0.3836134811    ratio 1.00000000
+
+======================================================================
+SECOND TEST: sweep u in the y-z plane (perpendicular to the marked axis)
+   First order predicts a CONSTANT there (both y and z give B).
+   Any modulation is higher-order lattice structure. What symmetry?
+======================================================================
+  eps=0.05:  min 0.0324794487  max 0.0327797224  swing 3.003e-04
+             0:+1.42e-04  20:+1.81e-05  40:-1.49e-04  60:-8.30e-05  80:+1.07e-04
+  eps= 0.3:  min -0.0097714244  max -0.0015598187  swing 8.212e-03
+             0:+3.93e-03  20:+4.60e-04  40:-4.05e-03  60:-2.29e-03  80:+2.93e-03
+  eps= 1.0:  min -0.0975329650  max -0.0483564994  swing 4.918e-02
+             0:+2.48e-02  20:+1.40e-03  40:-2.33e-02  60:-1.45e-02  80:+1.77e-02
+
+   0 deg = the y axis, 45 deg = the y-z diagonal, 90 deg = the z axis.
+   Extrema at 0/45/90 = FOUR-FOLD structure about the marked axis.
+
+======================================================================
+WHY IT CAN NEVER BE A ROSE
+======================================================================
+   Crystallographic restriction theorem: a periodic lattice in 2D or 3D
+   admits only 2-, 3-, 4- and 6-fold rotational symmetry.
+   FIVE- and TEN-fold are forbidden on Z^3, at every order, for all time.
+   Z^3's point group is octahedral: 48 elements, axes of order 2, 3, 4.
+
+   022's ten-petal rose lives on a PENROSE lattice. Cut-and-project from
+   Z^5 buys exactly the thing periodicity forbids: ten-fold symmetry.

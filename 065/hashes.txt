@@ -1,0 +1,5 @@
+# SHA-256 hashes — sealed 2026-08-25 05:10:53 UTC
+
+output.txt                                                   8273093613956fbd17323abf9b6732c1d2310dda8235cee6ebdb016d9878c631
+rose_on_Z3.py                                                859c177e4badb646b9b41f31c2801b2f89725266b898f73f61d5920cc2fefe01
+the-rose-the-torus-can-have.md                               cb8c7ae75ffef4b98992b5c90d6493bc648a8fde1b1876b5ddc80daf2a898fd4
