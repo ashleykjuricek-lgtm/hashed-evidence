@@ -1,0 +1,27 @@
+counting ideals of norm m <= 2,000,000 in cyclic CUBIC fields
+r1 = 3, r2 = 0  (totally real)  ->  class number formula gives
+    residue = 2^r1 (2pi)^r2 h R / (w sqrt|d|) = 8 h R / (2 sqrt d) = 4 h R / sqrt d
+
+Q(zeta_7)+  cyclic cubic, conductor 7
+   splitting-rule check      PASS  0 mismatches
+   counted mean              0.30025300
+   4 h R / sqrt(d)           0.30025982     R = 0.5254546821  (a 2x2 DETERMINANT of logs)
+   ratio counted/closed      0.999977
+   would-be value WITH pi    1.88658808   <- ratio to counted 0.1592
+
+Q(zeta_9)+  cyclic cubic, conductor 9
+   splitting-rule check      PASS  0 mismatches
+   counted mean              0.37748350
+   4 h R / sqrt(d)           0.37746109     R = 0.8492874506  (a 2x2 DETERMINANT of logs)
+   ratio counted/closed      1.000059
+   would-be value WITH pi    2.37165797   <- ratio to counted 0.1592
+
+for contrast, the price in each shape, from Dirichlet's formula:
+   2^r1 (2pi)^r2 h R / (w sqrt|d|)      r2 = number of COMPLEX embedding pairs
+                                        R  = det of an (r1+r2-1) x (r1+r2-1) log matrix
+
+   shape                 r1 r2  unit rank  pi?   what R is
+   imaginary quadratic    0  1      0      YES   empty determinant = 1
+   real quadratic         2  0      1      no    ONE logarithm
+   totally real cubic     3  0      2      no    a 2x2 DETERMINANT  <- counted above
+   complex cubic          1  1      1      YES   one logarithm, times 2pi

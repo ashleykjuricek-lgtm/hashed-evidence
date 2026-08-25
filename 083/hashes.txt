@@ -1,0 +1,7 @@
+# SHA-256 hashes — sealed 2026-08-25 10:41:55 UTC
+
+cubic-output.txt                                             7572dcd44335cd450ccbd320811480ff4ffee820381433673fae4c9b1d88e32b
+cubic.py                                                     c72147fb5b9a31088ac6cef024b32f2c4f2a95f58434eb70589077f11f1cd7e4
+gauss-output.txt                                             fddcb6621c75d0cba1af3a9be23568a25ae891b0bddc7567e38c611524a9915e
+gauss2.py                                                    4ea38aadd941617fdef7c034e30d0014750863d61f4baf374036799b52335939
+the-price-has-two-parts.md                                   01f29803598a00ad3a41597bc451c719725424e08367208b5fd901442c87fe34

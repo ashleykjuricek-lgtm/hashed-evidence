@@ -1,0 +1,20 @@
+GAUSS: the shell counts of the flat 3-torus lattice Z^3,
+       against class numbers of IMAGINARY QUADRATIC fields (the pi rows).
+
+     m   m mod 8      r3(m)   Gauss prediction        h        law
+   ------------------------------------------------------------------------
+       2    2          12       12                 1   12 h(-4m) * 2/w  [w=2]
+       3    3           8        8                 1   24 h(-m) * 2/w   [w=6]
+       5    5          24       24                 2   12 h(-4m) * 2/w  [w=2]
+       6    6          24       24                 2   12 h(-4m) * 2/w  [w=2]
+       7    7           0        0                 -   = 0            (Legendre)
+      10    2          24       24                 2   12 h(-4m) * 2/w  [w=2]
+      11    3          24       24                 1   24 h(-m) * 2/w   [w=2]
+      13    5          24       24                 2   12 h(-4m) * 2/w  [w=2]
+      14    6          48       48                 4   12 h(-4m) * 2/w  [w=2]
+      15    7           0        0                 -   = 0            (Legendre)
+   ------------------------------------------------------------------------
+   squarefree m <= 3000:   1824 agreements, 0 mismatches
+
+Every shell count of Z^3 is a class number of an IMAGINARY quadratic field
+times 24/w.  Imaginary quadratic = r2 = 1 = the rows that pay pi.
