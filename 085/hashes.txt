@@ -1,0 +1,7 @@
+# SHA-256 hashes — sealed 2026-08-25 11:10:00 UTC
+
+d4-output.txt                                                33ed90c8c0a64be3a4ac6ee39a484e1a885780823294b9b10849a05e6a848834
+d4-the-mirror-halves-it.md                                   c9bf469cf73062dbf94b78efc3336546af2b006f2635ec7ea2d172688ec9196c
+d4.py                                                        1f03c83f44a892d5fc20cd9d093c4c90dcc090520e95737145d02a67b03a9dea
+d4b-output.txt                                               ea27504834cd178c58c59c4ba87370f18b82856f227afcacb3b825811be51527
+d4b.py                                                       21c7dacbc18eff25a6fe7e0489be7cac5b64e78721499f93c485436c7c65a996

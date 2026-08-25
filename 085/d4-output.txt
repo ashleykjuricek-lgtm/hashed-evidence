@@ -1,0 +1,52 @@
+d = 4.  m :   r_4    | X(4,1)  X(4,2)  X(4,3)  X(4,4) |  N0   N1   N2   N3   N4
+   ------------------------------------------------------------------------------------
+        1 :      8  |      4       0      -4      -8 |    0    8    0    0    0
+        2 :     24  |      0      -8       0      24 |    0    0   24    0    0
+        3 :     32  |    -16       0      16     -32 |    0    0    0   32    0
+        4 :     24  |     -8      24      -8      24 |    8    0    0    0   16
+        5 :     48  |     24       0     -24     -48 |    0   48    0    0    0
+        6 :     96  |      0     -32       0      96 |    0    0   96    0    0
+        7 :     64  |    -32       0      32     -64 |    0    0    0   64    0
+        8 :     24  |     24      24      24      24 |   24    0    0    0    0
+        9 :    104  |     52       0     -52    -104 |    0  104    0    0    0
+       10 :    144  |      0     -48       0     144 |    0    0  144    0    0
+       11 :     96  |    -48       0      48     -96 |    0    0    0   96    0
+       12 :     96  |    -32      96     -32      96 |   32    0    0    0   64
+       13 :    112  |     56       0     -56    -112 |    0  112    0    0    0
+       14 :    192  |      0     -64       0     192 |    0    0  192    0    0
+       15 :    192  |    -96       0      96    -192 |    0    0    0  192    0
+       16 :     24  |     24      24      24      24 |   24    0    0    0    0
+       17 :    144  |     72       0     -72    -144 |    0  144    0    0    0
+       18 :    312  |      0    -104       0     312 |    0    0  312    0    0
+       19 :    160  |    -80       0      80    -160 |    0    0    0  160    0
+       20 :    144  |    -48     144     -48     144 |   48    0    0    0   96
+
+A - the shell count itself, with NO constant of any kind (Jacobi):
+   ------------------------------------------------------------------------------------
+   r_4(m) = 8 * sum of divisors d of m with 4 not | d         HOLDS   exceptions 0 / 20000
+   r_4(m) = 8*sigma(m) for ODD m                              HOLDS   exceptions 0 / 10000
+
+B - THE MIRROR'S FIXED POINT, j = 2:
+   ------------------------------------------------------------------------------------
+   X(4,2)(m) = 0 on odd m                                     HOLDS   exceptions 0 / 10000
+   X(4,2)(2k) = (-1)^k * r_4(k)   <- SELF-SIMILAR AT HALF SCALE HOLDS   exceptions 0 / 10000
+
+C - the non-fixed markings:
+   ------------------------------------------------------------------------------------
+   X(4,4)(m) = (-1)^m r_4(m)        [LAW 1]                   HOLDS   exceptions 0 / 20000
+   X(4,3)(m) = (-1)^m X(4,1)(m)     [LAW 1]                   HOLDS   exceptions 0 / 20000
+   X(4,1)(m) = eps * r_4(m)/2 on ODD m   eps=+1 if m=1 mod 4  HOLDS   exceptions 0 / 10000
+   X(4,1)(m) = 4*sigma(m)*eps on ODD m                        HOLDS   exceptions 0 / 10000
+   X(4,1)(m) = 0 for m = 2 mod 4         <- A SECOND VANISHING HOLDS   exceptions 0 / 5000
+   X(4,1)(m) = r_4(m/4) for m = 0 mod 8                       HOLDS   exceptions 0 / 2500
+   X(4,1)(m) = r_4(m/4) - N4(m) for m = 4 mod 8               HOLDS   exceptions 0 / 2500
+   X(4,1)(m) = N0 - N4 for ALL even m                         HOLDS   exceptions 0 / 10000
+
+D - which parity classes are EMPTY (this is what forces C):
+   ------------------------------------------------------------------------------------
+   N0 (all even) = 0 unless m = 0 mod 4                       HOLDS   exceptions 0 / 15000
+   N4 (all odd)  = 0 unless m = 4 mod 8                       HOLDS   exceptions 0 / 17500
+   N1 = 0 when m = 3 mod 4                                    HOLDS   exceptions 0 / 5000
+   N3 = 0 when m = 1 mod 4                                    HOLDS   exceptions 0 / 5000
+   N2 = 0 when m = 0 mod 4                                    HOLDS   exceptions 0 / 5000
+   N0(m) = r_4(m/4)  for m = 0 mod 4                          HOLDS   exceptions 0 / 5000
