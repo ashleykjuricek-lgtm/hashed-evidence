@@ -1,0 +1,5 @@
+# SHA-256 hashes — sealed 2026-08-25 06:20:37 UTC
+
+output.txt                                                   12acb4dd2c71fd76837137123556b045d61648798f2c83e4d25f11a5f836d11a
+test_the_stack.py                                            c2ed8d19ec11216579500b1595b3faebea9237b452588944b93246aac26196a9
+testing-the-proposed-stack.md                                1065aaf5cc04ac1ec950dc42f737ab15460053d84d790db4895bc5d354f80749

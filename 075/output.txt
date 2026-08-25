@@ -1,0 +1,63 @@
+==========================================================================
+TEST 1 -- would SEMANTIC HASHING have caught the Tier-2 errors?
+==========================================================================
+
+  sealed : R sits a hair under 1/24
+  correct: R sits a hair over 1/24
+  char similarity 0.894   token overlap 0.714
+
+  sealed : 79.0% of shells below the cutoff are empty
+  correct: 76% of shells below the cutoff are empty
+  char similarity 0.951   token overlap 0.778
+
+  sealed : the two divisions are complementary, each blind exactly where the other sees
+  correct: the two divisions are independent, neither lens predicts the other
+  char similarity 0.648   token overlap 0.333
+
+  A semantic hash is DESIGNED so that small changes in meaning give small
+  changes in code. 'under' vs 'over' is one token in eight -- these collide
+  by construction. Semantic hashing is not merely unhelpful for Tier 2;
+  it is ACTIVELY BLIND to it. That is the design goal, not a defect.
+
+==========================================================================
+TEST 2 -- would a MORE PRECISE LANGUAGE have caught them?
+==========================================================================
+  The Tier-2 failure was not a shortage of expressive precision.
+  'under' and 'over' are unambiguous in English. So are adhah and upari.
+  The failure was not CHECKING the sentence against the table beside it.
+
+  A precisely-worded wrong sentence is still wrong. Test:
+     English  : 'R sits a hair under 1/24'   -- unambiguous, and false
+     Any lang : same proposition, same falsity
+  -> a denser medium changes what CAN be said, not what IS checked.
+
+  And 074 tested what DOES catch them: rendering the direction-word
+  from a predicate over the witness output.  3 of 3.  Language-independent.
+
+==========================================================================
+TEST 3 -- would a LEARNED POLICY have caught them? What is the training set?
+==========================================================================
+  total recorded errors: 17
+     Tier1      11
+     Tier2       3
+     retrieval   1
+     identity    1
+     process     1
+
+  A Q-network needs (state, action, reward) trajectories. We have 17 errors,
+  each resolved ONCE, with no repeated episodes and no counterfactuals.
+  That is not a training set; it is an anecdote list.
+
+  And for every case, the fix that worked was a FIXED RULE, not a policy:
+     floor at ten               -> re-ran as a ratio
+     PSLQ at 24 digits          -> stated the digit budget
+     tolerance vs truncation    -> widened the truncation
+     11 lobes on 10-fold        -> 11 cannot divide 10
+     truncated theta 4297       -> the number was absurd
+     RP^3 integration v1        -> the cut WAS the answer
+     RP^3 integration v2        -> lambda-invariance test
+     18 sigma                   -> writing the repro spec
+
+  None of these was a wrong ACTION CHOSEN FROM A MENU. They were:
+     (a) a test not run,  (b) a table not read,  (c) a frame not questioned.
+  A policy over {run witness, fetch gloss, retrieve, escalate} addresses none.
