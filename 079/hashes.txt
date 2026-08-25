@@ -1,0 +1,4 @@
+# SHA-256 hashes — sealed 2026-08-25 09:16:20 UTC
+
+README-079.md                                                9aa4a9aa041d4e7da202da787c2b053af1b6b7b2886757319906afeff616dd87
+identity-relative-to-class.md                                a6ba875aa1c2feda39ce6f33866865333604f0713f13d1569fb6decc7ed43caa

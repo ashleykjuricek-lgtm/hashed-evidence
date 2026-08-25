@@ -5,6 +5,18 @@
 
 cd "$(dirname "$0")" || exit 1
 
+# PRE-FLIGHT: no new entry seals while any prior seal fails.
+# Required by 077 and by 079 (Greg's section 8). Added 2026-08-25.
+if [ -f verify_seals.py ]; then
+  if ! python verify_seals.py > /tmp/_seals.txt 2>&1; then
+    echo "*** REFUSING TO SEAL: a prior seal does not verify ***"
+    cat /tmp/_seals.txt
+    exit 1
+  fi
+  echo "pre-flight: $(grep -E 'files checked|REAL failures' /tmp/_seals.txt | tr '
+' ' ')"
+fi
+
 # Find the highest numbered folder
 CURRENT=$(ls -d [0-9][0-9][0-9] 2>/dev/null | sort -n | tail -1)
 
