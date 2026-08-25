@@ -84,4 +84,11 @@
 080 |  4 files | sealed | π is one row of a table — and the price of a rotation that closes
 081 |  6 files | sealed | 081 — the identity gauntlet, renumbered from 080. Second numbering race in one hour.
 082 |  1 files | sealed | 082 — Stratum tags: which floor is this claim standing on
-083 |  0 files | OPEN   | 
+083 |  5 files | sealed | The price has two parts — and the flat 3-torus is not in the π-free room
+084 |  4 files | sealed | Integers only — and the parity theorem turns out to be a fixed point
+085 |  5 files | sealed | d = 4 — the mirror's fixed point is the whole object at half scale
+086 |  5 files | sealed | 086 — four notes rehomed out of sealed 080, and the seal hole closed
+087 |  7 files | sealed | d = 5, 6 — where marking stops being a corollary. And the clean room: what walks in by itself
+088 |  2 files | OPEN   | 088 — Witness mutualism constitution
+089 |  1 files | sealed | Testing 088 against the error record — one tenet is understated, one hypothesis already has a counterexample
+090 |  0 files | OPEN   | 
