@@ -1,0 +1,40 @@
+======================================================================
+CLAIM 1 -- 070's sentence 'each blind exactly where the other sees'
+======================================================================
+   both 99   four-only 113   five-only 109   neither 109   total 430
+   the lenses AGREE (both lit or both dark) on 208/430 = 48.4%
+   they DISAGREE on 222/430 = 51.6%
+
+   'blind exactly where the other sees' predicts both=0 and neither=0.
+   observed both=99, neither=109.  -> the sentence is REFUTED by its own bins.
+
+   independence test: if independent, each bin ~ 1/4 of total
+      both        23.0%   (independent prediction 25.0%)
+      four-only   26.3%   (independent prediction 25.0%)
+      five-only   25.3%   (independent prediction 25.0%)
+      neither     25.3%   (independent prediction 25.0%)
+   mod 4 and mod 5 are coprime -> CRT: the classes mod 20 equidistribute.
+   Each lens reads the other as a FAIR COIN. INDEPENDENT, not complementary.
+
+======================================================================
+CLAIM 2 -- the ten-cycle mod 11, and 11 minimal
+======================================================================
+   powers of 2 mod 11: 1 -> 2 -> 4 -> 8 -> 5 -> 10 -> 9 -> 7 -> 3 -> 6 -> 1
+   distinct nonzero residues visited: 10 of 10   closes: True
+
+   smallest prime p with 10 | p-1  (i.e. p = 1 mod 10):
+      [11, 31, 41, 61, 71, 101] -> 11 is first
+   (2,3,5,7 all fail: p-1 = 1,2,4,6, none divisible by 10)
+
+======================================================================
+CLAIM 3 -- the golden-world average is 2 log(phi)/sqrt5, no pi
+======================================================================
+   mean ideal count, m <=     10000 : 0.43040000
+   mean ideal count, m <=    100000 : 0.43041000
+   mean ideal count, m <=   1000000 : 0.43040700
+   exact limit 2 log(phi)/sqrt5           : 0.43040894
+
+   for contrast, square world limit pi/4  : 0.78539816
+   Dirichlet class number formula, one slot, two occupants:
+      imaginary disc (-4):  2 pi h / (w sqrt|d|) = 2 pi / (4 * 2) = pi/4
+      real disc     (+5):  4 h R / (w sqrt d)   = 4 log(phi) / (2 sqrt5) = 2 log(phi)/sqrt5
