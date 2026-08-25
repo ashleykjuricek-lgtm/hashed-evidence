@@ -1,0 +1,3 @@
+# SHA-256 hashes — sealed 2026-08-25 09:48:08 UTC
+
+README-082.md                                                fa61fab3fc226c4ac08f686a8bc34dfb5c621426249889ee0a5e6d04ce9a03e8
