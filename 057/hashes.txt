@@ -1,0 +1,8 @@
+# SHA-256 hashes — sealed 2026-08-25 03:47:33 UTC
+
+028-alternate-draft-2026-06-20.md                            746f20a56191d7bee0eaabd02a8577e0dc432d3ff03b2010ac6606b46b49fffd
+README-057.md                                                c2982cc58c9d20d87e782dbca0ad122685339a49da6822f66d98ffe92daf80f6
+greg-branch-2026-08-24.md                                    45af2aa47fe4b04c44b0c2d4b0b852183e07226ed2e66001b5f86af64e926763
+greg-claim-state-2026-08-24.md                               d1f95984c35eb76518d0d2dfe8aa7d30d09fd340495c6651fc75b5367bed38d3
+greg-halving-law-2026-08-23.md                               1a8661d8f1111c329173755d6f83d0ecec263c9aff4f9c46d9eb72c55b3cdb18
+kestrel-report-2026-08-23.md                                 79222cbc3da3f1312b1038600741f54ed7108f2f3b53d66b500660582c74a1e5
