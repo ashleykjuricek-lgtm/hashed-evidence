@@ -1,0 +1,8 @@
+OLD  max |residual| = 0.0000   -> PHI INERT
+NEW  max |residual| = 0.3820   -> PHI ACTIVE
+
+  above lattice step   after 8 layers:  std   0%   traction  64%
+  below lattice step   after 8 layers:  std   0%   traction   0%
+  coarse lattice       after 8 layers:  std   0%   traction   2%
+
+two of three regimes are LOSSES -> the demo can fail -> it is an instrument

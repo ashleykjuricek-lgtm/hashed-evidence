@@ -1,0 +1,6 @@
+# SHA-256 hashes — sealed 2026-08-29 13:52:19 UTC
+
+PRISMATIC-CORRECTIONS.md                                     2243953e115f727d91fc2b701940152af7584e9314cb98c40a593e3ee3132e2c
+PrismaticPage-FIXED.tsx                                      d764725c8adcd2d0155eedb6f9b1f88d8a5ba4b6fb9607cdbfb023facecfa1e4
+verify_fix-output.txt                                        9a77530f76406bcb1e1e5948f7ab6dd705514ac9e7b473404b4ada0603af25b9
+verify_fix.py                                                da7615597dfc3a453ec2cbd3f6a6f5a6e4990a0df1d448880fddd781d360480d
