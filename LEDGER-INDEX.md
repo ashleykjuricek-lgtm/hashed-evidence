@@ -93,4 +93,5 @@
 089 |  1 files | sealed | Testing 088 against the error record — one tenet is understated, one hypothesis already has a counterexample
 090 |  4 files | sealed | The Prismatic page — φ is inert, the comparison is hard-coded, and one derivation contradicts our own record
 091 |  4 files | sealed | PrismaticPage — corrections
-092 |  0 files | OPEN   | 
+092 |  3 files | sealed | 092 — the six scars, added to the page; and a ranked inventory of what survives
+093 |  0 files | OPEN   | 
