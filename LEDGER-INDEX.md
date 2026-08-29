@@ -94,4 +94,5 @@
 090 |  4 files | sealed | The Prismatic page — φ is inert, the comparison is hard-coded, and one derivation contradicts our own record
 091 |  4 files | sealed | PrismaticPage — corrections
 092 |  3 files | sealed | 092 — the six scars, added to the page; and a ranked inventory of what survives
-093 |  0 files | OPEN   | 
+093 |  7 files | sealed | d = 5 closes completely — and the multiplier law never died, it reached down one level
+094 |  0 files | OPEN   | 
