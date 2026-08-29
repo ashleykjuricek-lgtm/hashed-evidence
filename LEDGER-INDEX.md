@@ -91,4 +91,6 @@
 087 |  7 files | sealed | d = 5, 6 — where marking stops being a corollary. And the clean room: what walks in by itself
 088 |  2 files | OPEN   | 088 — Witness mutualism constitution
 089 |  1 files | sealed | Testing 088 against the error record — one tenet is understated, one hypothesis already has a counterexample
-090 |  0 files | OPEN   | 
+090 |  4 files | sealed | The Prismatic page — φ is inert, the comparison is hard-coded, and one derivation contradicts our own record
+091 |  4 files | sealed | PrismaticPage — corrections
+092 |  0 files | OPEN   | 
