@@ -1,0 +1,9 @@
+# SHA-256 hashes — sealed 2026-08-29 14:09:26 UTC
+
+d5-closed-and-the-two-shell-law.md                           4f2e440eaec067c555181dfaff81f754cad024308719a0216031ae901265bb9f
+d5-output.txt                                                e324f45250642a3b1ebce8e9b6ed97e9ba71254c2959438447f9a8f65ca7bcec
+d5.py                                                        d64aaaf7468d52ee07852a70fbc9a903ed669211df578a1ff459ad67b787a2e6
+d6status-output.txt                                          956f9bc5a414d2b7fcb589470c8c9651be56f849bce367189dad044272186785
+d6status.py                                                  0820550728d2192de7bdb338afc4cbd80933ee40e7d03dad2394a5f1e06073a3
+twoshell-output.txt                                          516f304ba338ca44384947697e4b309dfffe201c652b4b4433c75a19db127c46
+twoshell.py                                                  bd902821c733b30284d1683d12541334b63a30ddb2a9327649e351e3c77e982b

@@ -1,0 +1,37 @@
+A - which parity classes are OCCUPIED, by m mod 8   (d=5, k = # odd coords)
+   ------------------------------------------------------------------------------
+   m = 0 mod 8 :  k in [0, 4]   <- TWO classes
+   m = 1 mod 8 :  k in [1]
+   m = 2 mod 8 :  k in [2]
+   m = 3 mod 8 :  k in [3]
+   m = 4 mod 8 :  k in [0, 4]   <- TWO classes
+   m = 5 mod 8 :  k in [1, 5]   <- TWO classes
+   m = 6 mod 8 :  k in [2]
+   m = 7 mod 8 :  k in [3]
+
+B - the fixed multiplier, class by class:  5*X(5,1)(m) / r_5(m)
+   ------------------------------------------------------------------------------
+   m = 0 mod 8 :  18 distinct values
+   m = 1 mod 8 :  +3
+   m = 2 mod 8 :  +1
+   m = 3 mod 8 :  -1
+   m = 4 mod 8 :  3 distinct values
+   m = 5 mod 8 :  +0.714286
+   m = 6 mod 8 :  +1
+   m = 7 mod 8 :  -1
+
+C - the two shells:  is X(5,1)(m) fixed by r_5(m) AND r_5(m/4) together?
+   ------------------------------------------------------------------------------
+   m = 0 mod 4 :  5*X(5,1)(m) = 8*r_5(m/4) - 3*r_5(m)       HOLDS  exc 0/10000
+   m = 0 mod 4 :  N_0(m) = r_5(m/4)   (all-even solutions)  HOLDS  exc 0/10000
+
+D - m = 5 mod 8 has TWO classes yet ONE multiplier. Why?
+   ------------------------------------------------------------------------------
+   m = 5 mod 8 :  2*N_1(m) = 5*N_5(m)                       HOLDS  exc 0/5000
+      sample (m, N_1, N_5, ratio N_1/N_5):
+        m=    5   N_1=    80   N_5=   32   ratio 2.5000
+        m=   13   N_1=   400   N_5=  160   ratio 2.5000
+        m=   21   N_1=   800   N_5=  320   ratio 2.5000
+        m=   29   N_1=  1200   N_5=  480   ratio 2.5000
+        m=   37   N_1=  2000   N_5=  800   ratio 2.5000
+        m=   45   N_1=  2480   N_5=  992   ratio 2.5000

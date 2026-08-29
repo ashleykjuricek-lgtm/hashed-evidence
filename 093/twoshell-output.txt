@@ -1,0 +1,23 @@
+THE TWO-SHELL LAW, m = 0 mod 4:
+     d * X(d,1)(m)  =  8 * r_d(m/4)  -  (8-d) * r_d(m)
+
+   d  | exceptions / shells | verdict
+   ----------------------------------------------------------
+   1  |         0 /  5000      | HOLDS
+   2  |         0 /  5000      | HOLDS
+   3  |         0 /  5000      | HOLDS
+   4  |         0 /  5000      | HOLDS
+   5  |         0 /  5000      | HOLDS
+   6  |         0 /  5000      | HOLDS
+   7  |         0 /  5000      | HOLDS
+   8  |      2500 /  5000      | FAILS (2500 exc)   <- k=8 (eight odd coords) becomes possible here
+   9  |      4999 /  5000      | FAILS (4999 exc)   <- k=8 (eight odd coords) becomes possible here
+
+consistency with what is already sealed:
+   d=3  law gives 3X = 8r(m/4) - 5r(m);  084 sealed 3X = +3r(m)
+        the two agree iff r_3(4m) = r_3(m)   -- which 085 verified separately
+   d=4  law gives 4X = 8r(m/4) - 4r(m);  085 sealed X = (-1)^(m/4) r_4(m/4)
+        agree iff r_4(m)=r_4(m/4) on m=0 mod 8 and r_4(m)=3r_4(m/4) on m=4 mod 8
+        r_3(m) == r_3(m/4)          exc 0/5000
+        r_4(m) == r_4(m/4)  m=0(8)  exc 0/2500
+        r_4(m) == 3r_4(m/4) m=4(8)  exc 0/2500

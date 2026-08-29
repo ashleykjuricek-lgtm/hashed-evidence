@@ -1,0 +1,22 @@
+=== d = 5 : is every residue class mod 8 CLOSED? ===
+   m=0 mod 8 : k=[0, 4]  TWO-SHELL LAW HOLDS (0 exc)
+   m=1 mod 8 : k=[1]  ONE MULTIPLIER +3
+   m=2 mod 8 : k=[2]  ONE MULTIPLIER +1
+   m=3 mod 8 : k=[3]  ONE MULTIPLIER -1
+   m=4 mod 8 : k=[0, 4]  TWO-SHELL LAW HOLDS (0 exc)
+   m=5 mod 8 : k=[1, 5]  ONE MULTIPLIER +0.714286
+   m=6 mod 8 : k=[2]  ONE MULTIPLIER +1
+   m=7 mod 8 : k=[3]  ONE MULTIPLIER -1
+   -> 8/8 classes closed
+
+=== d = 6 : is every residue class mod 8 CLOSED? ===
+   m=0 mod 8 : k=[0, 4]  TWO-SHELL LAW HOLDS (0 exc)
+   m=1 mod 8 : k=[1, 5]  1258 multipliers; N_1/N_5 takes 1257 value(s)
+   m=2 mod 8 : k=[2]  ONE MULTIPLIER +2
+   m=3 mod 8 : k=[3]  ONE MULTIPLIER +0
+   m=4 mod 8 : k=[0, 4]  TWO-SHELL LAW HOLDS (0 exc)
+   m=5 mod 8 : k=[1, 5]  1250 multipliers; N_1/N_5 takes 1250 value(s)
+   m=6 mod 8 : k=[2, 6]  ONE MULTIPLIER +1.05882
+   m=7 mod 8 : k=[3]  ONE MULTIPLIER +0
+   -> 6/8 classes closed
+
