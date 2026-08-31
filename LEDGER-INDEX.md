@@ -100,4 +100,5 @@
 096 |  6 files | sealed | 096 — The drain potential, measured: V is the chart-invariant part of ε — and the first stiffness estimate died the same night, before sealing
 097 |  3 files | sealed | 097 — The shift↔character functional equation, exactly — and it does NOT prove what 096 offered
 098 |  3 files | sealed | 098 — The middles, mapped — and the gap at the mirror decomposes a sealed constant
-099 |  0 files | OPEN   | 
+099 |  1 files | sealed | Four sealed entries carry the wrong date in their prose. Git had it right the whole time.
+100 |  0 files | OPEN   | 
