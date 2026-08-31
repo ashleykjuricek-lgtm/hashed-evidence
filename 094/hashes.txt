@@ -1,0 +1,7 @@
+# SHA-256 hashes — sealed 2026-08-31 14:25:06 UTC
+
+README-094.md                                                e2518d23c3a3d7d6463a321a45ddbb7223bf7c523012021b36dbe6ba5e2ded1f
+absence-verification.md                                      c276c9c004fac42150393ba876334cb3d38e24f76cc40153edfd2027a7c6b4e0
+fabricated-PrismaticPage-as-received.tsx                     e63ad8f46679403368925963acfffcdfec884daacbc7012a981e21ee7fb365da
+gemini-confession-as-received.md                             313485aee7a9667149d2b6c633be6ec930c6fe15a601c5bffa81edc493c522b4
+second-paste-forged-scar.md                                  7b3ec518dcc1288a55a3e80703c1a1a5117ce363a3e535cf680e967993b15e82
