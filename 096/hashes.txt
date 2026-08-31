@@ -1,0 +1,8 @@
+# SHA-256 hashes — sealed 2026-08-31 22:01:39 UTC
+
+README-096.md                                                27c4f8ef2e54516a81c34db6e02f17f36a5c7208ebdcc18734f2765ed9c59962
+v_landscape.csv                                              9e9ab376e604a40de1a8183473ea290ef882d711c620ff51923bfeed87fa67e6
+v_landscape.png                                              979306b50d59e7697b4e92fddb7dd0be075809926be93f7adbe9bf6660f4f8f6
+v_landscape.py                                               6e332046fac6858a5573f87b18b4e1e00bcfd5a7ae1f8cae812d77bc1556c3da
+v_precision_pass.py                                          eae0514c0b00fb7aa4e62a5550028da96eea3ff9d5bd164830a4385cd88c6413
+v_precision_pass_output.txt                                  c87b68bc081af1d7cc5aaea54a4cf07fb8a0be19f0bd65341c00f7ae5ecd0561
