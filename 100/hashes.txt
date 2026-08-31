@@ -1,0 +1,7 @@
+# SHA-256 hashes — sealed 2026-08-31 23:43:30 UTC
+
+allodd-output.txt                                            5425434cbe61707b89c02d68743395881e90d6ba239cbe9ecefed938befbdcfc
+allodd.py                                                    cf6aabb36956c06f5f4b4590cf34c358229e4c66288c6c0d850d6a89cf528add
+d7-and-the-all-odd-identity.md                               b010cd61037cad01641709481c261ff040c0fdd5906831f386a2387cd421c586
+d7-output.txt                                                2e614b750aed0c02192047747ccea4c6fe1d8f2d6c5e37f81d29f27d1a55d737
+d7.py                                                        3472fa9f598b82dbd411ea0cfc59626f6232e3ce1fb9a03a2c31dd05a63b4591

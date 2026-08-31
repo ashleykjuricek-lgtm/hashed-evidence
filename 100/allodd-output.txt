@@ -1,0 +1,20 @@
+UNIFIED ALL-ODD IDENTITY
+  On the class mod 8 where all-odd solutions exist and one companion class shares it:
+     ORDERED all-odd count  =  2 x ORDERED companion count
+  (ordered = before the C(d,k) placement factor)
+   ----------------------------------------------------------------------
+   d=5, m=5 mod 8, companion k=1:  B == 2A   HOLDS   exc 0/2500
+   d=6, m=6 mod 8, companion k=2:  B == 2A   HOLDS   exc 0/2500
+   d=7, m=7 mod 8, companion k=3:  B == 2A   HOLDS   exc 0/2500
+   d=4, m=4 mod 8, companion k=0:  B == 2A   HOLDS   exc 0/2500
+
+  which reproduces every observed ratio, via N_k = C(d,k)*ordered:
+   d=5: N_1/N_5 = C(5,1)*A / B = 5A/2A = 2.5
+   d=6: N_2/N_6 = C(6,2)*A / B = 15A/2A = 7.5
+   d=7: N_3/N_7 = C(7,3)*A / B = 35A/2A = 17.5
+
+DIVISIBILITY forced by X being an integer:
+   d=5, m=5 mod 8:  7 divides r_5(m)   HOLDS  0/2500
+   d=7, m=7 mod 8:  37 divides r_7(m)   HOLDS  0/2500
+   d=7, m=3 mod 8:  5 divides r_7(m)   HOLDS  0/2500
+   d=7, m=3 mod 8:  7 divides r_7(m)   HOLDS  0/2500

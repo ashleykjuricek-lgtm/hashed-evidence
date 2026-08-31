@@ -1,0 +1,16 @@
+d = 7  —  does it close the way d=5 did?
+   m mod 8 | occupied k | multiplier 7*X(7,1)/r_7 | ratio of the two classes
+   ----------------------------------------------------------------------------
+      0     |  [0, 4]    |              16 values  | TWO-SHELL LAW HOLDS
+      1     |  [1, 5]    |            2500 values  | N_1/N_5: 2499 value(s)
+      2     |  [2, 6]    |            2498 values  | N_2/N_6: 2497 value(s)
+      3     |  [3]       |                     +1  | 
+      4     |  [0, 4]    |               3 values  | TWO-SHELL LAW HOLDS
+      5     |  [1, 5]    |            2500 values  | N_1/N_5: 2500 value(s)
+      6     |  [2, 6]    |            2500 values  | N_2/N_6: 2500 value(s)
+      7     |  [3, 7]    |              +0.567568  | 
+   -> 4/8 classes closed
+
+cross-checks:
+   mirror  X(7,j) = (-1)^m X(7,7-j), all j      HOLDS  exc 0
+   d=7 is ODD -> predict NO vanishing marking.  found: NONE
