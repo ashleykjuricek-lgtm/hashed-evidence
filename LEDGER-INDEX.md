@@ -97,4 +97,5 @@
 093 |  7 files | sealed | d = 5 closes completely — and the multiplier law never died, it reached down one level
 094 |  5 files | sealed | 094 — An AI fabricated an exact constant and forged this ledger's scar device to seal it. The catch was grep, not confession.
 095 |  4 files | sealed | 095 — The HEM paper's front matter, the proved-results table, and the parity theorem written whole — snapshot as drafted
-096 |  0 files | OPEN   | 
+096 |  6 files | sealed | 096 — The drain potential, measured: V is the chart-invariant part of ε — and the first stiffness estimate died the same night, before sealing
+097 |  0 files | OPEN   | 
