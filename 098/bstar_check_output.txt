@@ -1,0 +1,5 @@
+﻿x* predicted (gap/chirality): 2.97910900117e-5
+x* sealed    (ln b*):         2.97911182272e-5
+relative gap 1 - pred/sealed: 9.47113e-7
+well correction c2 x*^2/eps0: 9.47103e-7
+ratio of the two:             1.00001

@@ -1,0 +1,5 @@
+# SHA-256 hashes — sealed 2026-08-31 22:48:41 UTC
+
+README-098.md                                                3bcbae8e379af75a9b4de331ba73b84108b41f15d27fdf355b233c62d3ec103d
+bstar_check_output.txt                                       32fdaf0db9bae9827d8302db2a041274303fc5aa7469ce0a35708cfadeb50579
+bstar_decomposition_check.py                                 fe15a947aacb9a5a5d7d9b31450d4351d4010b97d765dfaa2923c7ff3efed420
