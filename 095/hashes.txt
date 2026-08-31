@@ -1,0 +1,6 @@
+# SHA-256 hashes — sealed 2026-08-31 14:26:24 UTC
+
+README-095.md                                                0db04229b589f023f945764fca1e359393f2b9b4d3e304e4fd2dda6eddf2b856
+paper-00-abstract-and-introduction.md                        5c34031663841717239f524aaff68e33fa138004b5d566bd9b6468a6938ff44a
+paper-01-proved-table.md                                     2710179cc136d6c95fef64f999403558ce6c24c588c8870c30b1336da6b93b18
+paper-02-parity-theorem.md                                   ece252a5f66a924f9ec367f4f376713e427d0f2820fd05a38c3787a411649886
