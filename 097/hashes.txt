@@ -1,0 +1,5 @@
+# SHA-256 hashes — sealed 2026-08-31 22:21:47 UTC
+
+shift-character-functional-equation.md                       75409603e9d7e1ef0aeebd396b5e043419076a2e5eaa4f0b9819677a8b6b69dc
+verify_functional_equation.py                                c13728c8d24f98d4854613d5e6dff64a867e31be221507d801ea9578085f5b71
+verify_output.txt                                            8705112cd80a556d4d9b2040dd3b967dca684a4dda181e8bc08b88d41fdb0e8a
