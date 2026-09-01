@@ -103,4 +103,5 @@
 099 |  1 files | sealed | Four sealed entries carry the wrong date in their prose. Git had it right the whole time.
 100 |  5 files | sealed | d = 7 does not close — and the exception that survives unifies four separate findings
 101 |  4 files | sealed | COTT Associativity Proof: The Algebra is C_4
-102 |  0 files | OPEN   | 
+102 |  4 files | sealed | All The Rules
+103 |  0 files | OPEN   | 
