@@ -104,4 +104,5 @@
 100 |  5 files | sealed | d = 7 does not close — and the exception that survives unifies four separate findings
 101 |  4 files | sealed | COTT Associativity Proof: The Algebra is C_4
 102 |  4 files | sealed | All The Rules
-103 |  0 files | OPEN   | 
+103 |  1 files | sealed | Evidence 103 — Preserve Distinctions Until Accountable Collapse
+104 |  0 files | OPEN   | 
