@@ -102,4 +102,5 @@
 098 |  3 files | sealed | 098 — The middles, mapped — and the gap at the mirror decomposes a sealed constant
 099 |  1 files | sealed | Four sealed entries carry the wrong date in their prose. Git had it right the whole time.
 100 |  5 files | sealed | d = 7 does not close — and the exception that survives unifies four separate findings
-101 |  0 files | OPEN   | 
+101 |  4 files | sealed | COTT Associativity Proof: The Algebra is C_4
+102 |  0 files | OPEN   | 
