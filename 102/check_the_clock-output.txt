@@ -1,0 +1,21 @@
+0*w = 1 (axiom)                PASS
+0^2 = -1                       PASS
+0^3 = -0                       PASS
+0^4 = 1                        PASS
+-(-0) = 0                      PASS
+-(-w) = w                      PASS
+(-0)*(-0) = -1 [line 103]      PASS
+
+-0 = w   -w = 0   -> carrier CLOSED
+
+line 105 says 0^n != (-0)^n for ALL n:
+  n=1: 0   vs w   differ
+  n=2: -1  vs -1  EQUAL -> line 105 FALSE
+  n=3: w   vs 0   differ
+  n=4: 1   vs 1   EQUAL -> line 105 FALSE
+  n=5: 0   vs w   differ
+  n=6: -1  vs -1  EQUAL -> line 105 FALSE
+  n=7: w   vs 0   differ
+  n=8: 1   vs 1   EQUAL -> line 105 FALSE
+
+OPEN RULE #1: 0^3=w  (-0)^3=0  -(0^3)=0  =>  (-0)^3 = -0^3 : True

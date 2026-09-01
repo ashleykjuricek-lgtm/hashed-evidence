@@ -1,0 +1,6 @@
+# SHA-256 hashes — sealed 2026-09-01 00:37:02 UTC
+
+branch-027-all_the_rules-as-received.md                      a50ced2296215a33c80bb4d7f4575c6da0afd0dbd63246ecb15d8169c3345887
+check_the_clock-output.txt                                   f2d3f18a18c13ff1c6f1f4f31db5e0bbdd6ea80affceccf8c178f59830a87f8e
+check_the_clock.py                                           ded3280aeaa4736671641734330f61f93938582e4ee0d6d25f1e2c168512f9a2
+on-the-clock-and-open-rule-1.md                              e0d0937ce19f23ab10fd6820d9db400dcff7d8e6c94d4c66b2e7b3a77f51ad05
