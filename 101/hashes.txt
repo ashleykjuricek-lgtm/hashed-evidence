@@ -1,0 +1,6 @@
+# SHA-256 hashes — sealed 2026-09-01 00:15:35 UTC
+
+branch-029-associativity-as-received.md                      31ef24d425743c96eef07c718595bee19777c2d4322696e343dcb58affe32256
+branch-029-verify_associativity.py                           6b2d7ad2cfc3c851f53c3ca116e379785c8d932de69c52cda7ea027e249ad09c
+branch-audit-and-the-negation-contradiction.md               28e489daf7e1584e893f87dc390e72ad10ecb008b8c608c9b254fa6e89d0aa06
+verify_associativity-rerun.txt                               7214bbfa47fe9761e0b0216f596b566df11393b27db9bb2e3487070ca114d5a8

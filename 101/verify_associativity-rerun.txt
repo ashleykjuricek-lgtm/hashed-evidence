@@ -1,0 +1,10 @@
+
+Checked all 64 triples.
+RESULT: COTT multiplication is ASSOCIATIVE.
+BONUS: COTT multiplication is COMMUTATIVE.
+BONUS: 1 is the identity element.
+BONUS: Every element has a multiplicative inverse.
+
+CONCLUSION: COTT is the cyclic group C_4 = {1, i, -1, -i}.
+Isomorphism: 1 <-> 1, 0 <-> i, -1 <-> -1, w <-> -i
+Corollary: -0 = w (algebraically), -w = 0 (algebraically)
