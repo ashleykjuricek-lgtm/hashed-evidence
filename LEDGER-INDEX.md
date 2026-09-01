@@ -105,4 +105,5 @@
 101 |  4 files | sealed | COTT Associativity Proof: The Algebra is C_4
 102 |  4 files | sealed | All The Rules
 103 |  1 files | sealed | Evidence 103 — Preserve Distinctions Until Accountable Collapse
-104 |  0 files | OPEN   | 
+104 |  1 files | sealed | Evidence 103 — Keep Everything: Distinctions, Erasure, and Restoration
+105 |  0 files | OPEN   | 
