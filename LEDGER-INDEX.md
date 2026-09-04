@@ -106,4 +106,5 @@
 102 |  4 files | sealed | All The Rules
 103 |  1 files | sealed | Evidence 103 — Preserve Distinctions Until Accountable Collapse
 104 |  1 files | sealed | Evidence 103 — Keep Everything: Distinctions, Erasure, and Restoration
-105 |  0 files | OPEN   | 
+105 |  1 files | OPEN   | James's rulings, 2026-08-31 late evening — as received (running log, UNSEALED until complete)
+106 |  4 files | sealed | The Shape of the Lie — Round 4
