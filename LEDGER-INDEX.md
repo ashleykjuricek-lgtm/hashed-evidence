@@ -110,3 +110,5 @@
 106 |  4 files | sealed | The Shape of the Lie — Round 4
 107 |  4 files | sealed | 107 — The bolt: the sealed law's failure at d=8 IS the E8 glue count
 108 |  4 files | sealed | 108 — The lemma proved: on rings divisible by 4, odd coordinates come in fours
+109 | 13 files | sealed | 109 — The rose drawn with three answers, and what π is in it
+110 |  0 files | OPEN   | 
