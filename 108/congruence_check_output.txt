@@ -1,0 +1,3 @@
+﻿violations of m == k (mod 4): 0
+occupied sectors on rings 4|m: [0, 4, 8]
+PASS
