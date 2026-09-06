@@ -109,3 +109,4 @@
 105 |  1 files | OPEN   | James's rulings, 2026-08-31 late evening — as received (running log, UNSEALED until complete)
 106 |  4 files | sealed | The Shape of the Lie — Round 4
 107 |  4 files | sealed | 107 — The bolt: the sealed law's failure at d=8 IS the E8 glue count
+108 |  4 files | sealed | 108 — The lemma proved: on rings divisible by 4, odd coordinates come in fours
