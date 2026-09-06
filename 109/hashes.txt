@@ -1,0 +1,15 @@
+# SHA-256 hashes — sealed 2026-09-06 18:22:25 UTC
+
+rose3_decagon_polar.png                                      f0f62488e751c370bf668ecdb1372d06cd4a7f61cdc4767b9fa85a1b16696fa5
+rose3_decagon_roundwindow_polar.png                          a3efdae59be4a01c67309d1324ceb88670878d84f5377a380c0d029e3a633da8
+rose3_decagon_roundwindow_unrolled.png                       6b1439288e345bed1850064e528d1579538a99c631e081d0dd9b9868e5ce5da6
+rose3_decagon_unrolled.png                                   b36e77965fab20960d1bd753340624cb3e2f9e8b79426a041aeb94af446179db
+rose3_octagon_polar.png                                      52d1203a227cf82bbbd0df8ee6cfab0a421779eb87db60f5e90fc9329f3cfa3a
+rose3_octagon_roundwindow_polar.png                          b4b43a3c2d349e17a025821b3c7752c8fc2ac1e6c52cc1b211e1bec9af987351
+rose3_octagon_roundwindow_unrolled.png                       c526ad37c5a7ab3a3222037caaae6ff406c3f6b1a3a553fbb520b89d04148fc9
+rose3_octagon_unrolled.png                                   209c7133852292b5f8422ca19b01e33360b66a9583de1bef27fc3efb20b899d5
+rose_three_answers.py                                        cb39d8ac941be1162744be3c00bf0383fee855dd71fd20f3d2e6c1caa5694492
+rose_three_answers_output.txt                                da7dd83f12e2c44be3efedef0a5c108a4235fa4c9cb3d174d871d6007bb23c37
+the-rose-drawn-with-three-answers.md                         ef4f47d58e4b0fd71a36d38c11e2bd2398beb094f270f7addda14594ec422fbd
+threeanswer-0.1.0-src.zip                                    5d6f7c2b40cb842697e982c5a69be0e527e40823686d6b530783d6695b9d528d
+threeanswer_test_output.txt                                  e22a482f5f67d9287a9daabe1248ac3ab6122e6c8752367dbe325c3b52059906

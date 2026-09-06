@@ -1,0 +1,75 @@
+rose_three_answers.py  --  shift magnitude 0.381966 (= 1/phi^2), exponent s = 2, 1440 arcs, pad 1e-12
+
+[   2.5s] built: DECAGON (Penrose P3, fivefold), N=8, decagon window (022's recipe)
+
+DECAGON (Penrose P3, fivefold), N=8, decagon window (022's recipe)
+  8820 lattice points can ever enter the window; unshifted Z = 521.3878315
+  three-answer tally over 1440 arcs of 0.250 deg: {'bounded': 1440}
+  arcs where r is a single value (flat step): 716
+  arcs that contain a jump (fat enclosure):    724
+  lowest level 0.521239   highest level 0.617632   swing 0.096393  = 17.71% of the arc-mean 0.544419
+  distinct flat levels: 14
+  jump sizes: smallest 2.34e-07   largest 0.0830   median 1.02e-05
+  jump sizes by decade: [1e-09,1e-07):0  [1e-07,1e-06):92  [1e-06,1e-05):236  [1e-05,1e-04):224  [1e-04,1e-03):60  [1e-03,1e-02):92  [1e-02,1e-01):20  [1e-01,1e+00):0
+  distinct jump sizes above 1e-3: [0.08299 0.00938 0.0028  0.00276 0.00139 0.00103 0.00101]
+  the twenty largest jumps (deg, size): (4.1, 0.0830), (31.9, 0.0830), (40.1, 0.0830), (67.9, 0.0830), (76.1, 0.0830), (103.9, 0.0830), (112.1, 0.0830), (139.9, 0.0830), (148.1, 0.0830), (175.9, 0.0830), (184.1, 0.0830), (211.9, 0.0830), (220.1, 0.0830), (247.9, 0.0830), (256.1, 0.0830), (283.9, 0.0830), (292.1, 0.0830), (319.9, 0.0830), (328.1, 0.0830), (355.9, 0.0830)
+  containment check: sampling the ORIGINAL float recipe at 1440 angles ... 1440 inside, 0 outside
+  saved rose3_decagon_unrolled.png
+  saved rose3_decagon_polar.png   [167.4s]
+
+[ 168.8s] built: DECAGON (Penrose P3, fivefold), N=8, ROUND window of equal area (the control)
+
+DECAGON (Penrose P3, fivefold), N=8, ROUND window of equal area (the control)
+  8820 lattice points can ever enter the window; unshifted Z = 93.0256578
+  three-answer tally over 1440 arcs of 0.250 deg: {'bounded': 1440}
+  arcs where r is a single value (flat step): 0
+  arcs that contain a jump (fat enclosure):    1440
+  lowest level 2.927638   highest level 3.403715   swing 0.476078  = 15.38% of the arc-mean 3.094750
+  distinct flat levels: 0
+  jump sizes: smallest 7.62e-06   largest 0.4609   median 1.11e-04
+  jump sizes by decade: [1e-09,1e-07):0  [1e-07,1e-06):0  [1e-06,1e-05):32  [1e-05,1e-04):640  [1e-04,1e-03):504  [1e-03,1e-02):168  [1e-02,1e-01):76  [1e-01,1e+00):20
+  distinct jump sizes above 1e-3: [0.4609  0.46058 0.46057 0.03521 0.0352  0.01201 0.01196 0.01193 0.01191
+ 0.01187 0.00516 0.00515 0.00514 0.0043  0.00429 0.00428 0.00324 0.00319
+ 0.00318 0.00317 0.00189 0.00186 0.0018  0.00179 0.00178 0.00177 0.00175
+ 0.00174 0.00172 0.00171 0.0017 ]
+  the twenty largest jumps (deg, size): (6.4, 0.4606), (29.6, 0.4609), (42.4, 0.4606), (65.6, 0.4606), (78.4, 0.4609), (101.6, 0.4609), (114.4, 0.4606), (137.6, 0.4606), (150.4, 0.4609), (173.6, 0.4606), (186.4, 0.4606), (209.6, 0.4609), (222.4, 0.4606), (245.6, 0.4606), (258.4, 0.4609), (281.6, 0.4609), (294.4, 0.4606), (317.6, 0.4606), (330.4, 0.4609), (353.6, 0.4606)
+  containment check: sampling the ORIGINAL float recipe at 1440 angles ... 1440 inside, 0 outside
+  saved rose3_decagon_roundwindow_unrolled.png
+  saved rose3_decagon_roundwindow_polar.png   [231.7s]
+
+[ 232.0s] built: OCTAGON (silver, eightfold), N=10, octagon window
+
+OCTAGON (silver, eightfold), N=10, octagon window
+  4856 lattice points can ever enter the window; unshifted Z = 46.8682650
+  three-answer tally over 1440 arcs of 0.250 deg: {'bounded': 1440}
+  arcs where r is a single value (flat step): 680
+  arcs that contain a jump (fat enclosure):    760
+  lowest level 1.027264   highest level 1.295178   swing 0.267913  = 22.81% of the arc-mean 1.174620
+  distinct flat levels: 22
+  jump sizes: smallest 6.85e-07   largest 0.2543   median 3.14e-05
+  jump sizes by decade: [1e-09,1e-07):0  [1e-07,1e-06):24  [1e-06,1e-05):176  [1e-05,1e-04):296  [1e-04,1e-03):128  [1e-03,1e-02):48  [1e-02,1e-01):72  [1e-01,1e+00):16
+  distinct jump sizes above 1e-3: [0.25435 0.08611 0.02241 0.0224  0.01118 0.01014 0.00283 0.00217 0.00108]
+  the twenty largest jumps (deg, size): (2.4, 0.0861), (14.1, 0.2543), (30.9, 0.2543), (59.1, 0.2543), (75.9, 0.2543), (92.4, 0.0861), (104.1, 0.2543), (120.9, 0.2543), (132.6, 0.0861), (149.1, 0.2543), (165.9, 0.2543), (194.1, 0.2543), (210.9, 0.2543), (239.1, 0.2543), (255.9, 0.2543), (284.1, 0.2543), (300.9, 0.2543), (329.1, 0.2543), (345.9, 0.2543), (357.6, 0.0861)
+  containment check: sampling the ORIGINAL float recipe at 1440 angles ... 1440 inside, 0 outside
+  saved rose3_octagon_unrolled.png
+  saved rose3_octagon_polar.png   [251.8s]
+
+[ 252.0s] built: OCTAGON (silver, eightfold), N=10, ROUND window of equal area (the control)
+
+OCTAGON (silver, eightfold), N=10, ROUND window of equal area (the control)
+  4856 lattice points can ever enter the window; unshifted Z = 46.8598273
+  three-answer tally over 1440 arcs of 0.250 deg: {'bounded': 1440}
+  arcs where r is a single value (flat step): 48
+  arcs that contain a jump (fat enclosure):    1392
+  lowest level 1.027257   highest level 1.353773   swing 0.326516  = 27.13% of the arc-mean 1.203381
+  distinct flat levels: 3
+  jump sizes: smallest 6.27e-07   largest 0.2489   median 5.69e-05
+  jump sizes by decade: [1e-09,1e-07):0  [1e-07,1e-06):32  [1e-06,1e-05):264  [1e-05,1e-04):576  [1e-04,1e-03):376  [1e-03,1e-02):72  [1e-02,1e-01):56  [1e-01,1e+00):16
+  distinct jump sizes above 1e-3: [0.24888 0.08537 0.08536 0.02136 0.01025 0.01024 0.00951 0.00212 0.00184
+ 0.00141 0.0014 ]
+  the twenty largest jumps (deg, size): (14.4, 0.2489), (30.6, 0.2489), (59.4, 0.2489), (75.6, 0.2489), (104.4, 0.2489), (120.6, 0.2489), (149.4, 0.2489), (165.6, 0.2489), (175.9, 0.0854), (184.1, 0.0854), (194.4, 0.2489), (210.6, 0.2489), (239.4, 0.2489), (255.6, 0.2489), (265.9, 0.0854), (284.4, 0.2489), (300.6, 0.2489), (310.9, 0.0854), (329.4, 0.2489), (345.6, 0.2489)
+  containment check: sampling the ORIGINAL float recipe at 1440 angles ... 1440 inside, 0 outside
+  saved rose3_octagon_roundwindow_unrolled.png
+  saved rose3_octagon_roundwindow_polar.png   [261.8s]
+
+done in 261.8s
