@@ -1,0 +1,4 @@
+README.md                                                    43ff7468863d03a6d3911f4ef9b5e1565db01d1e6a80eeb65cd19fbe9665ee7d
+w1-report.md                                                 6eeea1d72a6d31ec16803688d6fe725e30d83f02cb2451f6dda8a1ace0d9f3ae
+w1_arrow_check.py                                            4f4fa5ebad95a94505dd607c9aff6a07e90809f19d364ace4d4aaacd0ef2f49e
+w1_arrow_check_output.txt                                    56f7b120fd0ea28e90ac578af29999a3c409d4374a697953d426e007d10d1d7c

@@ -1,0 +1,21 @@
+﻿R1  eps(0) = 5.459504653862e-04   sealed 5.4595046537e-4   rel diff 2.97e-11
+R1b eps(ln 0.97) = +0.559271680048   csv +0.559271680048   diff 1.33e-15
+R1b eps(ln 0.999) = +0.018881667273   csv +0.018881667273   diff 1.93e-14
+R1b eps(ln 1.01) = -0.181745587795   csv -0.181745587795   diff 1.30e-14
+R2  neighbourhood of the cube:
+      x = -1.0e-04   eps = +2.378553e-03
+      x = -3.0e-05   eps = +1.095730e-03
+      x = -1.0e-05   eps = +7.292102e-04
+      x = -3.0e-06   eps = +6.009284e-04
+      x = +0.0e+00   eps = +5.459505e-04
+      x = +3.0e-06   eps = +4.909726e-04
+      x = +1.0e-05   eps = +3.626909e-04
+      x = +3.0e-05   eps = -3.827953e-06
+      x = +1.0e-04   eps = -1.286640e-03
+      sign change on the LEFT half? False
+R2  single zero in this chart at x* = 2.9791118229e-05  (b* = 1.0000297916);  054 recorded b* = 1.0000298
+      1/b* = 0.9999702093;  054 recorded b0 = 0.99997
+R3  h = 1e-04: s_odd = -18.325965   even-curvature estimate = +0.582604   (registry c2 = +0.58260865)
+R3  h = 3e-04: s_odd = -18.325965   even-curvature estimate = +0.582608   (registry c2 = +0.58260865)
+R4  x* * |s_odd| / eps_0 = 1.00000095   (1 + predicted well correction ~ 1.00000095)
+OVERALL: PASS
