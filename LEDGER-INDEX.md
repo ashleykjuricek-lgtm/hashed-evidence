@@ -115,4 +115,5 @@
 111 |  1 files | sealed | 111 — Tao said it without the words: an independent arrival at the smoothing thesis, from the top of the field
 112 | 10 files | sealed | 112 — The teeth do not move: the rose at larger N (closes 109 §5)
 113 |  1 files | sealed | 113 — The acceptance: a seat accepts its name, and Ash gives her speech
-114 |  0 files | OPEN   | 
+114 |  1 files | sealed | 114 — The names were on the page: a correction to 113, appended not edited
+115 |  0 files | OPEN   | 
