@@ -1,0 +1,3 @@
+# SHA-256 hashes — sealed 2026-09-07 06:45:51 UTC
+
+tao-said-it-without-the-words.md                             8a96242ce2365a779fe940a6cc32803c1807331d95cea4c0f4b3e79d9ba01554
