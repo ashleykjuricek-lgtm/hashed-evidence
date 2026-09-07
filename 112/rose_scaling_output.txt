@@ -1,0 +1,27 @@
+rose_scaling.py -- shift 0.381966, s=2, 1440 arcs, containment at 360 angles
+  decagon  N= 6 poly  pts=  4990 baseZ=  521.298402 r in [0.521159, 0.617567] swing= 17.71%  bigjump=0.08300  teeth=10 width= 8.25deg (spread 0.00) first@0.0  levels= 15 flat= 852  check 360/360  [1s]
+  decagon  N= 6 round pts=  4990 baseZ=   92.937074 r in [2.929475, 3.406004] swing= 15.39%  bigjump=0.46134  teeth=10 width=12.75deg (spread 0.00) first@0.0  levels=  0 flat=   0  check 360/360  [1s]
+  decagon  N= 8 poly  pts=  8820 baseZ=  521.387831 r in [0.521239, 0.617632] swing= 17.71%  bigjump=0.08299  teeth=10 width= 8.25deg (spread 0.00) first@0.0  levels= 14 flat= 716  check 360/360  [2s]
+  decagon  N= 8 round pts=  8820 baseZ=   93.025658 r in [2.927638, 3.403715] swing= 15.38%  bigjump=0.46090  teeth=10 width=12.75deg (spread 0.00) first@0.0  levels=  0 flat=   0  check 360/360  [2s]
+  decagon  N=10 poly  pts= 13580 baseZ=  521.429792 r in [0.521276, 0.617662] swing= 17.70%  bigjump=0.08298  teeth=10 width= 8.25deg (spread 0.00) first@0.0  levels= 14 flat= 648  check 360/360  [3s]
+  decagon  N=10 round pts= 13580 baseZ=   93.067559 r in [2.926764, 3.402627] swing= 15.38%  bigjump=0.46070  teeth=10 width=12.75deg (spread 0.00) first@0.0  levels=  0 flat=   0  check 360/360  [3s]
+  decagon  N=12 poly  pts= 19470 baseZ=  521.452985 r in [0.521297, 0.617679] swing= 17.70%  bigjump=0.08298  teeth=10 width= 8.25deg (spread 0.00) first@0.0  levels= 14 flat= 540  check 360/360  [4s]
+  decagon  N=12 round pts= 19470 baseZ=   93.090466 r in [2.926290, 3.402039] swing= 15.38%  bigjump=0.46058  teeth=10 width=12.75deg (spread 0.00) first@0.0  levels=  0 flat=   0  check 360/360  [3s]
+  decagon  N=14 poly  pts= 26290 baseZ=  521.466829 r in [0.521309, 0.617689] swing= 17.70%  bigjump=0.08298  teeth=10 width= 8.25deg (spread 0.00) first@0.0  levels= 13 flat= 496  check 360/360  [6s]
+  decagon  N=14 round pts= 26290 baseZ=   93.104401 r in [2.926001, 3.401678] swing= 15.38%  bigjump=0.46051  teeth=10 width=12.75deg (spread 0.00) first@0.0  levels=  0 flat=   0  check 360/360  [6s]
+  decagon  N=16 poly  pts= 34270 baseZ=  521.475880 r in [0.521318, 0.617696] swing= 17.70%  bigjump=0.08298  teeth=10 width= 8.25deg (spread 0.00) first@0.0  levels= 12 flat= 444  check 360/360  [7s]
+  decagon  N=16 round pts= 34270 baseZ=   93.113388 r in [2.925817, 3.401449] swing= 15.38%  bigjump=0.46047  teeth=10 width=12.75deg (spread 0.00) first@0.0  levels=  0 flat=   0  check 360/360  [8s]
+  octagon  N= 8 poly  pts=  3144 baseZ=   46.844508 r in [1.027269, 1.295319] swing= 22.82%  bigjump=0.25447  teeth= 8 width=16.75deg (spread 0.00) first@22.5  levels= 24 flat= 808  check 360/360  [1s]
+  octagon  N= 8 round pts=  3144 baseZ=   46.835706 r in [1.027259, 1.353955] swing= 27.15%  bigjump=0.24901  teeth= 8 width=16.25deg (spread 0.00) first@22.5  levels=  5 flat= 104  check 360/360  [1s]
+  octagon  N=10 poly  pts=  4856 baseZ=   46.868265 r in [1.027264, 1.295178] swing= 22.81%  bigjump=0.25435  teeth= 8 width=16.75deg (spread 0.00) first@22.5  levels= 22 flat= 680  check 360/360  [1s]
+  octagon  N=10 round pts=  4856 baseZ=   46.859827 r in [1.027257, 1.353773] swing= 27.13%  bigjump=0.24888  teeth= 8 width=16.25deg (spread 0.00) first@22.5  levels=  3 flat=  48  check 360/360  [1s]
+  octagon  N=14 poly  pts=  9288 baseZ=   46.890355 r in [1.027239, 1.295025] swing= 22.80%  bigjump=0.25423  teeth= 8 width=16.75deg (spread 0.00) first@22.5  levels= 20 flat= 472  check 360/360  [2s]
+  octagon  N=14 round pts=  9288 baseZ=   46.881768 r in [1.027234, 1.353598] swing= 27.12%  bigjump=0.24877  teeth= 8 width=16.25deg (spread 0.00) first@22.5  levels=  0 flat=   0  check 360/360  [2s]
+  octagon  N=20 poly  pts= 18656 baseZ=   46.902174 r in [1.027231, 1.294953] swing= 22.79%  bigjump=0.25417  teeth= 8 width=16.75deg (spread 0.00) first@22.5  levels= 15 flat= 320  check 360/360  [3s]
+  octagon  N=20 round pts= 18656 baseZ=   46.893493 r in [1.027228, 1.353512] swing= 27.12%  bigjump=0.24871  teeth= 8 width=16.25deg (spread 0.00) first@22.5  levels=  0 flat=   0  check 360/360  [3s]
+  octagon  N=28 poly  pts= 36224 baseZ=   46.907869 r in [1.027227, 1.294917] swing= 22.79%  bigjump=0.25414  teeth= 8 width=16.75deg (spread 0.00) first@22.5  levels=  7 flat= 136  check 360/360  [5s]
+  octagon  N=28 round pts= 36224 baseZ=   46.899183 r in [1.027225, 1.353470] swing= 27.11%  bigjump=0.24868  teeth= 8 width=16.25deg (spread 0.00) first@22.5  levels=  0 flat=   0  check 360/360  [6s]
+
+all containment checks passed; 92s total
+saved C:\Users\atoms\quasicrystal-tier1\rose_scaling_summary.png
+saved rose_scaling_table.txt

@@ -1,0 +1,12 @@
+# SHA-256 hashes — sealed 2026-09-07 06:45:57 UTC
+
+rose3_decagon_N16_poly_unrolled.png                          3d50048a1bc4ea54765202af4a8c22aa8a405e6a21afaebe4c8ea2a910a2b898
+rose3_decagon_N16_roundwindow_unrolled.png                   eebbc35cfa82d3f705c7c97113c61797fe477b4a9aa777db44a4396b4297b88a
+rose3_octagon_N28_poly_unrolled.png                          fd4ab930b1fe3207393e5ec6ce511cc0ea43af5e30dcd053346f63e6f7898ff7
+rose3_octagon_N28_roundwindow_unrolled.png                   95dcf0b9cc0c62adfdc3fec3682d48258c6f8cf7613013a04550c9a9cc8efcdd
+rose_scaling.py                                              e4dacf1c8a92919e37052189b6ede08fe629d17246fbe7d52b23be745b0db32c
+rose_scaling_output.txt                                      2bce030bd90f064d1083d2f82bb10d5fdd0957e1de3f4c49f4d65c7d41c82605
+rose_scaling_summary.png                                     a2107da142c6ae87a68f7c53b988cb57cb92274f603f1701fe60b197392ad90a
+rose_scaling_table.txt                                       04fcda7031ace4edf764d8abfaa64f88ed77855fa97ce27ad1354d65a149ba62
+rose_three_answers.py                                        2c18fed9b41dc561d0351be036b66e0051a8a2c5537c18878626f8e0984cff5f
+the-teeth-do-not-move.md                                     2fbff9dc763d6bdc2f1b21112185cf11531a316799924f4826b46c39f07af1b5
