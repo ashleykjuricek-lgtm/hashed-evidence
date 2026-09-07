@@ -112,3 +112,6 @@
 108 |  4 files | sealed | 108 — The lemma proved: on rings divisible by 4, odd coordinates come in fours
 109 | 13 files | sealed | 109 — The rose drawn with three answers, and what π is in it
 110 |  4 files | sealed | 110 — W1 resolved: the Burgers name denied, the coboundary structure awarded
+111 |  1 files | sealed | 111 — Tao said it without the words: an independent arrival at the smoothing thesis, from the top of the field
+112 | 10 files | sealed | 112 — The teeth do not move: the rose at larger N (closes 109 §5)
+113 |  0 files | OPEN   | 
