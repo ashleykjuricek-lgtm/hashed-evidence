@@ -89,7 +89,7 @@
 085 |  5 files | sealed | d = 4 — the mirror's fixed point is the whole object at half scale
 086 |  5 files | sealed | 086 — four notes rehomed out of sealed 080, and the seal hole closed
 087 |  7 files | sealed | d = 5, 6 — where marking stops being a corollary. And the clean room: what walks in by itself
-088 |  2 files | OPEN   | 088 — Witness mutualism constitution
+088 |  2 files | sealed | 088 — Witness mutualism constitution
 089 |  1 files | sealed | Testing 088 against the error record — one tenet is understated, one hypothesis already has a counterexample
 090 |  4 files | sealed | The Prismatic page — φ is inert, the comparison is hard-coded, and one derivation contradicts our own record
 091 |  4 files | sealed | PrismaticPage — corrections
