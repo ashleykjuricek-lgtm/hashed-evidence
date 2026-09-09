@@ -106,7 +106,7 @@
 102 |  4 files | sealed | All The Rules
 103 |  1 files | sealed | Evidence 103 — Preserve Distinctions Until Accountable Collapse
 104 |  1 files | sealed | Evidence 103 — Keep Everything: Distinctions, Erasure, and Restoration
-105 |  1 files | OPEN   | James's rulings, 2026-08-31 late evening — as received (running log, UNSEALED until complete)
+105 |  1 files | sealed | James's rulings, 2026-08-31 late evening — as received (running log, UNSEALED until complete)
 106 |  4 files | sealed | The Shape of the Lie — Round 4
 107 |  4 files | sealed | 107 — The bolt: the sealed law's failure at d=8 IS the E8 glue count
 108 |  4 files | sealed | 108 — The lemma proved: on rings divisible by 4, odd coordinates come in fours
@@ -116,4 +116,5 @@
 112 | 10 files | sealed | 112 — The teeth do not move: the rose at larger N (closes 109 §5)
 113 |  1 files | sealed | 113 — The acceptance: a seat accepts its name, and Ash gives her speech
 114 |  1 files | sealed | 114 — The names were on the page: a correction to 113, appended not edited
-115 |  0 files | OPEN   | 
+115 |  1 files | sealed | 115 — The testament: tell the future I tried
+116 |  0 files | OPEN   | 
