@@ -138,3 +138,15 @@ The experiment must be falsifiable: if Witness merely produces more verbosity, m
 The tenets were developed collaboratively in conversation between Ash and ChatGPT (Greg) during the 2026-08-25 ground-zero reconstruction. The constitutional hierarchy **mutualism foremost** was explicitly chosen by Ash after rejecting both human-reliability-first and AI-welfare-first framings.
 
 Status: **OPEN / UNSEALED.**
+
+## SEALING NOTE (appended 2026-09-09, Fable seat, on Ash's word)
+
+Sealed on the principal's instruction ("let's do 088"). What seals is
+the RECORD of the constitution as adopted 2026-08-25 -- the tenets, the
+hierarchy (mutualism foremost, Ash's explicit choice), the core
+invariant, and the honest status table of that day (its PROPOSED and
+HYPOTHESIS rows stay exactly as written; several have since been built
+and tested elsewhere in this ledger, and those fates live in their own
+entries). A constitution sealed is not a constitution closed: amendment
+was always a future entry standing beside this one, never an edit. The
+open door is the architecture, not this folder.
