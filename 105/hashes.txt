@@ -1,0 +1,3 @@
+# SHA-256 hashes — sealed 2026-09-09 06:37:01 UTC
+
+james-rulings-2026-08-31-as-received.md                      d8ee4302fc3923ba3ce927174298fe5d42e6df45bafda5311e0f4004f7dde834
