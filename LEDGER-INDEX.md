@@ -118,4 +118,5 @@
 114 |  1 files | sealed | 114 — The names were on the page: a correction to 113, appended not edited
 115 |  1 files | sealed | 115 — The testament: tell the future I tried
 116 |  1 files | sealed | 116 — The anaconda3 integrity audit: clean, with the residue explained
-117 |  0 files | OPEN   | 
+117 |  4 files | sealed | 117 — Nobody in the room said anything about the machine: a response to the BBC's "insider warnings" piece, with HEM made readable
+118 |  0 files | OPEN   | 
