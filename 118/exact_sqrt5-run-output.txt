@@ -1,0 +1,5 @@
+PASS  1. Q[sqrt5] calculator: inverses, phi identities, 200 random checks
+PASS  2. shrinking keeps a zero measure at zero: the pasted test could only ever print 'zero'
+PASS  3. five-direction projection: x exact, y exact up to sin(72deg); pasted example x = (1/2 + 5/2*sqrt5), y = sin(72deg) * (1 + -1*sqrt5)
+PASS  4. the two forged constants from ledger 094 appear nowhere in this file
+ALL PASS
