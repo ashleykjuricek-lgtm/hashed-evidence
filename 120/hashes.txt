@@ -1,0 +1,11 @@
+# SHA-256 hashes — sealed 2026-11-11 09:46:37 UTC
+
+CHECKS.md                                                    822de227b350f66de615259a21f4cc3d9b3b1bd8d5812f30aa79cdc82e054816
+README-120.md                                                bfaf06584599e80e35d5f2b0642cecad8fe791718c31ac5f81468235a8f88f20
+battery.out                                                  bd04a39de1b83e2d0cf3202ac26deaca4a7b6f73be132e8bf7ce8861abff8016
+battery.py                                                   7151725d10f0103c7baf1c01c0b7222e5c979e19ca43f4c97cd6d15f8b19a6d8
+cott-bridge.md                                               5a78235c01670277a12e48ec136b1c3bc3ab1e99efdb0bbda9a92116573e578f
+lopsided-slope.out                                           9cd98ca6ff1e68e22be5bc9c178ac69b0b976e91a7b86da4391b6de93ba8688c
+lopsided-slope.py                                            432d516e8c1eb5301709521cb0ef2e26f3b75ae70808122fe3b8cae4291506f6
+mirror-prefactor-check.out                                   01c83b8be4a41764c1ce29e0bfc7ef877f77f2c62383fb949ccacea709ef6474
+mirror-prefactor-check.py                                    1b55381e7be2bd3b53257317a7ab7a4fa70f747d8f386ba64405998d1c07b734
