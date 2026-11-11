@@ -1,0 +1,9 @@
+# SHA-256 hashes — sealed 2026-11-11 09:46:41 UTC
+
+README-122.md                                                31642a92e5815cbead3596a17b39895fc04642d99df45d8cd7953010d23969a5
+closure-test.out                                             ec668c7df9da590f0b0a5a89a87afcea39bef8d3648a26c5bfe390a34f789408
+closure-test.py                                              715e803d51ecf5502eb51fe9123f69c15a85d7d4a018f574d4f7cda2c6d7f80d
+cusp-check.out                                               d37798eb46684b1ee1637336e3b8f1d2b9fc1db124d3be16f90eba471de4e014
+cusp-check.py                                                6e113053cc7802cf33415ca892e4dbe268ebef4a72e2bc71df94d43eb4c6f080
+deep-check.out                                               af4a6d79f1ac2751bedff26112c04d02c35a166f6c79f45eec8f43382a789bd7
+deep-check.py                                                a72b0f5a8f8f9822b66180210286b4dddba842482da90abd9e311dcfbe37166f

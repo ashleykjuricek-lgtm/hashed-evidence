@@ -1,0 +1,10 @@
+d=3 plain  : no relation (coeffs <= 1e7, 130 digits)
+d=3 twisted: no relation (coeffs <= 1e7, 130 digits)
+d=4 plain  : CLOSES [1, -7, 0, 0, 0, 0, 0, 0, 0]  residual 7.21e-130
+d=4 twisted: CLOSES [-16, -5, 64, 0, 0, 3, 0, 0, 0]  residual 1.98e-129
+d=6 plain  : CLOSES [-1, 0, 0, -4, 16, 0, 0, 0, 0, 0, 0]  residual 7.21e-130
+d=6 twisted: CLOSES [-16, 0, 0, -1, -16, 128, 0, 0, 4, 16, 0]  residual 7.21e-129
+d=7 plain  : no relation (coeffs <= 1e7, 130 digits)
+d=7 twisted: no relation (coeffs <= 1e7, 130 digits)
+d=8 plain  : CLOSES [2, -33, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0]  residual 9.81e-128
+d=8 twisted: CLOSES [-512, 17, -1024, 0, 0, 0, 7168, -9, 0, 0, 0, 896, 0]  residual 9.0e-126

@@ -1,0 +1,6 @@
+d=6  L(g,3.5) = 0.982716421390215034052315325279   (direct sum, 400 terms: 0.982717576196)
+   twisted D: CLOSES with cusp term: [-16, 0, 0, -1, -16, 0, 0, 4, 16, 128, 0]  residual 0.0
+d=8  L(g,4.5) = 0.972715862845683537124735012013   (direct sum, 400 terms: 0.97271590524)
+   twisted D: still no relation
+d=8  L(g16,4.5) = 1.02379611591870449419585076634   (direct: 1.02379616511)
+   twisted D (with g8, g16): still no relation

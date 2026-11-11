@@ -1,0 +1,29 @@
+d=3 check: R should be 0.0416894146027237751...
+
+d=2  R=-0.1035533905932737622004222
+  plain   D: CLOSES: [-1, 0, 0, 4, 0, 0, 0]  residual 1.24e-60
+  twisted D: CLOSES: [1, 0, 0, -1, 0, 0, 1]  residual 3.11e-61
+
+d=3  R=0.04168941460272377512007919
+  plain   D: no relation (coeff <= 1000)
+  twisted D: no relation (coeff <= 1000)
+
+d=4  R=0.1269588046740574833040026
+  plain   D: CLOSES: [1, -7, 0, 0, 0, 0, 0, 0, 0]  residual 7.47e-60
+  twisted D: CLOSES: [-16, -5, 64, 0, 0, 3, 0, 0, 0]  residual 2.49e-60
+
+d=5  R=0.1911885480613993072302755
+  plain   D: no relation (coeff <= 1000)
+  twisted D: no relation (coeff <= 1000)
+
+d=6  R=0.2480091517941508697461122
+  plain   D: CLOSES: [1, 0, 0, 4, -16, 0, 0, 0, 0]  residual 4.98e-60
+  twisted D: no relation (coeff <= 1000)
+
+d=7  R=0.3037926377488277822561503
+  plain   D: no relation (coeff <= 1000)
+  twisted D: no relation (coeff <= 1000)
+
+d=8  R=0.3619753402520602643887061
+  plain   D: CLOSES: [-2, 33, 0, 0, 0, -2, 0, 0, 0]  residual 3.67e-59
+  twisted D: no relation (coeff <= 1000)
