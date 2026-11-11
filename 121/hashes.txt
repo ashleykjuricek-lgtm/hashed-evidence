@@ -1,0 +1,7 @@
+# SHA-256 hashes — sealed 2026-11-11 09:46:39 UTC
+
+README-121.md                                                d4a45b3254fde7cd7f3a8abf0bdb50499cbd36354e1377b26dbfc76bef197876
+attraction-dimension.out                                     760e9b67a2d3c6a7334bb6375252c2691b9a6dee86fbdf454cbb5f28b83f4265
+attraction-dimension.py                                      563325bae181bc3e934476188b9a4d8845f25a1b141acf64bb77a97bcfc4d6e9
+inheritance-test.out                                         e4db81901e9b5e11547cbe5618132e38e7b6e44f38e86e7b0c859257a0cab387
+inheritance-test.py                                          9a0c943bd3b06ab23fac32a9699d9dd5c8c0f4bee212d8559ee3e573e852df09
