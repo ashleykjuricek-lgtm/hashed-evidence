@@ -1,0 +1,9 @@
+# SHA-256 hashes — sealed 2026-11-11 09:46:23 UTC
+
+README-118.md                                                f70c1a4bdf7cba65582b35a611d882f684ddff30a073ff398a6f5987b6d4028d
+exact_sqrt5-run-output.txt                                   4876fac9358e2ca5cf4507cea477cc905b77a75956449b3b84c1c6e522b8915d
+exact_sqrt5.py                                               17e101b0e355c540d4f605ceb48494d13eb47be3fef7bf6afa8fa96eb3524594
+four-unit-check.md                                           e629a23ce652e4359f956f4a6e8091cfb4a3e3960a80974ab7e29fa6ba316dab
+pentagram-vortex-as-received.md                              ca2f3cc55f761aee8406603c5e0417b49910ca2b9d83b607a5b69386e5a1d446
+the-constant-returned.md                                     14256b037f877b890d96aa44f745febef8632f17fa8f4017e05269e393865d41
+the-exchange.md                                              cb7031a894af18c631b93880c4a4022584f10da0a10d820c64ec9e5178fa1f12
