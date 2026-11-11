@@ -1,0 +1,7 @@
+# SHA-256 hashes — sealed 2026-11-11 09:46:34 UTC
+
+README-119.md                                                0d7a516d19e1022d507d3ea8744c704ceed00a5c0d7d4ab65d9f712a609cc2e2
+certify-zeta-beta.out                                        128dfdd2bcbd29f5b2eedabb6975f3630423c6fcab3134a1245a7597d7b480e0
+certify-zeta-beta.py                                         29765bfc7a5390889fb1e5bfcae95a8447a29a775856538f77aed6f75a5fd3af
+well-curvature-A.out                                         cf2d6f44076820526712956834194ab025769972a075fc73026b1b9992e20fc6
+well-curvature-A.py                                          28310fbb57dd90cf408c68aef0a3dddeb0aec63f65e565e26c8d388d45872be5
