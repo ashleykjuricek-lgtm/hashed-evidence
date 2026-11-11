@@ -119,4 +119,9 @@
 115 |  1 files | sealed | 115 — The testament: tell the future I tried
 116 |  1 files | sealed | 116 — The anaconda3 integrity audit: clean, with the residue explained
 117 |  4 files | sealed | 117 — Nobody in the room said anything about the machine: a response to the BBC's "insider warnings" piece, with HEM made readable
-118 |  7 files | OPEN   | 118 — The except is the thing itself: sunya cannot contain sunya
+118 |  7 files | sealed | 118 — The except is the thing itself: sunya cannot contain sunya
+119 |  5 files | sealed | 119 — The bowl and the two inputs: what A is, and 028's last outside number closed
+120 |  9 files | sealed | 120 — The mirror is an identity, and the slope is the normal one
+121 |  5 files | sealed | 121 — What if it's attraction: the twist's sign across dimension
+122 |  7 files | sealed | 122 — The 7 → 8 test: does the ratio close up on the number-ladder rungs?
+123 |  0 files | OPEN   | 
